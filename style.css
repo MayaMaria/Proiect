@@ -1,35 +1,34 @@
-
 body
 {
 	margin-top:0px;
 	margin-left:0px;
 	margin-right:0px;
+	margin-bottom:0px;
 }
 
 .menu
 {
-	
 	display:flex;
 	position:relative;
 	width: 100%;
-	height: 50px;
+	height: auto;
 	list-style:none;
-	background-color:white;
 	text-align:center;
-	
+	font: italic bold Georgia;
+	font-size:30px;
 	
 }
 a:link,a:visited {
 	font-weight:bold;
 	font-size:17px;
 	color:#FFFFFF;
-	background-color:#d2691e;
+	background-color:#ff0000;
 	text-align:center;
 	padding:6px;
     text-decoration:none;
 }
 a:hover,a:active {
-	background-color:#daa520;
+	background-color:#800000;
 }
 
 .menu > div
@@ -45,5 +44,27 @@ a:hover,a:active {
 #back
 {
 	width:100%;
-	height:500px;
+	height:auto;
+}
+
+
+footer
+{
+	background-color:white;
+	height:auto;
+}
+
+h1
+{	
+	width:100%;
+	height:auto;
+	position:relative;
+	text-align:center;
+	font-family:"blackadder itc";
+	font-size:auto;
+}
+
+header
+{
+	background-color:#EA6A6A;
 }
