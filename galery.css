@@ -2,7 +2,7 @@
 {
 	width:250px;
 	height:250px;
-	top:100px;
+	top:235px;
 	left:600px;
 	position:absolute;
 	animation:right 1s ease;
@@ -14,7 +14,7 @@
 {
 	width:250px;
 	height:250px;
-	top:100px;
+	top:235px;
 	left:800px;
 	position:absolute;
 	animation:right1 1s 1s,op 1s;
@@ -26,7 +26,7 @@
 {
 	width:250px;
 	height:250px;
-	top:100px;
+	top:235px;
 	left:300px;
 	position:absolute;
 	animation:left 1s ease;
@@ -38,7 +38,7 @@
 {
 	width:250px;
 	height:250px;
-	top:100px;
+	top:235px;
 	left:100px;
 	position:absolute;
 	animation:left1 1s 1s ease,op 1s;
