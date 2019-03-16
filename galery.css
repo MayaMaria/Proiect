@@ -3,7 +3,7 @@
 	display:flex;
 	padding:0 4px;
 	flex-wrap:wrap;
-	position:fixed;
+	position:relative;
 }
 
 

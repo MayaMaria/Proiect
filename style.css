@@ -98,3 +98,8 @@ navbar>div{
   display: block;
 }
 
+.message{
+	font-family:Cambria (Headings);
+	font-size:20px;
+}
+
