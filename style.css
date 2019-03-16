@@ -1,40 +1,38 @@
-body
-{
-	margin:0
+body {
+  margin: 0;
 }
-.container
-{
-	width:100%;
-	margin-left: auto;
-	margin-right: auto;
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.banner{
-	position:relative;
-	text-align:center;
-	height:150px;
-	width:100%;
+.banner {
+  position: relative;
+  text-align: center;
+  height: 150px;
+  width: 100%;
 }
 
-h1{
-	position: absolute;
-	font-family:Matura MT Script Capitals;
-	font-size:50px;
-	color:white;
-	top: 5%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+h1 {
+  position: absolute;
+  font-family: Matura MT Script Capitals;
+  font-size: 50px;
+  color: white;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .navbar {
-	display:flex;
+  display: flex;
   overflow: hidden;
   background-color: #333;
   font-family: Cambria (Headings);
 }
 
-navbar>div{
-	flex:100%;
+navbar > div {
+  flex: 100%;
 }
 
 .navbar a {
@@ -46,39 +44,35 @@ navbar>div{
   text-decoration: none;
 }
 
-
 .dropdown {
   float: left;
   overflow: hidden;
 }
 
-
 .dropdown .dropbtn {
-  font-size: 20px; 
+  font-size: 20px;
   border: none;
   outline: none;
   color: white;
   padding: 14px 80px;
   background-color: inherit;
-  font-family: inherit; 
-  margin: 0; 
+  font-family: inherit;
+  margin: 0;
 }
 
-
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   background-color: red;
 }
-
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
 
 .dropdown-content a {
   float: none;
@@ -88,7 +82,6 @@ navbar>div{
   display: block;
   text-align: left;
 }
-
 
 .dropdown-content a:hover {
   background-color: #ddd;
@@ -106,4 +99,7 @@ footer {
   text-align: center;
   bottom: 0;
 }
-
+.message {
+  font-family: Cambria (Headings);
+  font-size: 20px;
+}
