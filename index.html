@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="galery.css">
 	<link rel="stylesheet" href="footer.css">
+	<link rel="stylesheet" href="buton.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title> M&A Inspiration </title>
 	
@@ -14,6 +15,7 @@
 
 
 <body bgcolor="#E6E6FA">
+	<button onclick="topFunction()" id="up" title="UP">UP</button>
 	<header>
     <img src="imagini/banner2.png" alt="M&A Inspiration" class="banner">
 	<h1>M&A Inspiration</h1>
@@ -51,15 +53,39 @@
   </div> 
   <a href="contact.html">Contact</a>
 </div>
-	</header>
 	<section>
-		<main class="image">
-			<img id="right" src="imagini/2.jpg">
-			<img id="left"  src="imagini/3.jpg">
-			<img id="right1" src="imagini/4.jpg">
-			<img id="left1"  src="imagini/5.jpg">
-		</main>
+	<div class="galery">
+		<div class="column">
+		<img src="imagini/dance.jpg" style="width:100%">
+		<p>Dance time</p>
+		</div>
+		<div class="column">
+		<a href=""><img src="imagini/travel.jpg" style="width:100%"></a>
+		<p>Are you going on a spring travel?And don't have the right shoes?</p>
+		</div>
+		<div class="column">
+		<img src="imagini/party.jpeg" style="width:100%">
+		<p>Party time</p>
+		</div>
+	</div>
 	</section>
+	
+<script>
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("up").style.display = "block";
+  } else {
+    document.getElementById("up").style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 	<footer>
 	<div class="textN">
 		JOIN OUR NEWSLETTER
@@ -82,9 +108,9 @@
 	<div class="keep">
 		KEEP UPDATED
 	</div>
-	<div>
-	<i class="fa fa-facebook-square"></i>
-	<i class="fa fa-twitter-square"></i>
+	<div class="logos">
+	<a href="https://www.facebook.com"><i class="fa fa-facebook-square"></i></a>
+	<a><i class="fa fa-twitter-square"></i></a>
 	</div>
 	</footer>
 	

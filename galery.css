@@ -1,8 +1,44 @@
-@media (min width:600px){
-	.image{
-		width:200px;
-	}
+.galery
+{
+	display:flex;
+	padding:0 4px;
+	flex-wrap:wrap;
+	position:fixed;
+}
+
+
+.column
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding:0 4px;
+	flex:33%;
+	max-width:30%;
+	text-align: center;
+	transition: transform .2s;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 
 
+.column:hover {
+  transform: scale(1.5); 
+}
