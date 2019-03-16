@@ -1,3 +1,5 @@
+@import url("./footer.css");
+
 body {
   margin: 0;
 }
@@ -27,7 +29,7 @@ h1 {
 .navbar {
   display: flex;
   overflow: hidden;
-  background-color: #333;
+  background-color: #777;
   font-family: Cambria (Headings);
 }
 
@@ -36,11 +38,9 @@ navbar > div {
 }
 
 .navbar a {
-  float: left;
   font-size: 20px;
   color: white;
-  text-align: center;
-  padding: 14px 80px;
+  padding: 14px 90px;
   text-decoration: none;
 }
 
@@ -62,7 +62,7 @@ navbar > div {
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #ac5353;
 }
 
 .dropdown-content {
@@ -91,14 +91,6 @@ navbar > div {
   display: block;
 }
 
-footer {
-  width: 100%;
-  height: 10%;
-  background-color: black;
-  color: white;
-  text-align: center;
-  bottom: 0;
-}
 .message {
   font-family: Cambria (Headings);
   font-size: 20px;

@@ -4,18 +4,31 @@ footer {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: grey;
+  background-color: black;
   color: white;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.footer-newsletter {
+  display: flex;
+}
+
+.newsInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px; 
 }
 
 input[type="text"],
 select {
-  width: 100%;
-  border: 1px solid #ccc;
-  background-color: #333;
-  color: white;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  width: 130%;
 }
 
 input[type="submit"] {
@@ -25,18 +38,51 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: red;
+  background-color: #E50000;
 }
 
 .news {
-  width: 30%;
-  float: left;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .textN {
   font-size: 15px;
+  color: #e50000;
+  margin: 0;
+}
+
+.newsSubtext {
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+}
+
+.newsText {
+  display: flex;
+  flex-direction: column;
   float: left;
-  padding: 30px;
+  margin: 20px;
+}
+
+.socialize {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  align-items: center;
+}
+
+.socialize-content {
+  width: fit-content;
+  text-align: start;
+}
+
+.logos {
+  margin-top: 5px; 
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 300px) {
@@ -48,11 +94,12 @@ input[type="submit"]:hover {
   }
 }
 
-.logos:hover {
+.logos i:hover {
   opacity: 0.7;
 }
 
 logos i {
+  margin-top: 40px; 
   padding: 20px;
   height: 30px;
 }
