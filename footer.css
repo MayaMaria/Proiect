@@ -1,0 +1,55 @@
+footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: grey;
+  color:white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+input[type=text],select{
+	width:100%;
+	border: 1px solid #ccc;
+	background-color:#333;
+	color:white;
+}
+
+input[type=submit] {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: red;
+}
+
+.news{
+  width: 30%;
+  float:left;
+}
+
+.textN{
+	font-size:15px;
+	float:left;
+	padding: 30px;
+}
+
+@media screen and (max-width: 300px) {
+  .news, input[type=submit] {
+    width: 30%;
+    margin-top: 0;
+  }
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+i{
+	padding:10px;
+	height:30px;
+}

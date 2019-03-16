@@ -4,53 +4,21 @@ body
 	
 }
 
-h1 {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align:center;
-  font-family:"Bradley Hand ITC";
-  font-style:bold;
- 
-}
-
-.container
-{
-	width:100%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-nav ul 
-{
-	list-style:none;
-	margin:0;
-	padding:0;
-	font: italic bold Georgia;
-	font-size:30px;
-	text-transform:uppercase;
-}
-
-nav li 
-{
-	display:inline-block;
-	margin-left:150px;
-	padding-top:0px;
-}
-
-
-nav a:link,a:visited {
-	font-weight:bold;
-	font-size:17px;
-	color:#FFFFFF;
-	background-color:#ff0000;
+.banner{
+	position:relative;
 	text-align:center;
-	padding:6px;
-    text-decoration:none;
+	height:150px;
+	width:100%;
 }
 
-a:hover,a:active {
-	background-color:#800000;
+h1{
+	position: absolute;
+	font-family:Matura MT Script Capitals;
+	font-size:50px;
+	color:white;
+	top: 5%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 section{
@@ -58,24 +26,18 @@ section{
 	width:100%;
 }
 
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: grey;
-  color:white;
-  text-align: center;
-}
-
-
 .navbar {
+  display:flex;
   overflow: hidden;
+  width:100%;
   background-color: #333;
-  font-family: Arial;
+  font-family: Cambria (Headings);
+  text-align:center;
 }
 
+navbar> div{
+	flex:1;
+}
 
 .navbar a {
   float: left;
@@ -137,3 +99,4 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
