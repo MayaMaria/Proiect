@@ -16,6 +16,7 @@ body {
   width: 100%;
 }
 
+/* M&A Inspiration */
 h1 {
   position: absolute;
   font-family: Matura MT Script Capitals;
@@ -26,17 +27,28 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 992px) {
+  h1 {
+    margin-top: 5%;
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    margin-top: 5%;
+    font-size: 20px;
+  }
+}
+
 .navbar {
   display: flex;
   overflow: hidden;
-  background-color: #777;
+  background-color: #960700;
   font-family: Cambria (Headings);
 }
 
-navbar > div {
-  flex: 100%;
-}
-
+/* home button */
 .navbar a {
   font-size: 18px;
   color: white;
@@ -49,6 +61,7 @@ navbar > div {
   overflow: hidden;
 }
 
+/* men women children button */
 .dropdown .dropbtn {
   font-size: 18px;
   border: none;
@@ -62,7 +75,7 @@ navbar > div {
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #ac5353;
+  background-color: #C44C46;
 }
 
 .dropdown-content {
