@@ -41,24 +41,34 @@ h1 {
   }
 }
 
-.navbar {
-  display: flex;
-  overflow: hidden;
-  background-color: #960700;
-  font-family: Cambria (Headings);
+.navbar * {
+  padding: 5px;
 }
 
-/* home button */
 .navbar a {
   font-size: 18px;
+  border: none;
+  outline: none;
   color: white;
-  padding: 14px 90px;
+  background-color: inherit;
+  font-family: inherit;
   text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  background-color: #960700;
+  height: 50px;
+  font-family: Cambria (Headings);
 }
 
 .dropdown {
   float: left;
   overflow: hidden;
+  height: 100%;
 }
 
 /* men women children button */
@@ -67,19 +77,17 @@ h1 {
   border: none;
   outline: none;
   color: white;
-  padding: 14px 80px;
   background-color: inherit;
   font-family: inherit;
-  margin: 0;
+  height: 100%;
 }
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #C44C46;
+  background-color: #c44c46;
 }
 
 .dropdown-content {
-
   display: none;
   position: absolute;
   background-color: #f9f9f9;
