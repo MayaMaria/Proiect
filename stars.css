@@ -1,0 +1,9 @@
+.vote 
+{
+	color:blue;
+}
+
+.vote > span:hover
+{
+	color:yellow;
+}

@@ -4,26 +4,26 @@
 	padding:0 4px;
 	flex-wrap:wrap;
 	position:relative;
-  z-index: 1
+	z-index: 1;
 }
 
-.column
+.column,.column2
 {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	padding:0 4px;
 	flex:33%;
-	max-width:30%;
+	max-width:32%;
 	text-align: center;
 	transition: transform .4s;
 }
 
-.column img {
+.column,.column2 img {
   margin-top: 8px;
   vertical-align: middle;
 }
 
 @media screen and (max-width: 800px) {
-  .column {
+  .column,.column2 {
     flex: 50%;
     max-width: 50%;
   }
@@ -31,7 +31,7 @@
 
 
 @media screen and (max-width: 600px) {
-  .column {
+  .column,.column2 {
     flex: 100%;
     max-width: 100%;
   }
