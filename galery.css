@@ -4,6 +4,7 @@
 	padding:0 4px;
 	flex-wrap:wrap;
 	position:relative;
+  z-index: 1
 }
 
 
@@ -14,7 +15,7 @@
 	flex:33%;
 	max-width:30%;
 	text-align: center;
-	transition: transform .2s;
+	transition: transform .4s;
 }
 
 .column img {
