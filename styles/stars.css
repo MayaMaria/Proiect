@@ -15,7 +15,7 @@ fieldset, label {  padding-bottom: 20px; }
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
-  align-items: center
+  align-items: center;
 }
 
 .stars > label { 
