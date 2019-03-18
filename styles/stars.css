@@ -1,9 +1,31 @@
-.vote 
-{
-	color:blue;
+fieldset, label {  padding-bottom: 20px; }
+
+
+.stars { 
+  border: none;
+  float: left;
+  padding-left: 165px;
 }
 
-.vote > span:hover
-{
-	color:yellow;
+.stars > input { display: none; } 
+.stars > label:before { 
+  margin: 5px;
+  font-size: 20px;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
 }
+
+.stars > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+.stars > input:checked ~ label, 
+.stars:not(:checked) > label:hover, 
+.stars:not(:checked) > label:hover ~ label { color: #FFD700;  } 
+
+.stars > input:checked + label:hover, 
+.stars > input:checked ~ label:hover,
+.stars > label:hover ~ input:checked ~ label, 
+.stars > input:checked ~ label:hover ~ label { color: #FFED85;  } 
