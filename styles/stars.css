@@ -4,7 +4,8 @@ fieldset, label {  padding-bottom: 20px; }
 .stars { 
   border: none;
   float: left;
-  padding-left: 165px;
+  padding-left: 30%;
+
 }
 
 .stars > input { display: none; } 
@@ -14,6 +15,7 @@ fieldset, label {  padding-bottom: 20px; }
   font-family: FontAwesome;
   display: inline-block;
   content: "\f005";
+  align-items: center
 }
 
 .stars > label { 
