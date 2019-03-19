@@ -1,0 +1,58 @@
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: yellow;
+}
+
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+
+.right {
+  text-align: right;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+.bar-5 {width: 60%; height: 18px; background-color: purple;}
+.bar-4 {width: 30%; height: 18px; background-color: red;}
+.bar-3 {width: 37%; height: 18px; background-color: blue;}
+.bar-2 {width: 4%; height: 18px; background-color: green;}
+.bar-1 {width: 15%; height: 18px; background-color: orange;}
+
+
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
