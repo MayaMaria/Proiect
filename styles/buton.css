@@ -35,12 +35,12 @@
 	background-color: #960700;
 }
 
-#buton-share {
+.buton-share {
 	width: 100%;
 	text-align: center;
 }
 
-#buton-share a {
+.buton-share a {
 	width: 50px;
 	height: 50px;
 	display: inline-block;
@@ -50,12 +50,12 @@
 	opacity: 0.50;
 }
 
-#buton-share a:hover {
+.buton-share a:hover {
 	transform: scale(1.2);
 	opacity: 1;
 }
 
-#buton-share i {
+.buton-share i {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
