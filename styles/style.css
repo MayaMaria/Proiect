@@ -1,169 +1,169 @@
 @import url("./footer.css");
-
 body {
-  margin: 20px;
-  background-color:#f0f5f5;
+	margin: 20px;
+	background-color: #f0f5f5;
 }
+
 .container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .banner {
-  position: relative;
-  text-align: center;
-  height: 150px;
-  width: 100%;
+	position: relative;
+	text-align: center;
+	height: 150px;
+	width: 100%;
 }
 
+
 /* M&A Inspiration */
+
 h1 {
-  position: absolute;
-  font-family: Matura MT Script Capitals;
-  font-size: 50px;
-  color: white;
-  top: 9%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	position: absolute;
+	font-family: Matura MT Script Capitals;
+	font-size: 50px;
+	color: white;
+	top: 9%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 992px) {
-  h1 {
-    margin-top: 5%;
-    font-size: 30px;
-  }
+	h1 {
+		margin-top: 5%;
+		font-size: 30px;
+	}
 }
 
 @media screen and (max-width: 600px) {
-  h1 {
-    margin-top: 5%;
-    font-size: 20px;
-  }
+	h1 {
+		margin-top: 5%;
+		font-size: 20px;
+	}
 }
 
 .navbar * {
-  padding: 5px;
+	padding: 5px;
 }
 
 .navbar a {
-  font-size: 18px;
-  border: none;
-  outline: none;
-  color: white;
-  background-color: inherit;
-  font-family: inherit;
-  text-decoration: none;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	text-decoration: none;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  overflow: hidden;
-  background-color: #960700;
-  height: 50px;
-  font-family: Cambria (Headings);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	overflow: hidden;
+	background-color: #960700;
+	height: 50px;
+	font-family: Cambria (Headings);
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
-  height: 100%;
+	float: left;
+	overflow: hidden;
+	height: 100%;
 }
 
+
 /* men women children button */
+
 .dropdown .dropbtn {
-  font-size: 18px;
-  border: none;
-  outline: none;
-  color: white;
-  background-color: inherit;
-  font-family: inherit;
-  height: 100%;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	color: white;
+	background-color: inherit;
+	font-family: inherit;
+	height: 100%;
 }
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-  background-color: #c44c46;
+	background-color: #c44c46;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.2);
+	z-index: 2;
 }
 
 .dropdown-content a {
-  font-size: 14px;
-  float: none;
-  color: black;
-  margin: 0;
-  padding: 3px 26px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+	font-size: 14px;
+	float: none;
+	color: black;
+	margin: 0;
+	padding: 3px 26px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+	background-color: #ddd;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+	display: block;
 }
 
 .message {
-  font-family: Cambria (Headings);
-  font-size: 20px;
-}
-.column_submenu {
-  float: left;
-  width: 45%;
+	font-family: Cambria (Headings);
+	font-size: 20px;
 }
 
+.column_submenu {
+	float: left;
+	width: 45%;
+}
 
 .row_submenu:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+	display: block;
+	font-size: 1.17em;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
 }
 
-
-.contact{
-	text-align:center;
-	font-size:20px;
-	font-family:Century Schoolbook;
-	
+.contact {
+	text-align: center;
+	font-size: 20px;
+	font-family: Century Schoolbook;
 }
 
-.photo{
-	display:flex;
-	flex-wrap:wrap;
+.photo {
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.photo1{
-	flex:33%;
-	max-width:50%;
-}
-	
-.photo img
-{
-	width:50%;
-	border-radius:50%;
-	height:200px;
+.photo1 {
+	flex: 33%;
+	max-width: 50%;
 }
 
+.photo img {
+	width: 50%;
+	border-radius: 50%;
+	height: 200px;
+}

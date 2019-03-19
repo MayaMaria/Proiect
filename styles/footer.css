@@ -1,122 +1,126 @@
 footer {
-  position: relative;
-  padding: 1rem;
-  background-color: black;
-  color: white;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+	position: relative;
+	padding: 1rem;
+	background-color: black;
+	color: white;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
 .footer-newsletter {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 }
+
 
 /* newsletter text */
 
 .joinNews {
-  font-size: 15px;
-  color: #960700;
-  margin: 0;
+	font-size: 15px;
+	color: #960700;
+	margin: 0;
 }
 
 .newsSubtext {
-  font-size: 14px;
-  color: white;
+	font-size: 14px;
+	color: white;
 }
 
 .newsText {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5em;
+	display: flex;
+	flex-direction: column;
+	margin-right: 5em;
 }
+
 
 /* newsletter fields */
 
 .news {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .newsInput {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 10px;
 }
 
 input[type="text"],
 select {
-  border: 1px solid white;
-  background-color: white;
-  color: black;
-  width: 20em;
+	border: 1px solid white;
+	background-color: white;
+	color: black;
+	width: 20em;
 }
 
 input[type="submit"] {
-  background-color: #333;
-  color: white;
-  border: none;
+	background-color: #333;
+	color: white;
+	border: none;
 }
 
 input[type="submit"]:hover {
-  background-color: #E50000;
+	background-color: #E50000;
 }
+
 
 /* social pages */
 
 .socialize {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 7%; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-left: 7%;
 }
 
 .socialize-content {
-  width: fit-content;
-  text-align: start;
+	width: fit-content;
+	text-align: start;
 }
 
 .socialText {
-  color: #960700;
+	color: #960700;
 }
 
 .logos {
-  margin-top: 5px; 
-  display: flex;
-  flex-direction: column;
+	margin-top: 5px;
+	display: flex;
+	flex-direction: column;
 }
 
 @media screen and (max-width: 300px) {
-  .news,
-  input[type="submit"],
-  .socialText {
-    width: 30%;
-    margin-top: 0;
-  }
+	.news,
+	input[type="submit"],
+	.socialText {
+		width: 30%;
+		margin-top: 0;
+	}
 }
 
 .logos i:hover {
-  opacity: 0.7;
+	opacity: 0.7;
 }
 
 logos i {
-  margin-top: 40px; 
-  padding: 20px;
-  height: 30px;
+	margin-top: 40px;
+	padding: 20px;
+	height: 30px;
 }
+
 
 /* logo */
 
 .footerLogo img {
-  width: 100px;
-  height: 100px;
-  margin-right: 10%;
-  margin-top: 20%;
-  margin-left: 30%;
+	width: 100px;
+	height: 100px;
+	margin-right: 10%;
+	margin-top: 20%;
+	margin-left: 30%;
 }
