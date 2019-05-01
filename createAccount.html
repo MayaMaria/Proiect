@@ -4,13 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" type="image/png" href="imagini/logo2.png" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/buton.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="styles/account.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
@@ -132,49 +131,40 @@
         </a>
     </div>
 
-     <div class="main">
-        <section class="sign-in">
-            <div class="container">
-                <div class="signin-content">
-                    <div class="signin-image">
-                        <figure><img src="imagini/draw.jpg" alt="sing up image"></figure>
-                        <a href="createAccount.html" class="signup-image-link">Create an account</a>
-                    </div>
+<div class="testbox">
+  <h5 id="title">Registration</h5>
+	<hr>
+  <form action="/">
 
-                    <div class="signin-form">
-                        <h2 class="form-title">Sign up</h2>
-                        <form class="register-form" id="login-form">
-                            <div class="form-group">
-                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="your_name" id="your_name" placeholder="Username"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
-                            </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
-                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
-                            </div>
-                            <div class="form-group form-button">
-                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
-                            </div>
-                        </form>
-                        <div class="social-login">
-                            <span class="social-label">Or login with</span>
-                            <ul class="socials">
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-    </div>
+  <label id="icon" for="name"><i class="icon-user"></i></label>
+  <input type="text" name="name" id="name" placeholder="Name" required/>
+  <label id="icon" for="name"><i class="icon-user"></i></label>
+  <input type="text" name="name" id="name" placeholder="Surname" required/>
+  <label id="icon" for="name"><i class="icon-user"></i></label>
+  <input type="text" name="name" id="name" placeholder="Username" required/>
+  <label id="icon" for="name"><i class="icon-envelope "></i></label>
+  <input type="text" name="name" id="name" placeholder="Email" required/>
+  <br>
+  <label id="icon" for="name"><i class="icon-globe"></i></label>
+  <input type="text" name="name" id="name" placeholder="Country" required/>
+  <label id="icon" for="name"><i class="icon-shield"></i></label>
+  <input type="password" name="name" id="name" placeholder="Password" required/>
+   <label id="icon" for="name"><i class="icon-shield"></i></label>
+  <input type="password" name="name" id="name" placeholder="Repeat password" required/>
+  
+  <div class="gender">
+    <input type="radio" value="None" id="male" name="gender">
+    <label for="male" class="radio" >Male</label>
+    <input type="radio" value="None" id="female" name="gender" />
+    <label for="female" class="radio">Female</label>
+   </div> 
+   <p>By clicking Register, you agree on our <a href="#">terms and condition</a>.</p>
+   <a href="#" class="button">Register</a>
+  </form>
+</div>
+    
+	
+  </div>
 
    
 </body>
