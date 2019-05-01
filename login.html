@@ -4,22 +4,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="imagini/logo2.png" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="styles/galery.css" />
-    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
     <link rel="stylesheet" type="text/css" href="styles/buton.css" />
-    <link rel="stylesheet" type="text/css" href="styles/shop.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <title>M&A Inspiration</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 </head>
 
-<body style="background-color:#FFFCFC">
+<body>
     <header id="top">
         <img src="imagini/banner2.png" alt="M&A Inspiration" class="banner" />
         <h1>M&A Inspiration</h1>
     </header>
-    <a href="#top" id="up" title="UP">UP</a>
 
     <div class="navbar">
         <a href="index.html">
@@ -129,100 +127,57 @@
         <a href="aboutUs.html">
             <p>About Us</p>
         </a>
+		<a href="login.html">
+            <p>Login</p>
+        </a>
     </div>
 
-   <form name="loginForm" method="post" action="login.php">
-<table width="100%" bgcolor="0099CC" align="center">
-
-<tr>
-<td colspan=2><font size=4><b>Login</b></font></td>
-</tr>
-
-<tr>
-<td>Username:</td>
-<td><input type="text" size=25 name="userid"></td>
-</tr>
-
-<tr>
-<td>Password:</td>
-<td><input type="Password" size=25 name="pwd"></td>
-</tr>
-
-<tr>
-<td ><input type="Reset"></td>
-<td><input type="submit" onclick="return check(this.form)" value="Login"></td>
-</tr>
-
-</table>
-</form>
-<script language="javascript">
-function check(form)
-{
-
-if(form.userid.value == "admin" && form.pwd.value == "pass")
-{
-	alert("Login Succesfull")
-	return true;
-}
-else
-{
-	alert("Error Password or Username")
-	return false;
-}
-}
-</script>
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <footer>
-        <div class="footer-newsletter">
-            <div class="newsText">
-                <p class="joinNews">JOIN OUR NEWSLETTER</p>
-                <p class="newsSubtext">Subscribe to be inspired all the time</p>
-            </div>
-
-            <div class="news">
-                <form>
-                    <div class="newsInput">
-                        <label for="mail">E-mail</label>
-                        <input type="text" id="mail" name="Email" placeholder="Enter your e-mail" style="color:black" />
+     <div class="main">
+        <!-- Sing in  Form -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="imagini/draw.jpg" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">Create an account</a>
                     </div>
-                    <div class="newsInput">
-                        <label>Subject of interest</label>
-                        <select id="types" name="subjects">
-                            <option disabled="disabled" selected="selected">Select your option</option>
-                            <option> Send me everything </option>
-                            <option> Women</option>
-                            <option> Men</option>
-                            <option> Children </option>
-                        </select>
-                    </div>
-                    <input type="submit" value="SUBSCRIBE" />
-                </form>
-            </div>
-        </div>
 
-        <div class="socialize">
-            <div class="socialize-content">
-                <div class="socialText">LET'S SOCIALIZE</div>
-                <div class="logos">
-                    <a href="https://www.facebook.com" target="_blank" style="color: white">
-                        <i class="fa fa-facebook-square"> Facebook</i></a>
-                    <a href="https://www.twitter.com" target="_blank" style="color: white">
-                        <i class="fa fa-twitter-square"> Twitter</i></a>
+                    <div class="signin-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="your_name" id="your_name" placeholder="Username"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="Password"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Log in"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="footerLogo">
-            <img src="imagini/logo2.png" alt="FooterLogo"/>
-        </div>
-    </footer>
+    </div>
+    </div>
+
+   
 </body>
 
 </html>
