@@ -1,6 +1,5 @@
-
 testbox input {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   color: #4c4c4c;
 }
@@ -10,7 +9,6 @@ testbox p {
   width: 150px;
   display: inline-block;
   margin-left: 18px;
-
 }
 
 #title {
@@ -23,24 +21,25 @@ testbox p {
 
 .testbox {
   margin: 20px auto;
-  width:100%; 
-  height: 100%; 
-  border-radius: 8px/7px; 
-  background-color: #ebebeb; 
-  box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+  width: 100%;
+  height: 100%;
+  border-radius: 8px/7px;
+  background-color: #ebebeb;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.31);
   border: solid 1px #cbc9c9;
 }
 
-input[type=radio] {
+input[type="radio"] {
   visibility: hidden;
+  align-items: center;
 }
 
-form{
+form {
   margin: 0 30px;
 }
 
 label.radio {
-	cursor: pointer;
+  cursor: pointer;
   text-indent: 35px;
   overflow: visible;
   display: inline-block;
@@ -50,9 +49,9 @@ label.radio {
 
 label.radio:before {
   background: #990000;
-  content:'';
+  content: "";
   position: absolute;
-  top:2px;
+  top: 2px;
   left: 0;
   width: 20px;
   height: 20px;
@@ -60,42 +59,43 @@ label.radio:before {
 }
 
 label.radio:after {
-	opacity: 0;
-	content: '';
-	position: absolute;
-	width: 0.5em;
-	height: 0.25em;
-	background: transparent;
-	top: 7.5px;
-	left: 4.5px;
-	border: 3px solid #ffffff;
-	border-top: none;
-	border-right: none;
-	transform: rotate(-45deg);
+  opacity: 0;
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 0.25em;
+  background: transparent;
+  top: 7.5px;
+  left: 4.5px;
+  border: 3px solid #ffffff;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
 }
 
-input[type=radio]:checked + label:after {
-	opacity: 1;
+input[type="radio"]:checked + label:after {
+  opacity: 1;
 }
 
-hr{
+hr {
   color: #a9a9a9;
   opacity: 0.3;
 }
 
-input[type=text],input[type=password]{
-  width: 200px; 
-  height: 39px; 
-  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px; 
-  background-color: #fff; 
-  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+input[type="text"],
+input[type="password"] {
+  width: 200px;
+  height: 39px;
+  border-radius: 0px 4px 4px 0px/5px 5px 4px 4px;
+  background-color: #fff;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
   border: solid 1px #cbc9c9;
   margin-left: -5px;
-  margin-top: 13px; 
+  margin-top: 13px;
   padding-left: 10px;
 }
 
-input[type=password]{
+input[type="password"] {
   margin-bottom: 25px;
 }
 
@@ -107,7 +107,7 @@ input[type=password]{
   margin-left: 15px;
   border-radius: 4px 0px 0px 4px;
   color: white;
-  box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
   border: solid 0px #cbc9c9;
 }
 
@@ -116,7 +116,7 @@ input[type=password]{
   margin-bottom: 30px;
 }
 
-.accounttype{
+.accounttype {
   margin-left: 8px;
   margin-top: 20px;
 }
@@ -130,19 +130,17 @@ a.button {
   display: inline-block;
   float: right;
   text-decoration: none;
-  width: 50px; height: 27px; 
-  border-radius: 5px; 
-  background-color:#990000; 
-  box-shadow: 0 3px rgba(58,87,175,.75);
-  transition: all 0.1s linear 0s; 
+  width: 50px;
+  height: 27px;
+  border-radius: 5px;
+  background-color: #990000;
+  transition: all 0.1s linear 0s;
   top: 0px;
   position: relative;
 }
 
 a.button:hover {
   top: 3px;
-  background-color:green;
+  background-color: green;
   box-shadow: none;
-  
 }
-

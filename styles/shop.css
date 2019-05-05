@@ -101,9 +101,9 @@
 }
 
 .collapsible:focus + .content {
-    display: flex;
+  display: flex;
 }
 
 .collapsible:focus:after {
-    content: "\2212";
+  content: "\2212";
 }

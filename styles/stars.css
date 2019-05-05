@@ -2,42 +2,42 @@
 
 fieldset,
 label {
-	padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .stars {
-	border: none;
-	float: left;
-	padding-left: 34%;
+  border: none;
+  float: left;
+  padding-left: 34%;
 }
 
-.stars>input {
-	display: none;
+.stars > input {
+  display: none;
 }
 
-.stars>label:before {
-	margin: 5px;
-	font-size: 20px;
-	font-family: FontAwesome;
-	display: inline-block;
-	content: "\f005";
-	align-items: center;
+.stars > label:before {
+  margin: 5px;
+  font-size: 20px;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+  align-items: center;
 }
 
-.stars>label {
-	color: #ddd;
-	float: right;
+.stars > label {
+  color: #ddd;
+  float: right;
 }
 
-.stars>input:checked~label,
-.stars:not(:checked)>label:hover,
-.stars:not(:checked)>label:hover~label {
-	color: #FFD700;
+.stars > input:checked ~ label,
+.stars:not(:checked) > label:hover,
+.stars:not(:checked) > label:hover ~ label {
+  color: #ffd700;
 }
 
-.stars>input:checked+label:hover,
-.stars>input:checked~label:hover,
-.stars>label:hover~input:checked~label,
-.stars>input:checked~label:hover~label {
-	color: #FFED85;
+.stars > input:checked + label:hover,
+.stars > input:checked ~ label:hover,
+.stars > label:hover ~ input:checked ~ label,
+.stars > input:checked ~ label:hover ~ label {
+  color: #ffed85;
 }

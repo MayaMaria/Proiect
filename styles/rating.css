@@ -16,15 +16,14 @@
 .side {
   float: left;
   width: 15%;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 .middle {
-  margin-top:10px;
+  margin-top: 10px;
   float: left;
   width: 70%;
 }
-
 
 .right {
   text-align: right;
@@ -43,15 +42,35 @@
   color: white;
 }
 
-.bar-5 {width: 60%; height: 18px; background-color: purple;}
-.bar-4 {width: 30%; height: 18px; background-color: red;}
-.bar-3 {width: 37%; height: 18px; background-color: blue;}
-.bar-2 {width: 4%; height: 18px; background-color: green;}
-.bar-1 {width: 15%; height: 18px; background-color: orange;}
-
+.bar-5 {
+  width: 60%;
+  height: 18px;
+  background-color: purple;
+}
+.bar-4 {
+  width: 30%;
+  height: 18px;
+  background-color: red;
+}
+.bar-3 {
+  width: 37%;
+  height: 18px;
+  background-color: blue;
+}
+.bar-2 {
+  width: 4%;
+  height: 18px;
+  background-color: green;
+}
+.bar-1 {
+  width: 15%;
+  height: 18px;
+  background-color: orange;
+}
 
 @media (max-width: 400px) {
-  .side, .middle {
+  .side,
+  .middle {
     width: 100%;
   }
   .right {
