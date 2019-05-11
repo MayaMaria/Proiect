@@ -10,7 +10,7 @@
       <div class="galery">
         <div class="column">
           <p>Oh, yes, it's Ladies' Night</p>
-          <a href="dance.html"
+          <a href="dance.php"
             ><img src="imagini/dance.jpg" alt="Dance" style="width:100%"
           /></a>
         </div>

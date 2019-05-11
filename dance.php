@@ -1,3 +1,19 @@
+<?php
+require_once 'database_con.php';;
+$sql = "SELECT  * FROM ratings WHERE name='stars2'";
+	$result = mysqli_query($conn,$sql);
+	
+	while($row = mysqli_fetch_assoc($result)) {
+        $rating1=$row["rating1"];
+		$rating2=$row["rating2"];
+		$rating3=$row["rating3"];
+		$rating4=$row["rating4"];
+		$rating5=$row["rating5"];
+    }
+	
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +37,7 @@
   <body style="background-color:#FFFCFC">
     <header id="top">
       <img src="imagini/banner2.png" alt="M&A Inspiration" class="banner" />
-      <a href="index.html" id="back" title="BACK">BACK</a>
+      <a href="index.php" id="back" title="BACK">BACK</a>
       <h1>M&A Inspiration</h1>
     </header>
     <a href="#top" id="up" title="UP">UP</a>
@@ -52,23 +68,41 @@
           <p>Kitten Heels</p>
           <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
 
+		  <?php
+		  session_start();
+		  if(isset($_SESSION['login'])){
+			  ?>
+		<form method="POST" action="rating.php">
           <fieldset class="stars">
-            <input type="radio" id="star15" name="stars2" value="15" />
+            <input type="submit" id="star15" name="stars2" value="5" />
             <label class="full" for="star15" title="Very Good"></label>
-            <input type="radio" id="star14" name="stars2" value="14" />
+            <input type="submit" id="star14" name="stars2" value="4" />
             <label class="full" for="star14" title="Pretty good"></label>
-            <input type="radio" id="star13" name="stars2" value="13" />
+            <input type="submit" id="star13" name="stars2" value="3" />
             <label class="full" for="star13" title="Ok"></label>
-            <input type="radio" id="star12" name="stars2" value="12" />
+            <input type="submit" id="star12" name="stars2" value="2" />
             <label class="full" for="star12" title="Kinda bad"></label>
-            <input type="radio" id="star11" name="stars2" value="11" />
+            <input type="submit" id="star11" name="stars2" value="1" />
             <label class="full" for="star11" title="Bad"></label>
           </fieldset>
-
-          <br />
+		  </form>
+		<?php
+		
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for vote!";
+		  }
+		  
+		  ?>
+		 
+		<br />
           <br /><br />
           <br />
           <p><b>Share this on </b></p>
+		<?php
+		  if(isset($_SESSION['login'])){
+			  ?>
           <p class="buton-share">
             <a
               class="facebook"
@@ -80,16 +114,17 @@
               ><i class="fa fa-twitter"></i
             ></a>
           </p>
-
+		  
+		<?php
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for share!";
+		  }
+		  
+		  ?>
+		  
           <br /><br />
-          <p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </p>
           <hr />
 
           <div class="row">
@@ -102,7 +137,15 @@
               </div>
             </div>
             <div class="side right">
-              <div>36</div>
+              <div>
+			  <?php
+			if(@$_GET['Rating5'] == true)
+					{
+						$rating5=$_GET['Rating5'];
+					}	
+			 echo $rating5;
+			?>
+			  </div>
             </div>
             <div class="side">
               <div>4<span class="fa fa-star checked"></span></div>
@@ -113,7 +156,16 @@
               </div>
             </div>
             <div class="side right">
-              <div>23</div>
+              <div>
+			  <?php
+			if(@$_GET['Rating4'] == true)
+					{
+			
+						$rating4=$_GET['Rating4'];
+					}	
+			 echo $rating4;
+			?>
+			  </div>
             </div>
             <div class="side">
               <div>3 <span class="fa fa-star checked"></span></div>
@@ -124,7 +176,15 @@
               </div>
             </div>
             <div class="side right">
-              <div>29</div>
+              <div>
+			  <?php
+			if(@$_GET['Rating3'] == true)
+					{
+						$rating3=$_GET['Rating3'];
+					}	
+			 echo $rating3;
+			?>
+			  </div>
             </div>
             <div class="side">
               <div>2 <span class="fa fa-star checked"></span></div>
@@ -135,7 +195,16 @@
               </div>
             </div>
             <div class="side right">
-              <div>4</div>
+              <div>
+			  <?php
+			if(@$_GET['Rating2'] == true)
+					{
+						$rating2=$_GET['Rating2'];
+					}	
+			 echo $rating2;
+			?>
+			  
+			  </div>
             </div>
             <div class="side">
               <div>1 <span class="fa fa-star checked"></span></div>
@@ -146,8 +215,21 @@
               </div>
             </div>
             <div class="side right">
-              <div>10</div>
+              <div>
+			   <?php
+			if(@$_GET['Rating1'] == true)
+					{
+						$rating1=$_GET['Rating1'];
+					}	
+			 echo $rating1;
+			?>
+			  </div>
             </div>
+			<hr />
+			<p>
+            <span><b>User Rating &emsp;&emsp;</b></span>
+			<?php include 'calculateRating.php'?>
+          </p>
           </div>
         </div>
 
