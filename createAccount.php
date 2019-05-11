@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <link rel="stylesheet" type="text/css" href="styles/buton.css" />
+	 <link rel="stylesheet" href="styles/account.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="styles/account.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600"
       rel="stylesheet"
@@ -144,64 +144,127 @@
     <div class="testbox">
       <h5 id="title">Registration</h5>
       <hr />
-      <form action="/">
+	  <?php 
+	  
+			if(@$_GET['InvalidPass'] == true)
+			{
+			?>
+			<div>
+				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
+				<?php echo $_GET['InvalidPass']?>
+				</div>
+						
+			<?php
+			}
+		
+			
+			if(@$_GET['InvalidEmail'] == true)
+			{
+			?>
+			<div>
+				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
+				<?php echo $_GET['InvalidEmail']?>
+				</div>
+						
+			<?php
+			}
+			
+			
+			if(@$_GET['InvalidEmailPas'] == true)
+			{
+			?>
+			<div>
+				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
+				<?php echo $_GET['InvalidEmailPas']?>
+				</div>
+						
+			<?php
+			}
+		?>
+		
+
+      <form action="register.php" method="POST">
+	  
         <label id="icon" for="name"><i class="icon-user"></i></label>
-        <input type="text" name="name" id="name" placeholder="Name" required />
+        <input 
+			type="text" 
+			name="name" 
+			id="name" 
+			placeholder="Name"
+			value="<?php if(isset($_COOKIE['name'])) {echo $_COOKIE['name'];}?>"
+			required />
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input
           type="text"
-          name="name"
+          name="surname"
           id="name"
           placeholder="Surname"
+		  value="<?php if(isset($_COOKIE['surname'])) {echo $_COOKIE['surname'];}?>"
           required
         />
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input
           type="text"
-          name="name"
+          name="username"
           id="name"
           placeholder="Username"
+		  value="<?php if(isset($_COOKIE['usernameR'])) {echo $_COOKIE['usernameR'];}?>"
           required
         />
         <label id="icon" for="name"><i class="icon-envelope "></i></label>
-        <input type="text" name="name" id="name" placeholder="Email" required />
+        <input 
+			type="text"
+			name="email" 
+			id="name" 
+			placeholder="Email" 
+			value="<?php if(isset($_COOKIE['email'])) {echo $_COOKIE['email'];}?>"
+			required />
         <br />
         <label id="icon" for="name"><i class="icon-globe"></i></label>
         <input
           type="text"
-          name="name"
+          name="country"
           id="name"
           placeholder="Country"
+		  value="<?php if(isset($_COOKIE['country'])) {echo $_COOKIE['country'];}?>"
           required
         />
         <label id="icon" for="name"><i class="icon-shield"></i></label>
         <input
           type="password"
-          name="name"
+          name="password"
           id="name"
           placeholder="Password"
+		  value="<?php if(isset($_COOKIE['pass'])) {echo $_COOKIE['pass'];}?>"
           required
         />
         <label id="icon" for="name"><i class="icon-shield"></i></label>
         <input
           type="password"
-          name="name"
+          name="repeatPass"
           id="name"
           placeholder="Repeat password"
+		  value="<?php if(isset($_COOKIE['rePass'])) {echo $_COOKIE['rePass'];}?>"
           required
         />
-
         <div class="gender">
-          <input type="radio" value="None" id="male" name="gender" />
+          <input type="radio" value="None" id="male" name="genderM" <?php if(isset($_COOKIE['genderM'])) {echo "checked='checked'";}?>/>
           <label for="male" class="radio">Male</label>
-          <input type="radio" value="None" id="female" name="gender" />
+          <input type="radio" value="None" id="female" name="genderF" <?php if(isset($_COOKIE['genderF'])) {echo "checked='checked'";}?>/>
           <label for="female" class="radio">Female</label>
         </div>
-        <p>
-          By clicking Register, you agree on our
-          <a href="#">terms and conditions</a>.
-        </p>
-        <a href="#" class="button">Register</a>
+   
+		<div class="form-group form-button">
+                  <input
+                    type="submit"
+                    name="register"
+                    id="signin"
+                    class="form-submit"
+                    value="Register"
+	
+                  />
+         </div>
+		
       </form>
     </div>
   </body>

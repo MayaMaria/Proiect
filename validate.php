@@ -15,8 +15,8 @@
 			{
 				if(isset($_POST['remember-me'])){
 
-				setCookie('username',$username,time()+60*60*2);
-				setCookie('password',$password,time()+60*60*2);
+					setCookie('username',$username,time()+60*60*2);
+					setCookie('password',$password,time()+60*60*2);
 				}
 				$_SESSION['login']=$username;
 				header("location:welcome.php");	

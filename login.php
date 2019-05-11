@@ -9,13 +9,25 @@ include 'header.php';
               <figure>
                 <img src="imagini/draw.jpg" alt="sing up image" />
               </figure>
-              <a href="createAccount.html" class="signup-image-link"
+              <a href="createAccount.php" class="signup-image-link"
                 >Create an account</a
               >
             </div>
 
-	
+			
             <div class="signin-form">
+			<?php
+			if(@$_GET['LoginR'] == true)
+					{
+						?>
+						<div>
+							<img style="height:15%; width:10%;" src="imagini/good.png"/>
+							<h4><?php echo $_GET['LoginR']?></h4>
+						</div>
+						
+					<?php
+					}
+			?>
               <h2 class="form-title">Sign up</h2>
 			  
 			  
@@ -29,7 +41,7 @@ include 'header.php';
 						</div>
 						
 					<?php
-					}
+					}			
 				?>
 			
               <form class="register-form" id="login-form" method="POST" action="validate.php">
