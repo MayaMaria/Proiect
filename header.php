@@ -3,7 +3,13 @@
 	
 	  if(isset($_SESSION['login'])){
 		
-		$message= "<a style='border: 2px solid yellow; border-radius: 30px;'>{$_SESSION['login']}</a> <a href='logout.php?logout'>Logout</a>";
+		require_once 'database_con.php';
+	$sql = "SELECT profile FROM users where username='".$_SESSION['login']."'";
+	$result = mysqli_query($conn,$sql);
+	$row = mysqli_fetch_assoc($result);
+		$message= "<a style='border: 2px solid ; border: 30px;'>
+		<img src='imagini/".$row["profile"]."' width='30' height='20' align='middle'>".$_SESSION['login']."
+		</a> <a href='logout.php?logout'>Logout</a>";
 	  }
 	  else
 	  {

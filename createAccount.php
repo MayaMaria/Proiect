@@ -184,7 +184,9 @@
 		
 
       <form action="register.php" method="POST">
-	  
+		<p>Choose your profile photo</p>
+		<input type="file" name="profile">
+	  <br>
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input 
 			type="text" 
@@ -247,13 +249,7 @@
 		  value="<?php if(isset($_COOKIE['rePass'])) {echo $_COOKIE['rePass'];}?>"
           required
         />
-        <div class="gender">
-          <input type="radio" value="None" id="male" name="genderM" <?php if(isset($_COOKIE['genderM'])) {echo "checked='checked'";}?>/>
-          <label for="male" class="radio">Male</label>
-          <input type="radio" value="None" id="female" name="genderF" <?php if(isset($_COOKIE['genderF'])) {echo "checked='checked'";}?>/>
-          <label for="female" class="radio">Female</label>
-        </div>
-   
+       
 		<div class="form-group form-button">
                   <input
                     type="submit"
