@@ -44,7 +44,7 @@ include 'header.php';
 					}			
 				?>
 			
-              <form class="register-form" id="login-form" method="POST" action="validate.php">
+              <form class="register-form" id="login-form" method="POST" action="phpfiles/validate.php">
                 <div class="form-group">
                   <label for="your_name"
                     ><i class="zmdi zmdi-account material-icons-name"></i

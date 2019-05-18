@@ -20,43 +20,61 @@
   <body style="background-color:#FFFCFC">
     <header id="top">
       <img src="imagini/banner2.png" alt="M&A Inspiration" class="banner" />
-      <a href="index.html" id="back" title="BACK">BACK</a>
+      <a href="index.php" id="back" title="BACK">BACK</a>
       <h1>M&A Inspiration</h1>
     </header>
     <a href="#top" id="up" title="UP">UP</a>
     <section>
       <br />
       <p class="message">
-        &emsp;&emsp;Finding the right shoes for spring travel can be a bit
-        confusing, especially when planning for cold and warm weather. Looking
-        for the perfect travel shoe is sort of like shopping for a mattress.
-        Everyone has different bodies, different preferences and finding the
-        right balance for all is nearly imposible. However, one thing is for
-        certain: travel shoes are not just about being functional but we'd love
-        if they are also stylish, durable and versatile too. Here are three
-        options to consider when packing shoes for spring travels.
+        &emsp;&emsp;Summer is finally closer, so check out our Stylists'
+        favorite warm weather outfit ideas! It's time to break out the bright
+        colors, bold patterns and strappy sandals.
       </p>
+      <p class="message">
+        &emsp;&emsp;We've picked out how some of our favorite fashion girls have
+        been rocking the strappy sandals, and after you see just how cool they
+        make any outfit look, you'll certainly want to purchase a pair (or two).
+      </p>
+
       <div class="galery">
         <div class="column2">
-          <img src="imagini/flatss.jpg" alt="Flats" style="width:100%" />
-          <h2>Flats</h2>
-          <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
-          <fieldset class="stars">
-            <input type="radio" id="star15" name="stars2" value="15" />
-            <label class="full" for="star15" title="Very Good"></label>
-            <input type="radio" id="star14" name="stars2" value="14" />
-            <label class="full" for="star14" title="Pretty good"></label>
-            <input type="radio" id="star13" name="stars2" value="13" />
-            <label class="full" for="star13" title="Ok"></label>
-            <input type="radio" id="star12" name="stars2" value="12" />
-            <label class="full" for="star12" title="Kinda bad"></label>
-            <input type="radio" id="star11" name="stars2" value="11" />
-            <label class="full" for="star11" title="Bad"></label>
-          </fieldset>
+          <img src="imagini/outfit1.png" alt="Outfit" style="width:100%" />
+          <h4>Pair with a cute miniskirt for the ultimate '90s feel</h4>
+          <b><br />Let us know if you liked it!<br />Vote Below!<br /><br /></b>
+		  <?php
+		  session_start();
+		  if(isset($_SESSION['login'])){
+			  ?>
+				<fieldset class="stars">
+					<input type="radio" id="star15" name="stars2" value="15" />
+					<label class="full" for="star15" title="Very Good"></label>
+					<input type="radio" id="star14" name="stars2" value="14" />
+					<label class="full" for="star14" title="Pretty good"></label>
+					<input type="radio" id="star13" name="stars2" value="13" />
+					<label class="full" for="star13" title="Ok"></label>
+					<input type="radio" id="star12" name="stars2" value="12" />
+					<label class="full" for="star12" title="Kinda bad"></label>
+					<input type="radio" id="star11" name="stars2" value="11" />
+					<label class="full" for="star11" title="Bad"></label>
+				</fieldset>
+		<?php
+		
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for vote!";
+		  }
+		  
+		  ?>
+          
           <br />
           <br /><br />
           <br />
           <p><b>Share this on </b></p>
+        <?php
+		  if(isset($_SESSION['login'])){
+			  ?>
           <p class="buton-share">
             <a
               class="facebook"
@@ -68,15 +86,16 @@
               ><i class="fa fa-twitter"></i
             ></a>
           </p>
-          <br /><br />
-          <p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </p>
+		  
+		<?php
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for share!";
+		  }
+		  
+		  ?>
+        
           <hr />
 
           <div class="row">
@@ -136,29 +155,53 @@
               <div>10</div>
             </div>
           </div>
+		  <p>
+            <span><b>User Rating &emsp;&emsp;</b></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </p>
         </div>
         <div class="column2">
           <a
-            ><img src="imagini/coton.jpg" alt="CottonShoes" style="width:100%"
+            ><img src="imagini/outfit2.png" alt="Outfit" style="width:100%"
           /></a>
-          <h2>Cotton shoes</h2>
-          <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
-          <fieldset class="stars">
-            <input type="radio" id="star10" name="stars1" value="10" />
-            <label class="full" for="star10" title="Awesome"></label>
-            <input type="radio" id="star9" name="stars1" value="9" />
-            <label class="full" for="star9" title="Pretty good"></label>
-            <input type="radio" id="star8" name="stars1" value="8" />
-            <label class="full" for="star8" title="Ok"></label>
-            <input type="radio" id="star7" name="stars1" value="7" />
-            <label class="full" for="star7" title="Kinda bad"></label>
-            <input type="radio" id="star6" name="stars1" value="6" />
-            <label class="full" for="star6" title="Pff"></label>
-          </fieldset>
+          <p>Socks and sandals? Counts us in</p>
+          <b><br />Let us know if you liked it!<br />Vote Below!<br /><br /></b>
+		  <?php
+		  if(isset($_SESSION['login'])){
+			  ?>
+				<fieldset class="stars">
+					<input type="radio" id="star5" name="stars" value="5" />
+					<label class="full" for="star5" title="Awesome"></label>
+					<input type="radio" id="star4" name="stars" value="4" />
+					<label class="full" for="star4" title="Pretty good"></label>
+					<input type="radio" id="star3" name="stars" value="3" />
+					<label class="full" for="star3" title="Ok"></label>
+					<input type="radio" id="star2" name="stars" value="2" />
+					<label class="full" for="star2" title="Kinda bad"></label>
+					<input type="radio" id="star1" name="stars" value="1" />
+					<label class="full" for="star1" title="Pff"></label>
+				 </fieldset>
+		<?php
+		
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for vote!";
+		  }
+		  
+		  ?>
+          
           <br />
           <br /><br />
           <br />
           <p><b>Share this on </b></p>
+          <?php
+		  if(isset($_SESSION['login'])){
+			  ?>
           <p class="buton-share">
             <a
               class="facebook"
@@ -170,15 +213,15 @@
               ><i class="fa fa-twitter"></i
             ></a>
           </p>
-          <br /><br />
-          <p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </p>
+		  
+		<?php
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for share!";
+		  }
+		  
+		  ?>
           <hr />
 
           <div class="row">
@@ -238,27 +281,53 @@
               <div>10</div>
             </div>
           </div>
+		  <p>
+            <span><b>User Rating &emsp;&emsp;</b></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </p>
         </div>
         <div class="column2">
-          <img src="imagini/boots.jpg" alt="Boots" style="width:100%" />
-          <h2>Boots</h2>
-          <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
-          <fieldset class="stars">
-            <input type="radio" id="star5" name="stars" value="5" />
-            <label class="full" for="star5" title="Awesome"></label>
-            <input type="radio" id="star4" name="stars" value="4" />
-            <label class="full" for="star4" title="Pretty good"></label>
-            <input type="radio" id="star3" name="stars" value="3" />
-            <label class="full" for="star3" title="Ok"></label>
-            <input type="radio" id="star2" name="stars" value="2" />
-            <label class="full" for="star2" title="Kinda bad"></label>
-            <input type="radio" id="star1" name="stars" value="1" />
-            <label class="full" for="star1" title="Pff"></label>
-          </fieldset>
+          <img src="imagini/outfit3.png" alt="Outfit" style="width:100%" />
+          <p>
+            A pair of strappy sandals will always look great with a maxi skirt
+          </p>
+          <b><br />Let us know if you liked it!<br />Vote Below!<br /><br /></b>
+		  <?php
+		  if(isset($_SESSION['login'])){
+			  ?>
+					<fieldset class="stars">
+						<input type="radio" id="star10" name="stars1" value="10" />
+						<label class="full" for="star10" title="Awesome"></label>
+						<input type="radio" id="star9" name="stars1" value="9" />
+						<label class="full" for="star9" title="Pretty good"></label>
+						<input type="radio" id="star8" name="stars1" value="8" />
+						<label class="full" for="star8" title="Ok"></label>
+						<input type="radio" id="star7" name="stars1" value="7" />
+						<label class="full" for="star7" title="Kinda bad"></label>
+						<input type="radio" id="star6" name="stars1" value="6" />
+						<label class="full" for="star6" title="Pff"></label>
+				    </fieldset>
+		<?php
+		
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for vote!";
+		  }
+		  
+		  ?>
+         
           <br />
           <br /><br />
           <br />
           <p><b>Share this on </b></p>
+          <?php
+		  if(isset($_SESSION['login'])){
+			  ?>
           <p class="buton-share">
             <a
               class="facebook"
@@ -270,15 +339,15 @@
               ><i class="fa fa-twitter"></i
             ></a>
           </p>
-          <br /><br />
-          <p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </p>
+		  
+		<?php
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for share!";
+		  }
+		  
+		  ?>
           <hr />
 
           <div class="row">
@@ -338,7 +407,16 @@
               <div>10</div>
             </div>
           </div>
+		  <p>
+            <span><b>User Rating &emsp;&emsp;</b></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </p>
         </div>
+		
       </div>
     </section>
     <br />

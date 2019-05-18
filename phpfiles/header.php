@@ -3,13 +3,15 @@
 	
 	  if(isset($_SESSION['login'])){
 		
-		require_once 'database_con.php';
-	$sql = "SELECT profile FROM users where username='".$_SESSION['login']."'";
+		require_once 'phpfiles/database_con.php';
+	$sql = "SELECT * FROM users where username='".$_SESSION['login']."'";
 	$result = mysqli_query($conn,$sql);
 	$row = mysqli_fetch_assoc($result);
-		$message= "<a style='border: 2px solid ; border: 30px;'>
+		$message= "<a style='border: 2px solid ; border: 30px;' href='profile.php'>
 		<img src='imagini/".$row["profile"]."' width='30' height='20' align='middle'>".$_SESSION['login']."
 		</a> <a href='logout.php?logout'>Logout</a>";
+		$image=$row["profile"];
+		$username=$row["username"];
 	  }
 	  else
 	  {
@@ -63,26 +65,26 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="men.html">Interview Shoes</a>
-              <a href="men.html">Wedding Shoes</a>
-              <a href="men.html">Evening Events Shoes</a>
+              <a href="men.php">Interview Shoes</a>
+              <a href="men.php">Wedding Shoes</a>
+              <a href="men.php">Evening Events Shoes</a>
               <a href="men.html">Graduation Shoes</a>
               <h3>Trends</h3>
-              <a href="men.html">Sweet Sneaks</a>
-              <a href="men.html">'90s Remix</a>
-              <a href="men.html">Looks We Love</a>
+              <a href="men.php">Sweet Sneaks</a>
+              <a href="men.php">'90s Remix</a>
+              <a href="men.php">Looks We Love</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="men.html">Summer</a>
-              <a href="men.html">Autumn</a>
-              <a href="men.html">Winter</a>
-              <a href="men.html">Spring</a>
+              <a href="men.php">Summer</a>
+              <a href="men.php">Autumn</a>
+              <a href="men.php">Winter</a>
+              <a href="men.php">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="men.html">Nike Airmax</a>
-              <a href="men.html">Gucci</a>
-              <a href="men.html">Supreme</a>
-              <a href="men.html" style="padding-top: 15px;"><b>ALL</b></a>
+              <a href="men.php">Nike Airmax</a>
+              <a href="men.php">Gucci</a>
+              <a href="men.php">Supreme</a>
+              <a href="men.php" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>
         </div>
@@ -97,26 +99,26 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="women.html">Interview Shoes</a>
-              <a href="women.html">Wedding Shoes</a>
-              <a href="women.html">Evening Events Shoes</a>
-              <a href="women.html">Graduation Shoes</a>
+              <a href="women.php">Interview Shoes</a>
+              <a href="women.php">Wedding Shoes</a>
+              <a href="women.php">Evening Events Shoes</a>
+              <a href="women.php">Graduation Shoes</a>
               <h3>Trends</h3>
-              <a href="women.html">Sweet Sneaks</a>
-              <a href="women.html">'90s Remix</a>
-              <a href="women.html">Looks We Love</a>
+              <a href="women.php">Sweet Sneaks</a>
+              <a href="women.php">'90s Remix</a>
+              <a href="women.php">Looks We Love</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="women.html">Summer</a>
-              <a href="women.html">Autumn</a>
-              <a href="women.html">Winter</a>
-              <a href="women.html">Spring</a>
+              <a href="women.php">Summer</a>
+              <a href="women.php">Autumn</a>
+              <a href="women.php">Winter</a>
+              <a href="women.php">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="women.html">Nike Airmax</a>
-              <a href="women.html">Gucci</a>
-              <a href="women.html">Supreme</a>
-              <a href="women.html" style="padding-top: 15px;"><b>ALL</b></a>
+              <a href="women.php">Nike Airmax</a>
+              <a href="women.php">Gucci</a>
+              <a href="women.php">Supreme</a>
+              <a href="women.php" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>
         </div>
@@ -131,31 +133,31 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="men.html">Interview Shoes</a>
-              <a href="men.html">Birthday Shoes</a>
-              <a href="men.html">Evening Events Shoes</a>
-              <a href="men.html">Christening Shoes</a>
+              <a href="men.php">Interview Shoes</a>
+              <a href="men.php">Birthday Shoes</a>
+              <a href="men.php">Evening Events Shoes</a>
+              <a href="men.php">Christening Shoes</a>
               <h3>Trends</h3>
-              <a href="children.html">Sweet Sneaks</a>
-              <a href="children.html">'90s Remix</a>
-              <a href="children.html">Looks We Love</a>
+              <a href="children.php">Sweet Sneaks</a>
+              <a href="children.php">'90s Remix</a>
+              <a href="children.php">Looks We Love</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="children.html">Summer</a>
-              <a href="children.html">Autumn</a>
-              <a href="children.html">Winter</a>
-              <a href="children.html">Spring</a>
+              <a href="children.php">Summer</a>
+              <a href="children.php">Autumn</a>
+              <a href="children.php">Winter</a>
+              <a href="children.php">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="children.html">Nike Airmax</a>
-              <a href="children.html">Gucci</a>
-              <a href="children.html">Supreme</a>
-              <a href="children.html" style="padding-top: 15px;"><b>ALL</b></a>
+              <a href="children.php">Nike Airmax</a>
+              <a href="children.php">Gucci</a>
+              <a href="children.php">Supreme</a>
+              <a href="children.php" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>
         </div>
       </div>
-      <a href="aboutUs.html">
+      <a href="aboutUs.php">
         <p>About Us</p>
       </a>
 	<?php echo $message?>

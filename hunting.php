@@ -21,44 +21,63 @@
   <body style="background-color:#FFFCFC">
     <header id="top">
       <img src="imagini/banner2.png" alt="M&A Inspiration" class="banner" />
-      <a href="index.html" id="back" title="BACK">BACK</a>
+      <a href="index.php" id="back" title="BACK">BACK</a>
       <h1>M&A Inspiration</h1>
     </header>
+
     <section>
       <a href="#top" id="up" title="UP">UP</a>
       <br />
       <h3 class="message">
-        &emsp;&emsp;Whether you're a routine marathon runner, or you simply
-        enjoy the occasional light jog, there's no denying that a gorgeous,
-        sunny day can motivate just about anyone to get out there and pound the
-        pavement.
+        &emsp;&emsp;The hunting season is near, so these boots along with
+        hunting costumes.
       </h3>
-
       <div class="galery">
         <div class="column2">
-          <img src="imagini/sport.jpg" alt="JustDoIt" style="width:100%" />
-          <p>Just do it</p>
+          <img src="imagini/hun.jpg" alt="Jacket" style="width:100%" />
+          <p>Jacket</p>
         </div>
+
         <div class="column2">
-          <img src="imagini/sport2.jpg" alt="Nike" style="width:100%" />
-          <p>Nike Run</p>
+          <a
+            ><img src="imagini/hunn.jpg" alt="CamoShoes" style="width:100%"
+          /></a>
+          <p>Camo Shoes</p>
           <p>
-            <br /><b>Let us know if you liked it!<br />Vote below!<br /></b>
+            <br /><b>Let us know if you liked it!<br />Vote below!</b>
           </p>
-          <fieldset class="stars">
-            <input type="radio" id="star10" name="stars1" value="10" />
-            <label class="full" for="star10" title="Awesome"></label>
-            <input type="radio" id="star9" name="stars1" value="9" />
-            <label class="full" for="star9" title="Pretty good"></label>
-            <input type="radio" id="star8" name="stars1" value="8" />
-            <label class="full" for="star8" title="Ok"></label>
-            <input type="radio" id="star7" name="stars1" value="7" />
-            <label class="full" for="star7" title="Kinda bad"></label>
-            <input type="radio" id="star6" name="stars1" value="6" />
-            <label class="full" for="star6" title="Pff"></label>
-          </fieldset>
-          <br /><br /><br /><br />
+		  <?php
+		  session_start();
+		  if(isset($_SESSION['login'])){
+			  ?>
+				<fieldset class="stars">
+					<input type="radio" id="star10" name="stars1" value="10" />
+					<label class="full" for="star10" title="Awesome"></label>
+					<input type="radio" id="star9" name="stars1" value="9" />
+					<label class="full" for="star9" title="Pretty good"></label>
+					<input type="radio" id="star8" name="stars1" value="8" />
+					<label class="full" for="star8" title="Ok"></label>
+					<input type="radio" id="star7" name="stars1" value="7" />
+					<label class="full" for="star7" title="Kinda bad"></label>
+					<input type="radio" id="star6" name="stars1" value="6" />
+					<label class="full" for="star6" title="Vote"></label>
+				 </fieldset>
+		<?php
+		
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for vote!";
+		  }
+		  
+		  ?>
+       
+          <br /><br /><br />
+          <br />
           <p><b>Share this on </b></p>
+          <?php
+		  if(isset($_SESSION['login'])){
+			  ?>
           <p class="buton-share">
             <a
               class="facebook"
@@ -70,15 +89,16 @@
               ><i class="fa fa-twitter"></i
             ></a>
           </p>
-          <br /><br />
-          <p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
-          </p>
+		  
+		<?php
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for share!";
+		  }
+		  
+		  ?>
+   
           <hr />
 
           <div class="row">
@@ -138,11 +158,23 @@
               <div>10</div>
             </div>
           </div>
+		  <p>
+            <br />
+            <span><b>User Rating &emsp;&emsp;</b></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </p>
         </div>
+		
 
         <div class="column2">
-          <img src="imagini/sport3.jpg" alt="Nike" style="width:100%" />
-          <p>Nike</p>
+          <a
+            ><img src="imagini/hunting2.jpg" alt="CamoSet" style="width:100%"
+          /></a>
+          <p>Camo Set</p>
         </div>
       </div>
     </section>

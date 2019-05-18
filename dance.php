@@ -1,5 +1,5 @@
 <?php
-require_once 'database_con.php';;
+require_once 'phpfiles/database_con.php';;
 $sql = "SELECT  * FROM ratings WHERE name='stars2'";
 	$result = mysqli_query($conn,$sql);
 	
@@ -12,7 +12,6 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
     }
 	
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +71,7 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
 		  session_start();
 		  if(isset($_SESSION['login'])){
 			  ?>
-		<form method="POST" action="rating.php">
+		<form method="POST" action="phpfiles/rating.php">
           <fieldset class="stars">
             <input type="submit" id="star15" name="stars2" value="5" />
             <label class="full" for="star15" title="Very Good"></label>
@@ -133,7 +132,7 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-5"></div>
+                <div class="bar-5" <?php echo "style='width:".$rating5."%';" ?> ></div>
               </div>
             </div>
             <div class="side right">
@@ -152,7 +151,8 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-4"></div>
+                <div class="bar-4" <?php echo "style='width:".$rating4."%';" ?> >
+				</div>
               </div>
             </div>
             <div class="side right">
@@ -160,7 +160,6 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
 			  <?php
 			if(@$_GET['Rating4'] == true)
 					{
-			
 						$rating4=$_GET['Rating4'];
 					}	
 			 echo $rating4;
@@ -172,7 +171,7 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-3"></div>
+                <div class="bar-3" <?php echo "style='width:".$rating3."%';" ?> ></div>
               </div>
             </div>
             <div class="side right">
@@ -191,7 +190,7 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-2"></div>
+                <div class="bar-2" <?php echo "style='width:".$rating2."%';" ?> ></div>
               </div>
             </div>
             <div class="side right">
@@ -211,7 +210,7 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-1"></div>
+                <div class="bar-1" <?php echo "style='width:".$rating1."%';" ?> ></div>
               </div>
             </div>
             <div class="side right">
@@ -237,7 +236,11 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
           <a><img src="imagini/club2.jpg" alt="Wedges" style="width:100%"/></a>
           <p>Wedges</p>
           <b><br />Let us know if you liked it!<br />Vote below!<br /></b>
-          <fieldset class="stars">
+		  <?php
+		 
+		  if(isset($_SESSION['login'])){
+			  ?>
+		<fieldset class="stars">
             <input type="radio" id="star10" name="stars1" value="10" />
             <label class="full" for="star10" title="Awesome"></label>
             <input type="radio" id="star9" name="stars1" value="9" />
@@ -249,10 +252,23 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             <input type="radio" id="star6" name="stars1" value="6" />
             <label class="full" for="star6" title="Pff"></label>
           </fieldset>
+		<?php
+		
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for vote!";
+		  }
+		  
+		  ?>
+          
           <br />
           <br /><br />
           <br />
           <p><b>Share this on </b></p>
+         <?php
+		  if(isset($_SESSION['login'])){
+			  ?>
           <p class="buton-share">
             <a
               class="facebook"
@@ -264,8 +280,77 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
               ><i class="fa fa-twitter"></i
             ></a>
           </p>
+		  
+		<?php
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for share!";
+		  }
+		  
+		  ?>
           <br /><br />
-          <p>
+       
+          <hr />
+
+          <div class="row">
+            <div class="side">
+              <div>5 <span class="fa fa-star checked"></span></div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-5"></div>
+              </div>
+            </div>
+            <div class="side right">
+              <div>36</div>
+            </div>
+            <div class="side">
+              <div>4<span class="fa fa-star checked"></span></div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-4"></div>
+              </div>
+            </div>
+            <div class="side right">
+              <div>23</div>
+            </div>
+            <div class="side">
+              <div>3 <span class="fa fa-star checked"></span></div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-3"></div>
+              </div>
+            </div>
+            <div class="side right">
+              <div>29</div>
+            </div>
+            <div class="side">
+              <div>2 <span class="fa fa-star checked"></span></div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-2"></div>
+              </div>
+            </div>
+            <div class="side right">
+              <div>4</div>
+            </div>
+            <div class="side">
+              <div>1 <span class="fa fa-star checked"></span></div>
+            </div>
+            <div class="middle">
+              <div class="bar-container">
+                <div class="bar-1"></div>
+              </div>
+            </div>
+            <div class="side right">
+              <div>10</div>
+            </div>
+          </div>
+		  <p>
             <span><b>User Rating &emsp;&emsp;</b></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -273,87 +358,45 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
           </p>
-          <hr />
-
-          <div class="row">
-            <div class="side">
-              <div>5 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-5"></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>36</div>
-            </div>
-            <div class="side">
-              <div>4<span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-4"></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>23</div>
-            </div>
-            <div class="side">
-              <div>3 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-3"></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>29</div>
-            </div>
-            <div class="side">
-              <div>2 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-2"></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>4</div>
-            </div>
-            <div class="side">
-              <div>1 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-1"></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>10</div>
-            </div>
-          </div>
         </div>
 
         <div class="column2">
           <img src="imagini/club3.jpg" alt="ChunkyHeels" style="width:100%" />
           <h4>Chunky Heels</h4>
           <b><br />Let us know if you liked it!<br />Vote below!<br /></b>
-          <fieldset class="stars">
-            <input type="radio" id="star5" name="stars" value="5" />
-            <label class="full" for="star5" title="Awesome"></label>
-            <input type="radio" id="star4" name="stars" value="4" />
-            <label class="full" for="star4" title="Pretty good"></label>
-            <input type="radio" id="star3" name="stars" value="3" />
-            <label class="full" for="star3" title="Ok"></label>
-            <input type="radio" id="star2" name="stars" value="2" />
-            <label class="full" for="star2" title="Kinda bad"></label>
-            <input type="radio" id="star1" name="stars" value="1" />
-            <label class="full" for="star1" title="Pff"></label>
-          </fieldset>
+		  <?php
+		 
+		  if(isset($_SESSION['login'])){
+			  ?>
+				<fieldset class="stars">
+					<input type="radio" id="star5" name="stars" value="5" />
+					<label class="full" for="star5" title="Awesome"></label>
+					<input type="radio" id="star4" name="stars" value="4" />
+					<label class="full" for="star4" title="Pretty good"></label>
+					<input type="radio" id="star3" name="stars" value="3" />
+					<label class="full" for="star3" title="Ok"></label>
+					<input type="radio" id="star2" name="stars" value="2" />
+					<label class="full" for="star2" title="Kinda bad"></label>
+					<input type="radio" id="star1" name="stars" value="1" />
+					<label class="full" for="star1" title="Pff"></label>
+				</fieldset>
+		<?php
+		
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for vote!";
+		  }
+		  
+		  ?>
+        
           <br />
           <br /><br />
           <br />
           <p><b>Share this on </b></p>
+         <?php
+		  if(isset($_SESSION['login'])){
+			  ?>
           <p class="buton-share">
             <a
               class="facebook"
@@ -365,15 +408,16 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
               ><i class="fa fa-twitter"></i
             ></a>
           </p>
+		  
+		<?php
+		  }
+		  else 
+		  {
+			  echo "<a href='login.php'>Login</a> for share!";
+		  }
+		  
+		  ?>
           <br /><br />
-          <p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-          </p>
           <hr />
 
           <div class="row">
@@ -386,7 +430,7 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
               </div>
             </div>
             <div class="side right">
-              <div>36</div>
+              <div>36</div
             </div>
             <div class="side">
               <div>4<span class="fa fa-star checked"></span></div>
@@ -433,6 +477,14 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
               <div>10</div>
             </div>
           </div>
+		  <p>
+            <span><b>User Rating &emsp;&emsp;</b></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </p>
         </div>
       </div>
     </section>

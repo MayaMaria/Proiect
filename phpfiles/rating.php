@@ -1,7 +1,7 @@
 <?php
 require_once 'database_con.php';;
 $sql = "SELECT  * FROM ratings WHERE name='stars2'";
-	$result = mysqli_query($conn,$sql);
+$result = mysqli_query($conn,$sql);
 	
 	while($row = mysqli_fetch_assoc($result)) {
         $rating1=$row["rating1"];

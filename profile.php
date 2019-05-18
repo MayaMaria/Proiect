@@ -1,3 +1,26 @@
+<?php 
+	 session_start();
+	
+	  if(isset($_SESSION['login'])){
+		
+		require_once 'phpfiles/database_con.php';
+	$sql = "SELECT * FROM users where username='".$_SESSION['login']."'";
+	$result = mysqli_query($conn,$sql);
+	$row = mysqli_fetch_assoc($result);
+		$message= "<a style='border: 2px solid ; border: 30px;' href='profile.php'>
+		<img src='imagini/".$row["profile"]."' width='30' height='20' align='middle'>".$_SESSION['login']."
+		</a> <a href='logout.php?logout'>Logout</a>";
+		$old_name=$_SESSION['login'];
+	  }
+	  else
+	  {
+		   $message= " <a href='login.php'>
+					<p>Login</p>
+				</a>";
+	  }
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -135,131 +158,19 @@
       <a href="aboutUs.php">
         <p>About Us</p>
       </a>
-      <a href="login.php">
-        <p>Login</p>
-      </a>
+     <?php echo $message?>
     </div>
 
-    <div class="testbox">
-      <h5 id="title">Registration</h5>
-      <hr />
-	  <?php 
-	  
-			if(@$_GET['InvalidPass'] == true)
-			{
-			?>
-			<div>
-				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
-				<?php echo $_GET['InvalidPass']?>
-				</div>
-						
-			<?php
-			}
-		
-			
-			if(@$_GET['InvalidEmail'] == true)
-			{
-			?>
-			<div>
-				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
-				<?php echo $_GET['InvalidEmail']?>
-				</div>
-						
-			<?php
-			}
-			
-			
-			if(@$_GET['InvalidEmailPas'] == true)
-			{
-			?>
-			<div>
-				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
-				<?php echo $_GET['InvalidEmailPas']?>
-				</div>
-						
-			<?php
-			}
-		?>
-		
-
-      <form action="phpfiles/register.php" method="POST">
-		<p>Choose your profile photo</p>
-		<input type="file" name="profile">
-	  <br>
-        <label id="icon" for="name"><i class="icon-user"></i></label>
-        <input 
-			type="text" 
-			name="name" 
-			id="name" 
-			placeholder="Name"
-			value="<?php if(isset($_COOKIE['name'])) {echo $_COOKIE['name'];}?>"
-			required />
-        <label id="icon" for="name"><i class="icon-user"></i></label>
-        <input
-          type="text"
-          name="surname"
-          id="surname"
-          placeholder="Surname"
-		  value="<?php if(isset($_COOKIE['surname'])) {echo $_COOKIE['surname'];}?>"
-          required
-        />
-        <label id="icon" for="name"><i class="icon-user"></i></label>
-        <input
-          type="text"
-          name="username"
-          id="username"
-          placeholder="Username"
-		  value="<?php if(isset($_COOKIE['usernameR'])) {echo $_COOKIE['usernameR'];}?>"
-          required
-        />
-        <label id="icon" for="name"><i class="icon-envelope "></i></label>
-        <input 
-			type="text"
-			name="email" 
-			id="email" 
-			placeholder="Email" 
-			value="<?php if(isset($_COOKIE['email'])) {echo $_COOKIE['email'];}?>"
-			required />
-        <br />
-        <label id="icon" for="name"><i class="icon-globe"></i></label>
-        <input
-          type="text"
-          name="country"
-          id="country"
-          placeholder="Country"
-		  value="<?php if(isset($_COOKIE['country'])) {echo $_COOKIE['country'];}?>"
-          required
-        />
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
-        <input
-          type="password"
-          name="password"
-          id="pass"
-          placeholder="Password"
-		  value="<?php if(isset($_COOKIE['pass'])) {echo $_COOKIE['pass'];}?>"
-          required
-        />
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
-        <input
-          type="password"
-          name="repeatPass"
-          id="passr"
-          placeholder="Repeat password"
-		  value="<?php if(isset($_COOKIE['rePass'])) {echo $_COOKIE['rePass'];}?>"
-          required
-        />
-       
-		<div>
-                  <input
-                    type="submit"
-                    name="register"
-                    id="signin"
-                    value="Register"
 	
-                  />
-         </div>
-		
-      </form>
-    </div>
+	<form action="phpfiles/change_profile.php" method="post"> 
+		Username: <input type="text" name="username"><br />
+		Country: <input type="text" name="country"><br />
+		Name: <input type="text" name="name"><br />
+		Surname: <input type="text" name="surname"><br />
+		Email <input type="text" name="email"><br />
+		Password: <input type="password" name="password"><br />
+			<input type="submit" value="Update" name="update">
+	</form>
+    
   </body>
 </html>
