@@ -1,23 +1,5 @@
 <?php 
-	 session_start();
-	
-	  if(isset($_SESSION['login'])){
-		
-		require_once 'phpfiles/database_con.php';
-	$sql = "SELECT * FROM users where username='".$_SESSION['login']."'";
-	$result = mysqli_query($conn,$sql);
-	$row = mysqli_fetch_assoc($result);
-		$message= "<a style='border: 2px solid ; border: 30px;' href='profile.php'>
-		<img src='imagini/".$row["profile"]."' width='30' height='20' align='middle'>".$_SESSION['login']."
-		</a> <a href='logout.php?logout'>Logout</a>";
-		$old_name=$_SESSION['login'];
-	  }
-	  else
-	  {
-		   $message= " <a href='login.php'>
-					<p>Login</p>
-				</a>";
-	  }
+	require_once 'phpfiles/extract_date.php';
 	
 ?>
 
@@ -162,14 +144,19 @@
     </div>
 
 	
-	<form action="phpfiles/change_profile.php" method="post"> 
-		Username: <input type="text" name="username"><br />
-		Country: <input type="text" name="country"><br />
-		Name: <input type="text" name="name"><br />
-		Surname: <input type="text" name="surname"><br />
-		Email <input type="text" name="email"><br />
-		Password: <input type="password" name="password"><br />
-			<input type="submit" value="Update" name="update">
+	<form  method="POST" action="phpfiles/change_profile.php"> 
+		 <input type="text" name="username" placeholder="Username"><br />
+		 <input type="submit" name="update1" value="Update"><br />
+		<input type="text" name="country" placeholder="Country"><br />
+		<input type="submit" name="update2" value="Update"><br />
+		 <input type="text" name="name" placeholder="Name"><br />
+		 <input type="submit" name="update3" value="Update"><br />
+		 <input type="text" name="surname" placeholder="Surname"><br />
+		 <input type="submit" name="update4" value="Update"><br />
+		<input type="text" name="email" placeholder="Email"><br />
+		<input type="submit" name="update5" value="Update"><br />
+		<input type="password" name="password" placeholder="Password"><br />
+		<input type="submit" name="update6" value="Update">
 	</form>
     
   </body>

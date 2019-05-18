@@ -15,15 +15,15 @@
 			{
 				if(isset($_POST['remember-me'])){
 
-					setCookie('username',$username,time()+60*60*2);
-					setCookie('password',$password,time()+60*60*2);
+					setCookie('username',$username,time()+60*60);
+					setCookie('password',$password,time()+60*60);
 				}
 				$_SESSION['login']=$username;
-				header("location:welcome.php");	
+				header("location:../welcome.php");	
 			}
 			else
 			{
-				header("location:login.php?InvalidLogin=Incorrect email or password");
+				header("location:../login.php?InvalidLogin=Incorrect email or password");
 				
 			}
 			

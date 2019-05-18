@@ -1,5 +1,5 @@
 <?php
-require_once 'phpfiles/database_con.php';;
+require_once 'phpfiles/database_con.php';
 $sql = "SELECT  * FROM ratings WHERE name='stars2'";
 	$result = mysqli_query($conn,$sql);
 	
@@ -227,7 +227,7 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
 			<hr />
 			<p>
             <span><b>User Rating &emsp;&emsp;</b></span>
-			<?php include 'calculateRating.php'?>
+			<?php include 'phpfiles/calculateRating.php'?>
           </p>
           </div>
         </div>
@@ -349,8 +349,9 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             <div class="side right">
               <div>10</div>
             </div>
+			 
           </div>
-		  <p>
+          <p>
             <span><b>User Rating &emsp;&emsp;</b></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -430,7 +431,7 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
               </div>
             </div>
             <div class="side right">
-              <div>36</div
+              <div>36</div>
             </div>
             <div class="side">
               <div>4<span class="fa fa-star checked"></span></div>
@@ -476,8 +477,9 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             <div class="side right">
               <div>10</div>
             </div>
+			 
           </div>
-		  <p>
+          <p>
             <span><b>User Rating &emsp;&emsp;</b></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
@@ -486,7 +488,6 @@ $sql = "SELECT  * FROM ratings WHERE name='stars2'";
             <span class="fa fa-star"></span>
           </p>
         </div>
-      </div>
     </section>
 
     <br />

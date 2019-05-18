@@ -1,7 +1,6 @@
 <?php 
-	include 'header.php';
+	include 'phpfiles/header.php';
 ?>
-
 
     <section>
       <h2 style="text-align: center; font-family:Cambria (Headings)">
