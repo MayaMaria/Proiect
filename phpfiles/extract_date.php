@@ -8,7 +8,7 @@
 	$result = mysqli_query($conn,$sql);
 	$row = mysqli_fetch_assoc($result);
 		$message= "<a style='border: 2px solid ; border: 30px;' href='profile.php'>
-		<img src='imagini/".$row["profile"]."' width='30' height='20' align='middle'>".$_SESSION['login']."
+		<img src='imagini/".$row["profileImage"]."' width='30' height='20' align='middle'>".$_SESSION['login']."
 		</a> <a href='phpfiles/logout.php?logout'>Logout</a>";
 		$old_name=$_SESSION['login'];
 	  }

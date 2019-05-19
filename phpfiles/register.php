@@ -16,6 +16,7 @@
 			$country=$_POST['country'];
 			$email=$_POST['email'];
 			$repeatPassword=$_POST['repeatPass'];
+			$typeUser="user";
 			
 			
 			if( $password != $repeatPassword && !preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/", $email))
@@ -47,7 +48,7 @@
 						header("location:../createAccount.php?InvalidEmail=Invalid email!Try again!");
 						}
 				}
-			$sql = "INSERT INTO users (name,surname,username,email,country,password,profile) VALUES ('".$name."','".$surname."', '".$username."','".$email."','".$country."','".$password."','".$profile."')";
+			$sql = "INSERT INTO users (username,password,firstname,lastname,typeUser,email,country,profileImage) VALUES ('".$username."','".$password."', '".$name."','".$surname."','".$typeUser."','".$email."','".$country."','".$profile."')";
 
 				if (mysqli_query($conn, $sql)) {
 					header("location:../login.php?LoginR=Registration complete! Login now");

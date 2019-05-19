@@ -3,7 +3,7 @@
 $dbServerName="localhost";
 $dbUserName="root";
 $dbPassword="";
-$dbName="proiect";
+$dbName="webassistant";
 
 $conn=mysqli_connect($dbServerName,$dbUserName,$dbPassword,$dbName);
 if (!$conn) {
