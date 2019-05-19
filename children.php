@@ -1,94 +1,52 @@
 <?php 
-	include './phpfiles/header.php';
+  include 'phpfiles/header.php';
+  include './phpfiles/children_controller.php';
 ?>
 
     <div class="body-content">
       <div class="filter-selector">
-        <div class="filter-selector-type">
+        
+      <div class="selector">
           <button class="collapsible">Brand</button>
           <div class="content">
             <ul>
-              <li>Adidas</li>
-              <li>Puma</li>
-              <li>Converse</li>
-              <li>Ecco</li>
-              <li>UGG</li>
-              <li>Vans</li>
+              <?php
+                filterBrands();
+              ?>
             </ul>
           </div>
         </div>
+
         <div class="selector">
           <button class="collapsible">Color</button>
           <div class="content">
             <ul>
-              <li>Red</li>
-              <li>White</li>
-              <li>Black</li>
-              <li>Green</li>
-              <li>Blue</li>
-              <li>Pink</li>
+              <?php
+                filterColors();
+              ?>
             </ul>
           </div>
         </div>
+
         <div class="selector">
-          <button class="collapsible">Type</button>
+          <button class="collapsible">Style</button>
           <div class="content">
             <ul>
-              <li>Sandals</li>
-              <li>Sneakers</li>
-              <li>Platform</li>
-              <li>Slip-on</li>
-              <li>Ballet flats</li>
-              <li>Boots</li>
+              <?php
+                filterStyle();
+              ?>
             </ul>
           </div>
         </div>
+
       </div>
 
       <div class="products-showcase">
-        <div class="product-box">
-          <img src="imagini/children/children7.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Children Shoe #1</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/children/children1.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Children Shoe #2</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/children/children2.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Children Shoe #3</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/children/children3.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Children Shoe #4</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/children/children4.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Children Shoe #5</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/children/children5.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Children Shoe #6</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/children/children6.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Children Shoe #7</p>
-          </div>
-        </div>
+        <?php
+          getProductsFromDatabase();
+        ?>
       </div>
+
     </div>
 
     <footer>

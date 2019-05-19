@@ -7,16 +7,13 @@
 
       <div class="filter-selector">
 
-        <div class="filter-selector-type">
+        <div class="selector">
           <button class="collapsible">Brand</button>
           <div class="content">
             <ul>
-              <li>Adidas</li>
-              <li>Puma</li>
-              <li>Converse</li>
-              <li>Ecco</li>
-              <li>UGG</li>
-              <li>Vans</li>
+              <?php
+                filterBrands();
+              ?>
             </ul>
           </div>
         </div>
@@ -25,23 +22,20 @@
           <button class="collapsible">Color</button>
           <div class="content">
             <ul>
-              <li>Red</li>
-              <li>White</li>
-              <li>Black</li>
-              <li>Green</li>
-              <li>Blue</li>
-              <li>Pink</li>
+              <?php
+                filterColors();
+              ?>
             </ul>
           </div>
         </div>
 
         <div class="selector">
-          <button class="collapsible">Type</button>
+          <button class="collapsible">Style</button>
           <div class="content">
             <ul>
-              <li>Sandals</li>
-              <li>Sneakers</li>
-              <li>Boots</li>
+              <?php
+                filterStyle();
+              ?>
             </ul>
           </div>
         </div>
