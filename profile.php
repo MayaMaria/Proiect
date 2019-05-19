@@ -146,17 +146,17 @@
 	
 	<form  method="POST" action="phpfiles/change_profile.php"> 
 		 <input type="text" name="username" placeholder="Username"><br />
-		 <input type="submit" name="update1" value="Update"><br />
+		 <input type="submit" name="updateUsername" value="Update"><br />
 		<input type="text" name="country" placeholder="Country"><br />
-		<input type="submit" name="update2" value="Update"><br />
+		<input type="submit" name="updateCountry" value="Update"><br />
 		 <input type="text" name="name" placeholder="Name"><br />
-		 <input type="submit" name="update3" value="Update"><br />
+		 <input type="submit" name="updateName" value="Update"><br />
 		 <input type="text" name="surname" placeholder="Surname"><br />
-		 <input type="submit" name="update4" value="Update"><br />
+		 <input type="submit" name="updateSurname" value="Update"><br />
 		<input type="text" name="email" placeholder="Email"><br />
-		<input type="submit" name="update5" value="Update"><br />
+		<input type="submit" name="updateEmail" value="Update"><br />
 		<input type="password" name="password" placeholder="Password"><br />
-		<input type="submit" name="update6" value="Update">
+		<input type="submit" name="updatePassword" value="Update">
 	</form>
     
   </body>
