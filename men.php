@@ -2,9 +2,11 @@
   include './phpfiles/header.php';
   include './phpfiles/men_controller.php';
 ?>
-
+    <meta charset="utf-8" />
     <div class="body-content">
+
       <div class="filter-selector">
+
         <div class="filter-selector-type">
           <button class="collapsible">Brand</button>
           <div class="content">
@@ -18,6 +20,7 @@
             </ul>
           </div>
         </div>
+
         <div class="selector">
           <button class="collapsible">Color</button>
           <div class="content">
@@ -31,6 +34,7 @@
             </ul>
           </div>
         </div>
+
         <div class="selector">
           <button class="collapsible">Type</button>
           <div class="content">
@@ -41,14 +45,15 @@
             </ul>
           </div>
         </div>
+
       </div>
 
-      
+      <div class="products-showcase">
+        <?php
+          getProductsFromDatabase();
+        ?>
+      </div>
 
-    <div class="products-showcase">
-      <?php
-        getProductsFromDatabase();
-      ?>
     </div>
 
     <footer>
