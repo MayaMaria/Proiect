@@ -1,5 +1,6 @@
 <?php
 include 'phpfiles/readRating.php';
+include 'phpfiles/suggestion_controller.php'
 ?>
 
 <!DOCTYPE html>
@@ -32,28 +33,18 @@ include 'phpfiles/readRating.php';
 
     <section>
       <br />
-      <p class="message">
-        &emsp;&emsp;We want to look our best when we go clubbing and fabulous
-        shoe styles will make you look good and feel great while dancing the
-        night away. You may have to walk or run to the train to get there so
-        you’ll be needing shoes that will let you experience the night without
-        falling over or getting blisters. Keep scrolling on our list for stylish
-        shoe style perfect for clubbing.
-      </p>
-      <p class="message">
-        &emsp;&emsp;If you’re not used to walking sky-high heels, you may go for
-        kitten heeled shoes with 2 to 3 inches to give additional height to your
-        stature while keeping you comfortable and giving you a great balance.
-        You can have your pick from ankle strap sandals to peep toe shoes with
-        kitten heels that can look great with ruffled dresses, asymmetrical
-        dresses, shift dresses, pencil skirts and such. Kitten heels will still
-        complement your outfit and show off your legs while keeping you secure
-        on your feet.
-      </p>
+      <?php 
+			$name ="timeToDance";
+			getSuggestion($name);
+		?>
       <div class="galery">
         <div class="column2">
-          <img src="imagini/club1.jpg" alt="KittenHeels" style="width:100%" />
-          <p>Kitten Heels</p>
+			<?php 
+			$name="timeToDance1";
+			getSuggestionPhoto($name);
+			?>
+		  
+		  
           <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
 
 		  <?php
@@ -121,7 +112,7 @@ include 'phpfiles/readRating.php';
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-5" <?php echo "style='width:".$rating5."%';" ?> ></div>
+                <div class="bar-5" <?php echo "style='width:".$rating5_1."%';" ?> ></div>
               </div>
             </div>
             <div class="side right">
@@ -129,9 +120,9 @@ include 'phpfiles/readRating.php';
 			  <?php
 			if(@$_GET['Rating5'] == true)
 					{
-						$rating5=$_GET['Rating5'];
+						$rating5_1=$_GET['Rating5'];
 					}	
-			 echo $rating5;
+			 echo $rating5_1;
 			?>
 			  </div>
             </div>
@@ -140,7 +131,7 @@ include 'phpfiles/readRating.php';
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-4" <?php echo "style='width:".$rating4."%';" ?> >
+                <div class="bar-4" <?php echo "style='width:".$rating4_1."%';" ?> >
 				</div>
               </div>
             </div>
@@ -149,9 +140,9 @@ include 'phpfiles/readRating.php';
 			  <?php
 			if(@$_GET['Rating4'] == true)
 					{
-						$rating4=$_GET['Rating4'];
+						$rating4_1=$_GET['Rating4'];
 					}	
-			 echo $rating4;
+			 echo $rating4_1;
 			?>
 			  </div>
             </div>
@@ -160,7 +151,7 @@ include 'phpfiles/readRating.php';
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-3" <?php echo "style='width:".$rating3."%';" ?> ></div>
+                <div class="bar-3" <?php echo "style='width:".$rating3_1."%';" ?> ></div>
               </div>
             </div>
             <div class="side right">
@@ -168,9 +159,9 @@ include 'phpfiles/readRating.php';
 			  <?php
 			if(@$_GET['Rating3'] == true)
 					{
-						$rating3=$_GET['Rating3'];
+						$rating3_1=$_GET['Rating3'];
 					}	
-			 echo $rating3;
+			 echo $rating3_1;
 			?>
 			  </div>
             </div>
@@ -179,7 +170,7 @@ include 'phpfiles/readRating.php';
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-2" <?php echo "style='width:".$rating2."%';" ?> ></div>
+                <div class="bar-2" <?php echo "style='width:".$rating2_1."%';" ?> ></div>
               </div>
             </div>
             <div class="side right">
@@ -187,9 +178,9 @@ include 'phpfiles/readRating.php';
 			  <?php
 			if(@$_GET['Rating2'] == true)
 					{
-						$rating2=$_GET['Rating2'];
+						$rating2_1=$_GET['Rating2'];
 					}	
-			 echo $rating2;
+			 echo $rating2_1;
 			?>
 			  
 			  </div>
@@ -199,7 +190,7 @@ include 'phpfiles/readRating.php';
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-1" <?php echo "style='width:".$rating1."%';" ?> ></div>
+                <div class="bar-1" <?php echo "style='width:".$rating1_1."%';" ?> ></div>
               </div>
             </div>
             <div class="side right">
@@ -207,9 +198,9 @@ include 'phpfiles/readRating.php';
 			   <?php
 			if(@$_GET['Rating1'] == true)
 					{
-						$rating1=$_GET['Rating1'];
+						$rating1_1=$_GET['Rating1'];
 					}	
-			 echo $rating1;
+			 echo $rating1_1;
 			?>
 			  </div>
             </div>
@@ -222,11 +213,13 @@ include 'phpfiles/readRating.php';
         </div>
 
         <div class="column2">
-          <a><img src="imagini/club2.jpg" alt="Wedges" style="width:100%"/></a>
-          <p>Wedges</p>
+         <?php 
+			$name="timeToDance2";
+			getSuggestionPhoto($name);
+			?>
           <b><br />Let us know if you liked it!<br />Vote below!<br /></b>
+		  <br />
 		  <?php
-		 
 		  if(isset($_SESSION['login'])){
 			  ?>
 		<fieldset class="stars">
@@ -351,11 +344,14 @@ include 'phpfiles/readRating.php';
         </div>
 
         <div class="column2">
-          <img src="imagini/club3.jpg" alt="ChunkyHeels" style="width:100%" />
-          <h4>Chunky Heels</h4>
+           <?php 
+			$name="timeToDance3";
+			getSuggestionPhoto($name);
+			?>
+		
           <b><br />Let us know if you liked it!<br />Vote below!<br /></b>
+		  <br />
 		  <?php
-		 
 		  if(isset($_SESSION['login'])){
 			  ?>
 				<fieldset class="stars">

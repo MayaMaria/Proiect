@@ -1,3 +1,6 @@
+<?php 
+	include 'phpfiles/suggestion_controller.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,33 +30,17 @@
     <a href="#top" id="up" title="UP">UP</a>
     <section>
       <br />
-      <p class="message">
-        &emsp;&emsp;It's never too early to start thinking about fresh new shoes
-        for summer. In fact, looking toward lighter, brighter footwear can help
-        propel you out of any cold-weather trudge you might otherwise find
-        yourself in.
-      </p>
-      <p class="message">
-        &emsp;&emsp;Crafting the perfect warm-weather collection of footwear is
-        also easier when you get started ahead of the season—stocking up on
-        sandals and low-top sneakers now means you'll be ready to hit the ground
-        running (actually) come summer. From waterproof slides to espadrilles,
-        here are the best shoes to get you through next summer in style.
-      </p>
+      <?php
+	  $name="summerM";
+	  getSuggestion($name);
+	  ?>
 
       <div class="galery">
         <div class="column2">
-          <img
-            src="imagini/summerMen.jpg"
-            alt="HavaianasShoes"
-            style="width:100%"
-          />
-          <h2>Havaianas</h2>
-          <p>
-            These come with a qualifier: They are to be worn at the beach or by
-            the pool only. But in those two locations, it's hard to beat a good
-            pair of sandals.
-          </p>
+          <?php
+	  $name="summerM1";
+	  getSuggestionPhoto($name);
+	  ?>
           <p>
             <br /><b>Let us know if you liked it!<br />Vote below!</b>
           </p>
@@ -180,17 +167,10 @@
           </p>
         </div>
         <div class="column2">
-          <a
-            ><img
-              src="imagini/summerMen2.jpg"
-              alt="Birkenstock"
-              style="width:100%"
-          /></a>
-          <h2>Birkenstock</h2>
-          <p>
-            More acceptable than flops: Birkenstocks. These are waterproof, so
-            they're a sure bet around water.
-          </p>
+			<?php
+			  $name="summerM2";
+			  getSuggestionPhoto($name);
+			 ?>
           <p>
             <b><br />Let us know if you liked it!<br />Vote below!</b>
           </p>
@@ -316,13 +296,10 @@
           </p>
         </div>
         <div class="column2">
-          <img src="imagini/summerMen3.jpg" alt="Vans" style="width:100%" />
-          <h2>Vans</h2>
-          <p>
-            If you want to fully embrace that laid-back spring vibe, go with a
-            pair of sneakers worn by every California surfer and skater since
-            the dawn of time (or since Vans first started making them).
-          </p>
+			  <?php
+				  $name="summerM3";
+				  getSuggestionPhoto($name);
+			?>
           <p>
             <br /><b>Let us know if you liked it!<br />Vote below!</b>
           </p>

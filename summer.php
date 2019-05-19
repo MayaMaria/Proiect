@@ -1,3 +1,7 @@
+<?php 
+	include 'phpfiles/suggestion_controller.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,21 +30,17 @@
     <a href="#top" id="up" title="UP">UP</a>
     <section>
       <br />
-      <p class="message">
-        &emsp;&emsp;Summer is finally closer, so check out our Stylists'
-        favorite warm weather outfit ideas! It's time to break out the bright
-        colors, bold patterns and strappy sandals.
-      </p>
-      <p class="message">
-        &emsp;&emsp;We've picked out how some of our favorite fashion girls have
-        been rocking the strappy sandals, and after you see just how cool they
-        make any outfit look, you'll certainly want to purchase a pair (or two).
-      </p>
+       <?php 
+		$name="summer";
+		getSuggestion($name);
+		?>
 
       <div class="galery">
         <div class="column2">
-          <img src="imagini/outfit1.png" alt="Outfit" style="width:100%" />
-          <h4>Pair with a cute miniskirt for the ultimate '90s feel</h4>
+            <?php 
+		$name="summer1";
+		getSuggestionPhoto($name);
+		?>
           <b><br />Let us know if you liked it!<br />Vote Below!<br /><br /></b>
 		  <?php
 		  session_start();
@@ -165,10 +165,10 @@
           </p>
         </div>
         <div class="column2">
-          <a
-            ><img src="imagini/outfit2.png" alt="Outfit" style="width:100%"
-          /></a>
-          <p>Socks and sandals? Counts us in</p>
+             <?php 
+				$name="summer2";
+				getSuggestionPhoto($name);
+			?>
           <b><br />Let us know if you liked it!<br />Vote Below!<br /><br /></b>
 		  <?php
 		  if(isset($_SESSION['login'])){
@@ -291,10 +291,10 @@
           </p>
         </div>
         <div class="column2">
-          <img src="imagini/outfit3.png" alt="Outfit" style="width:100%" />
-          <p>
-            A pair of strappy sandals will always look great with a maxi skirt
-          </p>
+            <?php 
+				$name="summer3";
+				getSuggestionPhoto($name);
+			?>
           <b><br />Let us know if you liked it!<br />Vote Below!<br /><br /></b>
 		  <?php
 		  if(isset($_SESSION['login'])){

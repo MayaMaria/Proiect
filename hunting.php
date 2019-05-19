@@ -1,3 +1,8 @@
+<?php 
+	include 'phpfiles/suggestion_controller.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,20 +34,24 @@
       <a href="#top" id="up" title="UP">UP</a>
       <br />
       <h3 class="message">
-        &emsp;&emsp;The hunting season is near, so these boots along with
-        hunting costumes.
+        <?php 
+		$name="hunting";
+		getSuggestion($name);
+		?>
       </h3>
       <div class="galery">
         <div class="column2">
-          <img src="imagini/hun.jpg" alt="Jacket" style="width:100%" />
-          <p>Jacket</p>
+          <?php 
+		$name="hunting1";
+		getSuggestionPhoto($name);
+		?>
         </div>
 
         <div class="column2">
-          <a
-            ><img src="imagini/hunn.jpg" alt="CamoShoes" style="width:100%"
-          /></a>
-          <p>Camo Shoes</p>
+          <?php 
+		$name="hunting2";
+		getSuggestionPhoto($name);
+		?>
           <p>
             <br /><b>Let us know if you liked it!<br />Vote below!</b>
           </p>
@@ -171,10 +180,10 @@
 		
 
         <div class="column2">
-          <a
-            ><img src="imagini/hunting2.jpg" alt="CamoSet" style="width:100%"
-          /></a>
-          <p>Camo Set</p>
+           <?php 
+		$name="hunting3";
+		getSuggestionPhoto($name);
+		?>
         </div>
       </div>
     </section>

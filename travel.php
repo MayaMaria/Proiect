@@ -1,3 +1,6 @@
+<?php
+include 'phpfiles/suggestion_controller.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,20 +30,16 @@
     <a href="#top" id="up" title="UP">UP</a>
     <section>
       <br />
-      <p class="message">
-        &emsp;&emsp;Finding the right shoes for spring travel can be a bit
-        confusing, especially when planning for cold and warm weather. Looking
-        for the perfect travel shoe is sort of like shopping for a mattress.
-        Everyone has different bodies, different preferences and finding the
-        right balance for all is nearly imposible. However, one thing is for
-        certain: travel shoes are not just about being functional but we'd love
-        if they are also stylish, durable and versatile too. Here are three
-        options to consider when packing shoes for spring travels.
-      </p>
+      <?php
+	  $name="timeToTravel";
+	  getSuggestion($name);
+	  ?>
       <div class="galery">
         <div class="column2">
-          <img src="imagini/flatss.jpg" alt="Flats" style="width:100%" />
-          <h2>Flats</h2>
+          <?php
+			  $name="timeToTravel1";
+			  getSuggestionPhoto($name);
+			?>
           <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
 		  <?php
 		  session_start();
@@ -166,10 +165,10 @@
           </p>
         </div>
         <div class="column2">
-          <a
-            ><img src="imagini/coton.jpg" alt="CottonShoes" style="width:100%"
-          /></a>
-          <h2>Cotton shoes</h2>
+          <?php
+			  $name="timeToTravel2";
+			  getSuggestionPhoto($name);
+			?>
           <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
 		  <?php
 		  if(isset($_SESSION['login'])){
@@ -294,8 +293,10 @@
           </p>
         </div>
         <div class="column2">
-          <img src="imagini/boots.jpg" alt="Boots" style="width:100%" />
-          <h2>Boots</h2>
+          <?php
+			  $name="timeToTravel3";
+			  getSuggestionPhoto($name);
+			?>
           <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
 		  <?php
 		  if(isset($_SESSION['login'])){

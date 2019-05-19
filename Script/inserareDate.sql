@@ -30,6 +30,9 @@ VALUES ("Balerini cu fundiță","Balerini cu bombeu contrastant şi fundiţă de
 
 
 --de la Maria
+
+ALTER TABLE `suggestions` CHANGE `description` `description` VARCHAR(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL;
+
 --women
 --timeToDance
 INSERT INTO suggestions (title,gender,description) VALUES('timeToDance','female','We want to look our best when we go clubbing and fabulous shoe styles will make you look good and feel great while dancing the night away. You may have to walk or run to the train to get there so you’ll be needing shoes that will let you experience the night without falling over or getting blisters. Keep scrolling on our list for stylish shoe style perfect for clubbing.If you’re not used to walking sky-high heels, you may go for kitten heeled shoes with 2 to 3 inches to give additional height to your stature while keeping you comfortable and giving you a great balance. You can have your pick from ankle strap sandals to peep toe shoes with kitten heels that can look great with ruffled dresses, asymmetrical dresses, shift dresses, pencil skirts and such. Kitten heels will still complement your outfit and show off your legs while keeping you secure on your feet.');
@@ -94,3 +97,14 @@ INSERT INTO suggestions(title,gender,description,imagePath) VALUES('sport2','mal
 INSERT INTO suggestions(title,gender,description,imagePath) VALUES('sport3','male','Nike','imagini/sport3.jpg');
 		  
 		  
+UPDATE `suggestions` SET `title` = 'timeToTravel' WHERE `suggestions`.`id_suggestion` = 41
+UPDATE `suggestions` SET `description` = 'It`s never too early to start thinking about fresh new shoes for summer. In fact, looking toward lighter, brighter footwear can help propel you out of any cold-weather trudge you might otherwise find yourself in.Crafting the perfect warm-weather collection of footwear is also easier when you get started ahead of the season—stocking up on sandals and low-top sneakers now means you\'ll be ready to hit the ground\r\n running (actually) come summer. From waterproof slides to espadrilles, here are the best shoes to get you through next summer in style.' WHERE `suggestions`.`id_suggestion` = 53
+UPDATE `suggestions` SET `description` = 'Finding the right shoes for spring travel can be a bit\r\n confusing, especially when planning for cold and warm weather. Looking\r\n for the perfect travel shoe is sort of like shopping for a mattress.\r\n Everyone has different bodies, different preferences and finding the\r\n right balance for all is nearly imposible. However, one thing is for\r\n certain: travel shoes are not just about being functional but we\'d love\r\n if they are also stylish, durable and versatile too. Here are three options to consider when packing shoes for spring travels.' WHERE `suggestions`.`id_suggestion` = 41;		  
+UPDATE `suggestions` SET `imagePath` = 'imagini/boots.jpg' WHERE `suggestions`.`id_suggestion` = 44
+	--pentru rating 
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('38','1','1','1','1','1');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('39','1','1','1','1','1');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('40','1','1','1','1','1');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('42','1','1','1','1','1');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('43','1','1','1','1','1');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('44','1','1','1','1','1');

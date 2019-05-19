@@ -1,3 +1,7 @@
+<?php 
+	include 'phpfiles/suggestion_controller.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,21 +31,23 @@
     <section>
       <a href="#top" id="up" title="UP">UP</a>
       <br />
-      <h3 class="message">
-        &emsp;&emsp;Whether you're a routine marathon runner, or you simply
-        enjoy the occasional light jog, there's no denying that a gorgeous,
-        sunny day can motivate just about anyone to get out there and pound the
-        pavement.
-      </h3>
+       <?php 
+		$name="sport";
+		getSuggestion($name);
+		?>
 
       <div class="galery">
         <div class="column2">
-          <img src="imagini/sport.jpg" alt="JustDoIt" style="width:100%" />
-          <p>Just do it</p>
+           <?php 
+		$name="sport1";
+		getSuggestionPhoto($name);
+		?>
         </div>
         <div class="column2">
-          <img src="imagini/sport2.jpg" alt="Nike" style="width:100%" />
-          <p>Nike Run</p>
+           <?php 
+		$name="sport2";
+		getSuggestionPhoto($name);
+		?>
           <p>
             <br /><b>Let us know if you liked it!<br />Vote below!<br /></b>
           </p>
@@ -168,8 +174,10 @@
         </div>
 
         <div class="column2">
-          <img src="imagini/sport3.jpg" alt="Nike" style="width:100%" />
-          <p>Nike</p>
+            <?php 
+		$name="sport3";
+		getSuggestionPhoto($name);
+		?>
         </div>
       </div>
     </section>
