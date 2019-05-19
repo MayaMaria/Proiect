@@ -1,5 +1,5 @@
 <?php 
-	include 'header.php';
+	include './phpfiles/header.php';
 ?>
 
     <div class="body-content">

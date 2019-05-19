@@ -3,7 +3,7 @@
 	
 	  if(isset($_SESSION['login'])){
 		
-		require_once 'phpfiles/database_con.php';
+		require_once './phpfiles/database_con.php';
 	$sql = "SELECT * FROM users where username='".$_SESSION['login']."'";
 	$result = mysqli_query($conn,$sql);
 	$row = mysqli_fetch_assoc($result);
