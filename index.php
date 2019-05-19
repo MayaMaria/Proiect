@@ -1,5 +1,5 @@
 <?php 
-	include 'phpfiles/header.php';
+	include './phpfiles/header.php';
 ?>
 
     <section>

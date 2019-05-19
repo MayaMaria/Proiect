@@ -1,5 +1,5 @@
 <?php 
-	include 'header.php';
+	include './phpfiles/header.php';
 ?>
 
     <section class="contact">

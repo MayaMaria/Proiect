@@ -1,5 +1,6 @@
 <?php 
-	include 'phpfiles/header.php';
+  include './phpfiles/header.php';
+  include './phpfiles/men_controller.php';
 ?>
 
     <div class="body-content">
@@ -42,50 +43,12 @@
         </div>
       </div>
 
-      <div class="products-showcase">
-        <div class="product-box">
-          <img src="imagini/men/men1.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Man Shoes #1</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/men/men2.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Man Shoes #2</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/men/men3.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Man Shoes #3</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/men/men4.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Man Shoes #4</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/men/men5.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Man Shoes #5</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/men/men7.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Man Shoes #6</p>
-          </div>
-        </div>
-        <div class="product-box">
-          <img src="imagini/men/men6.jpg" alt="ShoeImage" />
-          <div class="product-box-title">
-            <p>Man Shoes #7</p>
-          </div>
-        </div>
-      </div>
+      
+
+    <div class="products-showcase">
+      <?php
+        getProductsFromDatabase();
+      ?>
     </div>
 
     <footer>
