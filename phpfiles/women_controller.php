@@ -39,7 +39,7 @@
         $length = count($brand);
         $brand = array_values($brand);
         for($i = 0; $i < $length; $i++) {
-            echo "<li>$brand[$i]</li>";           
+            echo "<li>$brand[$i]</li>";        
         }
     }
 

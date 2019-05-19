@@ -108,10 +108,10 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="men.php">Interview Shoes</a>
-              <a href="men.php">Birthday Shoes</a>
-              <a href="men.php">Evening Events Shoes</a>
-              <a href="men.html">Christening Shoes</a>
+              <a href="children.php">Interview Shoes</a>
+              <a href="children.php">Birthday Shoes</a>
+              <a href="children.php">Evening Events Shoes</a>
+              <a href="children.html">Christening Shoes</a>
               <h3>Trends</h3>
               <a href="children.php">Sweet Sneaks</a>
               <a href="children.php">'90s Remix</a>
