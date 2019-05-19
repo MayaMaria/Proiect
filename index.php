@@ -2,7 +2,6 @@
 	include './phpfiles/header.php';
 ?>
 
-
     <section>
       <h2 style="text-align: center; font-family:Cambria (Headings)">
         Take a look at it, lady!
