@@ -1,7 +1,7 @@
 <?php
     require_once 'database_con.php';
     mysqli_set_charset($conn,"utf8mb4");
-    $sql = "SELECT * FROM recommendation";
+    $sql = "SELECT * FROM recommendation WHERE gender = 'child'";
     $result = mysqli_query($conn, $sql);
     $i = 0;
     while($row = mysqli_fetch_assoc($result)) {
@@ -35,7 +35,9 @@
 
     function filterBrands() {
         global $brand;
-        $length = count(array_unique($brand));
+        $brand = array_unique($brand);
+        $length = count($brand);
+        $brand = array_values($brand);
         for($i = 0; $i < $length; $i++) {
             echo "<li>$brand[$i]</li>";           
         }
@@ -43,7 +45,9 @@
 
     function filterColors() {
         global $color;
-        $length = count(array_unique($color));
+        $color = array_unique($color);
+        $length = count($color);
+        $color = array_values($color);
         for($i = 0; $i < $length; $i++) {
             echo "<li>$color[$i]</li>";           
         }
@@ -51,7 +55,9 @@
 
     function filterStyle() {
         global $style;
-        $length = count(array_unique($style));
+        $style = array_unique($style);
+        $length = count($style);
+        $style = array_values($style);
         for($i = 0; $i < $length; $i++) {
             echo "<li>$style[$i]</li>";           
         }
