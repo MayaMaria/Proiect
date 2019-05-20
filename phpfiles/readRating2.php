@@ -1,7 +1,7 @@
 <?php
 
 		require 'phpfiles/database_con.php';
-		$sql = "SELECT  * FROM ratings WHERE id_suggestion='38'";
+		$sql = "SELECT  * FROM ratings WHERE id_suggestion='42'";
 		$result = mysqli_query($conn,$sql);
 			
 			while($row = mysqli_fetch_assoc($result)) {
@@ -12,7 +12,7 @@
 				$rating5_1=$row["rating5"];
 			}
 			
-		$sql = "SELECT  * FROM ratings WHERE id_suggestion='39'";
+		$sql = "SELECT  * FROM ratings WHERE id_suggestion='43'";
 		$result_1 = mysqli_query($conn,$sql);
 			
 			while($row = mysqli_fetch_assoc($result_1)) {
@@ -23,7 +23,7 @@
 				$rating5_2=$row["rating5"];
 			}
 		
-		$sql = "SELECT  * FROM ratings WHERE id_suggestion='40'";
+		$sql = "SELECT  * FROM ratings WHERE id_suggestion='44'";
 		$result_2 = mysqli_query($conn,$sql);
 			
 			while($row = mysqli_fetch_assoc($result_2)) {

@@ -105,6 +105,22 @@ UPDATE `suggestions` SET `imagePath` = 'imagini/boots.jpg' WHERE `suggestions`.`
 	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('38','1','1','1','1','1');
 	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('39','1','1','1','1','1');
 	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('40','1','1','1','1','1');
+	
 	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('42','1','1','1','1','1');
 	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('43','1','1','1','1','1');
 	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('44','1','1','1','1','1');
+	
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('46','1','1','1','1','1');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('47','1','1','1','1','1');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('48','1','1','1','1','1');
+	
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('50','0','0','0','0','0');
+	
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('54','0','0','0','0','0');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('55','0','0','0','0','0');
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('56','0','0','0','0','0');
+	
+	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('59','1','0','1','0','0');
+
+	
+	

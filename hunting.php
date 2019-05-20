@@ -1,5 +1,7 @@
 <?php 
 	include 'phpfiles/suggestion_controller.php';
+	include 'phpfiles/readRating3.php';
+	include 'phpfiles/calculateRating.php';
 ?>
 
 
@@ -59,18 +61,20 @@
 		  session_start();
 		  if(isset($_SESSION['login'])){
 			  ?>
+			   <form method="POST" action="phpfiles/rating4.php">
 				<fieldset class="stars">
-					<input type="radio" id="star10" name="stars1" value="10" />
+					<input type="submit" id="star10" name="stars1" value="5" />
 					<label class="full" for="star10" title="Awesome"></label>
-					<input type="radio" id="star9" name="stars1" value="9" />
+					<input type="submit" id="star9" name="stars1" value="4" />
 					<label class="full" for="star9" title="Pretty good"></label>
-					<input type="radio" id="star8" name="stars1" value="8" />
+					<input type="submit" id="star8" name="stars1" value="3" />
 					<label class="full" for="star8" title="Ok"></label>
-					<input type="radio" id="star7" name="stars1" value="7" />
+					<input type="submit" id="star7" name="stars1" value="2" />
 					<label class="full" for="star7" title="Kinda bad"></label>
-					<input type="radio" id="star6" name="stars1" value="6" />
+					<input type="submit" id="star6" name="stars1" value="1" />
 					<label class="full" for="star6" title="Vote"></label>
 				 </fieldset>
+				</form>
 		<?php
 		
 		  }
@@ -116,65 +120,103 @@
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-5"></div>
+                <div class="bar-5"<?php echo "style='width:".$rating5_4."%';" ?>></div>
               </div>
             </div>
             <div class="side right">
-              <div>36</div>
+              <div>
+			   <?php
+			if(@$_GET['Rating5'] == true)
+					{
+						$rating5_4=$_GET['Rating5'];
+					}	
+			 echo $rating5_4;
+			?>
+			  </div>
             </div>
             <div class="side">
               <div>4<span class="fa fa-star checked"></span></div>
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-4"></div>
+                <div class="bar-4"<?php echo "style='width:".$rating4_4."%';" ?>></div>
               </div>
             </div>
             <div class="side right">
-              <div>23</div>
+              <div>
+			   <?php
+			if(@$_GET['Rating4'] == true)
+					{
+						$rating4_4=$_GET['Rating4'];
+					}	
+			 echo $rating4_4;
+			?>
+			  </div>
             </div>
             <div class="side">
               <div>3 <span class="fa fa-star checked"></span></div>
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-3"></div>
+                <div class="bar-3"<?php echo "style='width:".$rating3_4."%';" ?>></div>
               </div>
             </div>
             <div class="side right">
-              <div>29</div>
+              <div>
+			   <?php
+			if(@$_GET['Rating3'] == true)
+					{
+						$rating3_4=$_GET['Rating3'];
+					}	
+			 echo $rating3_4;
+			?>
+			  </div>
             </div>
             <div class="side">
               <div>2 <span class="fa fa-star checked"></span></div>
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-2"></div>
+                <div class="bar-2"<?php echo "style='width:".$rating2_4."%';" ?>></div>
               </div>
             </div>
             <div class="side right">
-              <div>4</div>
+              <div>
+			   <?php
+			if(@$_GET['Rating2'] == true)
+					{
+						$rating2_4=$_GET['Rating2'];
+					}	
+			 echo $rating2_4;
+			?>
+			  </div>
             </div>
             <div class="side">
               <div>1 <span class="fa fa-star checked"></span></div>
             </div>
             <div class="middle">
               <div class="bar-container">
-                <div class="bar-1"></div>
+                <div class="bar-1"<?php echo "style='width:".$rating1_4."%';" ?>></div>
               </div>
             </div>
             <div class="side right">
-              <div>10</div>
+              <div>
+			   <?php
+			if(@$_GET['Rating1'] == true)
+					{
+						$rating1_4=$_GET['Rating1'];
+					}	
+			 echo $rating1_4;
+			?>
+			  </div>
             </div>
           </div>
 		  <p>
             <br />
             <span><b>User Rating &emsp;&emsp;</b></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star checked"></span>
-            <span class="fa fa-star"></span>
-            <span class="fa fa-star"></span>
+            <?php 
+				calculateRating($rating1_4,$rating2_4,$rating3_4,$rating4_4,$rating5_4);
+			?>
           </p>
         </div>
 		
