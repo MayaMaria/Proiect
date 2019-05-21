@@ -1,12 +1,13 @@
 <?php 
-  include 'phpfiles/header.php';
-  include './phpfiles/children_controller.php';
+  include './phpfiles/header.php';
+  include './phpfiles/shop_controller.php';
 ?>
-
+    <meta charset="utf-8" />
     <div class="body-content">
+
       <div class="filter-selector">
-        
-      <div class="selector">
+
+        <div class="selector">
           <button class="collapsible">Brand</button>
           <div class="content">
             <ul>
@@ -111,5 +112,8 @@
         <img src="imagini/logo2.png" alt="FooterLogo" />
       </div>
     </footer>
+
+    <script src="./shop.js"> </script>
+    
   </body>
 </html>

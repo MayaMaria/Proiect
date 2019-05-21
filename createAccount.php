@@ -40,26 +40,26 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="men.php">Interview Shoes</a>
-              <a href="men.php">Wedding Shoes</a>
-              <a href="men.php">Evening Events Shoes</a>
-              <a href="men.php">Graduation Shoes</a>
+              <a href="shop.php?gender=male">Interview Shoes</a>
+              <a href="shop.php?gender=male">Wedding Shoes</a>
+              <a href="shop.php?gender=male">Evening Events Shoes</a>
+              <a href="shop.php?gender=male">Graduation Shoes</a>
               <h3>Trends</h3>
-              <a href="men.php">Sweet Sneaks</a>
-              <a href="men.php">'90s Remix</a>
-              <a href="men.php">Looks We Love</a>
+              <a href="shop.php?gender=male">Sweet Sneaks</a>
+              <a href="shop.php?gender=male">'90s Remix</a>
+              <a href="shop.php?gender=male">Looks We Love</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="men.php">Summer</a>
-              <a href="men.php">Autumn</a>
-              <a href="men.php">Winter</a>
-              <a href="men.php">Spring</a>
+              <a href="shop.php?gender=male">Summer</a>
+              <a href="shop.php?gender=male">Autumn</a>
+              <a href="shop.php?gender=male">Winter</a>
+              <a href="shop.php?gender=male">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="men.php">Nike Airmax</a>
-              <a href="men.php">Gucci</a>
-              <a href="men.php">Supreme</a>
-              <a href="men.php" style="padding-top: 15px;"><b>ALL</b></a>
+              <a href="shop.php?gender=male">Nike Airmax</a>
+              <a href="shop.php?gender=male">Gucci</a>
+              <a href="shop.php?gender=male">Supreme</a>
+              <a href="shop.php?gender=male" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>
         </div>
@@ -74,26 +74,26 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="women.php">Interview Shoes</a>
-              <a href="women.php">Wedding Shoes</a>
-              <a href="women.php">Evening Events Shoes</a>
-              <a href="women.php">Graduation Shoes</a>
+              <a href="shop.php?gender=female">Interview Shoes</a>
+              <a href="shop.php?gender=female">Wedding Shoes</a>
+              <a href="shop.php?gender=female">Evening Events Shoes</a>
+              <a href="shop.php?gender=female">Graduation Shoes</a>
               <h3>Trends</h3>
-              <a href="women.php">Sweet Sneaks</a>
-              <a href="women.php">'90s Remix</a>
-              <a href="women.php">Looks We Love</a>
+              <a href="shop.php?gender=female">Sweet Sneaks</a>
+              <a href="shop.php?gender=female">'90s Remix</a>
+              <a href="shop.php?gender=female">Looks We Love</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="women.php">Summer</a>
-              <a href="women.php">Autumn</a>
-              <a href="women.php">Winter</a>
-              <a href="women.php">Spring</a>
+              <a href="shop.php?gender=female">Summer</a>
+              <a href="shop.php?gender=female">Autumn</a>
+              <a href="shop.php?gender=female">Winter</a>
+              <a href="shop.php?gender=female">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="women.php">Nike Airmax</a>
-              <a href="women.php">Gucci</a>
-              <a href="women.php">Supreme</a>
-              <a href="women.php" style="padding-top: 15px;"><b>ALL</b></a>
+              <a href="shop.php?gender=female">Nike Airmax</a>
+              <a href="shop.php?gender=female">Gucci</a>
+              <a href="shop.php?gender=female">Supreme</a>
+              <a href="shop.php?gender=female" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>
         </div>
@@ -108,26 +108,26 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="children.php">Interview Shoes</a>
-              <a href="children.php">Birthday Shoes</a>
-              <a href="children.php">Evening Events Shoes</a>
-              <a href="children.html">Christening Shoes</a>
+              <a href="shop.php?gender=child">Interview Shoes</a>
+              <a href="shop.php?gender=child">Birthday Shoes</a>
+              <a href="shop.php?gender=child">Evening Events Shoes</a>
+              <a href="shop.php?gender=child">Christening Shoes</a>
               <h3>Trends</h3>
-              <a href="children.php">Sweet Sneaks</a>
-              <a href="children.php">'90s Remix</a>
-              <a href="children.php">Looks We Love</a>
+              <a href="shop.php?gender=child">Sweet Sneaks</a>
+              <a href="shop.php?gender=child">'90s Remix</a>
+              <a href="shop.php?gender=child">Looks We Love</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="children.php">Summer</a>
-              <a href="children.php">Autumn</a>
-              <a href="children.php">Winter</a>
-              <a href="children.php">Spring</a>
+              <a href="shop.php?gender=child">Summer</a>
+              <a href="shop.php?gender=child">Autumn</a>
+              <a href="shop.php?gender=child">Winter</a>
+              <a href="shop.php?gender=child">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="children.php">Nike Airmax</a>
-              <a href="children.php">Gucci</a>
-              <a href="children.php">Supreme</a>
-              <a href="children.php" style="padding-top: 15px;"><b>ALL</b></a>
+              <a href="shop.php?gender=child">Nike Airmax</a>
+              <a href="shop.php?gender=child">Gucci</a>
+              <a href="shop.php?gender=child">Supreme</a>
+              <a href="shop.php?gender=child" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>
         </div>

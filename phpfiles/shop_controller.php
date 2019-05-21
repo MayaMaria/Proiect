@@ -1,7 +1,7 @@
 <?php
     require_once 'database_con.php';
     mysqli_set_charset($conn,"utf8mb4");
-    $sql = "SELECT * FROM recommendation WHERE gender = 'female'";
+    $sql = sprintf("SELECT * FROM recommendation WHERE gender = '%s';", $_GET["gender"]);
     $result = mysqli_query($conn, $sql);
     $i = 0;
     while($row = mysqli_fetch_assoc($result)) {
@@ -39,7 +39,7 @@
         $length = count($brand);
         $brand = array_values($brand);
         for($i = 0; $i < $length; $i++) {
-            echo "<li>$brand[$i]</li>";        
+            echo "<li>$brand[$i]</li>";           
         }
     }
 
