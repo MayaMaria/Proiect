@@ -5,42 +5,44 @@
     <meta charset="utf-8" />
     <div class="body-content">
 
-      <div class="filter-selector">
+      <form class="filter-selector">
+        <?php
+          echo sprintf("<input type=\"hidden\" name=\"gender\" value=\"%s\">", $_GET["gender"]); 
+        ?>
 
-        <div class="selector">
-          <button class="collapsible">Brand</button>
-          <div class="content">
-            <ul>
-              <?php
+        <div class = "selector">
+          <button class="collapsible" type="button">Brand</button>
+          <div class = "content">
+            <input type="radio" name="brand" value="none"> None <br>
+            <?php
                 filterBrands();
-              ?>
-            </ul>
+            ?>
           </div>
         </div>
 
-        <div class="selector">
-          <button class="collapsible">Color</button>
-          <div class="content">
-            <ul>
-              <?php
+        <div class = "selector">
+          <button class="collapsible" type="button">Color</button>
+          <div class = "content">
+            <input type="radio" name="brand" value="none"> None <br>
+            <?php
                 filterColors();
-              ?>
-            </ul>
+            ?>
           </div>
         </div>
 
-        <div class="selector">
-          <button class="collapsible">Style</button>
-          <div class="content">
-            <ul>
-              <?php
+        <div class = "selector">
+          <button class="collapsible" type="button">Style</button>
+          <div class = "content">
+            <input type="radio" name="brand" value="none"> None <br>
+            <?php
                 filterStyle();
-              ?>
-            </ul>
+            ?>
           </div>
         </div>
 
-      </div>
+        <input type="submit">
+
+      </form>
 
       <div class="products-showcase">
         <?php

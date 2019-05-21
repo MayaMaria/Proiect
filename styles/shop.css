@@ -104,3 +104,7 @@
   background-color: #f1f1f1;
   max-height: 0;
 }
+
+.content a {
+  text-decoration: none !important;
+}
