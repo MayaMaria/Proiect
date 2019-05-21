@@ -50,6 +50,7 @@
 .product-box img {
   width: 290px;
   height: 230px;
+  object-fit: cover;
 }
 
 .product-box-title {
@@ -85,25 +86,21 @@
 }
 
 .collapsible:after {
-  content: "\002B"; /* plus symbol */
+  content: '\002B'; /* plus symbol */
   color: white;
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
 
+.active:after {
+  content: '\2212';
+}
+
 .content {
-  padding: 0 18px;
-  display: none;
+  padding: 0 18px;  
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: #f1f1f1;
-}
-
-.collapsible:focus + .content {
-  display: flex;
-}
-
-.collapsible:focus:after {
-  content: "\2212";
+  max-height: 0;
 }

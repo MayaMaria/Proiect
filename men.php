@@ -112,5 +112,8 @@
         <img src="imagini/logo2.png" alt="FooterLogo" />
       </div>
     </footer>
+
+    <script src="./shop.js"> </script>
+    
   </body>
 </html>
