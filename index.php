@@ -76,7 +76,7 @@
         </div>
 
         <div class="news">
-          <form>
+          <form method="POST" action="phpfiles/send_email.php">
             <div class="newsInput">
               <label for="mail">E-mail</label>
               <input

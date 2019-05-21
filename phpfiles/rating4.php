@@ -98,4 +98,9 @@ header("location:../summerMen.php?Rating3=".$rating3." ");
 header("location:../summerMen.php?Rating4=".$rating4." ");
 header("location:../summerMen.php?Rating5=".$rating5." ");
 
+
+
+
+
+
 ?>

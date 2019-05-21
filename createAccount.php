@@ -182,7 +182,7 @@
 		?>
 		
 
-      <form action="phpfiles/register.php" method="POST">
+      <form  method="POST" action="phpfiles/register.php">
 		<p>Choose your profile photo</p>
 		<input type="file" name="profile">
 	  <br>

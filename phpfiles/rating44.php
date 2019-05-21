@@ -45,6 +45,6 @@ if(isset($_POST['stars1'])) {
 header("location:../sport.php?Rating1_1=".$rating1." ");
 header("location:../sport.php?Rating2_1=".$rating2." ");
 header("location:../sport.php?Rating3_1=".$rating3." ");
-header("location:../sport.php?Rating4_1".$rating4." ");
+header("location:../sport.php?Rating4_1=".$rating4." ");
 header("location:../sport.php?Rating5_1=".$rating5." ");
 ?>
