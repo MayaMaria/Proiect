@@ -19,7 +19,10 @@
 					setCookie('password',$password,time()+60*60*7);
 				}
 				$_SESSION['login']=$username;
-				header("location:../welcome.php");	
+				if ($username=="admin" && $password=="admin")
+					header("location:../admin.php");
+				else
+					header("location:../welcome.php");	
 			}
 			else
 			{
