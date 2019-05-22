@@ -3,6 +3,11 @@
   include './phpfiles/shop_controller.php';
 ?>
     <meta charset="utf-8" />
+
+    <?php
+      getFilters();
+      getProductsFromDatabase();
+    ?>
     <div class="body-content">
 
       <form class="filter-selector">
@@ -23,7 +28,7 @@
         <div class = "selector">
           <button class="collapsible" type="button">Color</button>
           <div class = "content">
-            <input type="radio" name="brand" value="none"> None <br>
+            <input type="radio" name="color" value="none"> None <br>
             <?php
                 filterColors();
             ?>
@@ -33,7 +38,7 @@
         <div class = "selector">
           <button class="collapsible" type="button">Style</button>
           <div class = "content">
-            <input type="radio" name="brand" value="none"> None <br>
+            <input type="radio" name="style" value="none"> None <br>
             <?php
                 filterStyle();
             ?>
@@ -46,7 +51,7 @@
 
       <div class="products-showcase">
         <?php
-          getProductsFromDatabase();
+          showProducts();
         ?>
       </div>
 
