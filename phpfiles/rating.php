@@ -36,7 +36,6 @@ if(isset($_POST['stars2'])) {
 	}
 	if($rating == 5){
 		$rating5 = $rating5+1;
-		
 		$sql3 = "UPDATE ratings SET rating5=".$rating5." WHERE id_suggestion='38'";
 		mysqli_query($conn, $sql3);
 	}	

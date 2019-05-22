@@ -2,33 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<style>
-.vertical-menu {
-  width: 200px; 
-}
-
-.vertical-menu a {
-  background-color: #eee; 
-  color: black; 
-  display: block; 
-  padding: 12px; 
-  text-decoration: none; 
-}
-
-.vertical-menu a:hover {
-  background-color: #ccc; 
-}
-
-.vertical-menu a.active {
-  background-color: red; 
-  color: white;
-}
-table, th, td {
-  border: 1px solid black;
-  font-size:10px;
-}
-</style>
-
+<link rel="stylesheet" type="text/css" href="styles/styles.css" />
 </head>
 
 <body>
