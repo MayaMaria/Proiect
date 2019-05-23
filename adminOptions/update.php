@@ -29,7 +29,7 @@ include '../phpfiles/showDataBase.php';
 					<?php listIdS();?>
 				</select> <br /><br />
 				 
-				<input type="text" name="title" placeholder="title"><br />
+				<input type="text" name="title" placeholder="Title"><br />
 				<input type="submit" name="updateTitle" value="Update"><br /><br />
 				<?php 
 					if(@$_GET['UpdateCompletT']==true)
@@ -75,7 +75,7 @@ include '../phpfiles/showDataBase.php';
 	<div>
 		<p>Update Recommendations</p>
 		<form  method="POST" action="updateRecommendation.php"> 
-				<select id="types" name="subjects">
+				<select id="types" name="idR">
 					<option disabled="disabled" selected="selected">
 							Select id
 					 </option>
@@ -83,39 +83,106 @@ include '../phpfiles/showDataBase.php';
               </select> <br /><br />
 				<input type="text" name="nameR" placeholder="Name"><br />
 				<input type="submit" name="updateNameR" value="Update"><br /><br />
-				
+				<?php 
+					if(@$_GET['UpdateCompletN']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletN']."</p>";
+					}
+				?>
 				 <input type="text" name="descriptionR" placeholder="Description"><br />
 				 <input type="submit" name="updateDescR" value="Update"><br /><br />
 				 
-				 <input type="text" name="imagePathR" placeholder="imagePath"><br />
+				 <?php 
+					if(@$_GET['UpdateCompletDr']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletDr']."</p>";
+					}
+				?>
+				 
+				 <input type="text" name="imagePathR" placeholder="ImagePath"><br />
 				<input type="submit" name="updateImageR" value="Update"><br /><br /> <br />
+				<?php 
+					if(@$_GET['UpdateCompletIr']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletIr']."</p>";
+					}
+				?>
 				 
 				 <input type="text" name="genderR" placeholder="Gender"><br />
 				 <input type="submit" name="updateGenderR" value="Update"><br /><br />
+				 <?php 
+					if(@$_GET['UpdateCompletGender']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletGender']."</p>";
+					}
+				?>
 				 
 				  <input type="text" name="event" placeholder="Event"><br />
 				 <input type="submit" name="updateEvent" value="Update"><br /><br />
+				 <?php 
+					if(@$_GET['UpdateCompletEvent']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletEvent']."</p>";
+					}
+				?>
 				 
 				  <input type="text" name="season" placeholder="Season"><br />
 				 <input type="submit" name="updateSeason" value="Update"><br /><br />
+				 <?php 
+					if(@$_GET['UpdateCompletSeason']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletSeason']."</p>";
+					}
+				?>
 				 
 				  <input type="text" name="style" placeholder="Style"><br />
 				 <input type="submit" name="updateStyle" value="Update"><br /><br />
+				 <?php 
+					if(@$_GET['UpdateCompletStyle']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletStyle']."</p>";
+					}
+				?>
 				 
 				  <input type="text" name="brand" placeholder="Brand"><br />
 				 <input type="submit" name="updateBrand" value="Update"><br /><br />
+				 <?php 
+					if(@$_GET['UpdateCompletBrand']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletBrand']."</p>";
+					}
+				?>
 				 
 				  <input type="text" name="color" placeholder="Color"><br />
 				 <input type="submit" name="updateColor" value="Update"><br /><br />
 				 
-				  <input type="text" name="trends" placeholder="Trend"><br />
+				 <?php 
+					if(@$_GET['UpdateCompletColor']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletColor']."</p>";
+					}
+				?>
+				  <input type="text" name="trend" placeholder="Trend"><br />
 				 <input type="submit" name="updateTrend" value="Update"><br /><br />
+				 <?php 
+					if(@$_GET['UpdateCompletTrend']==true)
+					{
+							echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletTrend']."</p>";
+					}
+				?>
 				
 				<input type="submit" name="updateR" value="UpdateALL"><br />
+				<?php 
+				if(@$_GET['UpdateCompletAllR']==true)
+				{
+						echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletAllR']."</p>";
+				}
+			?>
+				
 			</form>
 	<div>
 
-	
+	<br /> <br />
 </body>
 
 

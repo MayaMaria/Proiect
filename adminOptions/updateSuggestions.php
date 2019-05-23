@@ -53,8 +53,6 @@
 			mysqli_query($conn, $sql);
 			header("location:update.php?UpdateCompletI=Update with success!");
 		}
-		
-		header("location:update.php");
 	}
 	else
 		header("location:update.php");
