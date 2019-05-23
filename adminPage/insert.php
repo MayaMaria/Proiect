@@ -14,7 +14,7 @@ include '../phpfiles/showDataBase.php';
 </div>
 
 <div class="vertical-menu">
-  <a class="active" href="admin.php">Options</a>
+  <a class="active" href="admin.php">Home</a>
   <a href="update.php">Update</a>
   <a href="delete.php">Delete</a>
   <a href="#">Insert</a>
