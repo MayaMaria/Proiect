@@ -88,7 +88,7 @@ include '../phpfiles/showDataBase.php';
 
 <hr>
 	<div>
-		<p>Update Recommendations</p>
+		<p>Update Recommendation</p>
 		<form  method="POST" action="updateRecommendation.php"> 
 				<select id="types" name="idR">
 					<option disabled="disabled" selected="selected">
@@ -195,7 +195,7 @@ include '../phpfiles/showDataBase.php';
 			?>
 				
 			</form>
-	<div>
+	</div>
 	<br /> <br />
 	
 	<hr>

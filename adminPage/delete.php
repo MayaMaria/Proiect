@@ -21,7 +21,7 @@ include '../phpfiles/showDataBase.php';
 </div>
 
 <div>
-		<p>Delete Suggestions</p>
+		<p>Delete Suggestion</p>
 		<form  method="POST" action="deleteSuggestions.php"> 
 				 <select id="types" name="idS">
 					<option disabled="disabled" selected="selected">
