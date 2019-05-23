@@ -257,14 +257,8 @@ include 'phpfiles/calculateRating.php';
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-via="m&amp;aInsipiration"
-		   data-hashtags="insipiration" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Perfect for club :) wedges" data-hashtags="timeToDance" 
+		   data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php

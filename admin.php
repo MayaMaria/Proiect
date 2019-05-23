@@ -5,36 +5,20 @@ include 'phpfiles/showDataBase.php';
 <!DOCTYPE HTML>
 <html>
 <head>
-<style>
-.vertical-menu {
-  width: 200px; /* Set a width if you like */
-}
-
-.vertical-menu a {
-  background-color: #eee; /* Grey background color */
-  color: black; /* Black text color */
-  display: block; /* Make the links appear below each other */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove underline from links */
-}
-
-.vertical-menu a:hover {
-  background-color: #ccc; /* Dark grey background on mouse-over */
-}
-
-.vertical-menu a.active {
-  background-color: red; /* Add a green color to the "active/current" link */
-  color: white;
-}
-table, th, td {
-  border: 1px solid black;
-  font-size:10px;
-}
-</style>
+<title> Admin Panel</title>
+<link rel="stylesheet" type="text/css" href="adminOptions/styles/styles.css" />
 
 </head>
 
 <body>
+
+<div id="header">
+	<center>
+		<img src="imagini/admin.png">
+		<h1> Welcome to Admin Panel | M&A Insipiration</h1>
+		<h2>Data available</h2>
+	</center>
+</div>
 
 <div class="vertical-menu">
   <a class="active">Options</a>
@@ -43,16 +27,40 @@ table, th, td {
   <a href="adminOptions/insert.php">Insert</a>
 </div>
 <br />
-<p>Suggestion table</p>
-<table>
-<?php	showSuggestions();?>
-</table>
+
+<center>
+
+	<p>Suggestion table</p>
+	<table>
+		<tr>
+			<th>id_suggestion</th>
+			<th>title</th> 
+			<th>gender</th>
+			<th>description</th>
+			<th>imagePath</th>
+		</tr>
+	<?php	showSuggestions();?>
+	</table>
 
 
-<p>Recommendation table</p>
-<table>
-<?php	showRecommendations();?>
-</table>
+	<p class="white"> Recommendation table</p>
+	<table>
+		<tr>
+				<th>id_recommendation</th>
+				<th>name</th> 
+				<th>description</th>
+				<th>imagePath</th>
+				<th>event</th>
+				<th>season</th>
+				<th>style</th>
+				<th>color</th>
+				<th>trends</th>
+		</tr>
+	<?php	showRecommendations();?>
+	</table>
+
+
+</center>
 </body>
 
 

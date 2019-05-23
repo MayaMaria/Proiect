@@ -1,11 +1,29 @@
+body{
+	text-align:center;
+	margin: 0px;
+	border: 0px;
+}
+
+#header{
+	width: auto;
+	height: 110px;
+	background: #00264d;
+}
+
+
+img{
+	width: 80px;
+	height: 80px;
+}
+	
 .vertical-menu {
   width: 200px; 
 }
 
 .vertical-menu a {
-  background-color: #eee; 
+  background-color: #eee;
   color: black; 
-  display: block; 
+  display: block;
   padding: 12px; 
   text-decoration: none; 
 }
@@ -15,10 +33,13 @@
 }
 
 .vertical-menu a.active {
-  background-color: red; 
+  background-color: #000d1a;
   color: white;
 }
+
 table, th, td {
   border: 1px solid black;
   font-size:10px;
+  background-color:#cce6ff;
 }
+

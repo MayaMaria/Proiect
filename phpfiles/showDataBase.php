@@ -1,12 +1,13 @@
 <?php
 
-	require_once 'phpfiles/database_con.php';
-	 mysqli_set_charset($conn,"utf8mb4");
+	require_once 'database_con.php';
+	mysqli_set_charset($conn,"utf8mb4");
 	$sql = "SELECT * FROM suggestions";
 	$result = mysqli_query($conn,$sql);
 	$i=0;
 	while($row = mysqli_fetch_assoc($result)) {
 		$id[$i]=$row["id_suggestion"];
+		$id_s[$i]=$row["id_suggestion"];
 		$title[$i]=$row["title"];
 		$gender[$i]=$row["gender"];
 		$description[$i]=$row["description"];
@@ -19,6 +20,7 @@
     $j = 0;
     while($row = mysqli_fetch_assoc($result)) {
         $id_r[$j] = $row["id_recommendation"];
+		$id_R[$j] = $row["id_recommendation"];
         $name_r[$j] = $row["name"];
         $description_r[$j] = $row["description"];
         $imagePath_r[$j] = $row["imagePath"];
@@ -64,6 +66,26 @@
 				</tr>";
 			
 		}
+	}
+	
+	function listIdS(){
+		global $id_s;
+		$length = count($id_s);
+		for($i=0;$i<$length;$i++){
+			echo "<option>$id_s[$i]</option>";
+		
+		}
+		
+	}
+	
+	function listIdR(){
+		global $id_R;
+		$length = count($id_R);
+		for($i=0;$i<$length;$i++){
+			echo "<option>$id_R[$i]</option>";
+		
+		}
+		
 	}
 	
 ?>
