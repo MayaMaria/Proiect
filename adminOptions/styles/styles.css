@@ -16,6 +16,12 @@ img{
 	height: 80px;
 }
 	
+.top{
+	width: auto;
+	height: 130px;
+	background: #00264d;
+	color:white;
+}	
 .vertical-menu {
   width: 200px; 
 }

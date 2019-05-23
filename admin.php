@@ -16,7 +16,6 @@ include 'phpfiles/showDataBase.php';
 	<center>
 		<img src="imagini/admin.png">
 		<h1> Welcome to Admin Panel | M&A Insipiration</h1>
-		<h2>Data available</h2>
 	</center>
 </div>
 
@@ -27,40 +26,6 @@ include 'phpfiles/showDataBase.php';
   <a href="adminOptions/insert.php">Insert</a>
 </div>
 <br />
-
-<center>
-
-	<p>Suggestion table</p>
-	<table>
-		<tr>
-			<th>id_suggestion</th>
-			<th>title</th> 
-			<th>gender</th>
-			<th>description</th>
-			<th>imagePath</th>
-		</tr>
-	<?php	showSuggestions();?>
-	</table>
-
-
-	<p class="white"> Recommendation table</p>
-	<table>
-		<tr>
-				<th>id_recommendation</th>
-				<th>name</th> 
-				<th>description</th>
-				<th>imagePath</th>
-				<th>event</th>
-				<th>season</th>
-				<th>style</th>
-				<th>color</th>
-				<th>trends</th>
-		</tr>
-	<?php	showRecommendations();?>
-	</table>
-
-
-</center>
 </body>
 
 

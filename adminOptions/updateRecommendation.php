@@ -44,74 +44,99 @@
 			header("location:update.php?UpdateCompletAllR=Update with success!");
 			
 		}
-		if(isset($_POST['updateNameR']) && !empty($name))
+		else 
 		{
-			$sql="UPDATE recommendation  SET name='".$name."' WHERE  id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletN=Update with success!");
-		}
-		
-		if(isset($_POST['updateGenderR']) && !empty($gender))
-		{
-			$sql="UPDATE recommendation SET gender='".$gender."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletGender=Update with success!");
-		}
-		
-		if(isset($_POST['updateDescR'])  && !empty($desc))
-		{
-			$sql="UPDATE recommendation SET description='".$desc."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletDr=Update with success!");
-		}
-		
-		if(isset($_POST['updateImageR']) && !empty($imagePath))
-		{
-			$sql="UPDATE recommendation SET imagePath='".$imagePath."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletIr=Update with success!");
-		}
-		
-		if(isset($_POST['updateEvent']) && !empty($event))
-		{
-			$sql="UPDATE recommendation SET event='".$event."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletEvent=Update with success!");
-		}
-		if(isset($_POST['updateStyle']) && !empty($style))
-		{
-			$sql="UPDATE recommendation SET style='".$style."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletStyle=Update with success!");
-		}
-		
-		if(isset($_POST['updateSeason']) && !empty($season))
-		{
-			$sql="UPDATE recommendation SET season='".$season."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletSeason=Update with success!");
-		}
-		
-		
-		if(isset($_POST['updateBrand']) && !empty($brand))
-		{
-			$sql="UPDATE recommendation SET brand='".$brand."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletBrand=Update with success!");
-		}
-		
-		if(isset($_POST['updateColor']) && !empty($color))
-		{
-			$sql="UPDATE recommendation SET color='".$color."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletColor=Update with success!");
-		}
-		
-		if(isset($_POST['updateTrend']) && !empty($trend))
-		{
-			$sql="UPDATE recommendation SET trends='".$trend."' WHERE id_recommendation='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletTrend=Update with success!");
+			if(isset($_POST['updateNameR']) && !empty($name))
+			{
+				$sql="UPDATE recommendation  SET name='".$name."' WHERE  id_recommendation='".$id."'";
+				mysqli_query($conn, $sql);
+				header("location:update.php?UpdateCompletN=Update with success!");
+			}
+			else
+			{
+				if(isset($_POST['updateGenderR']) && !empty($gender))
+				{
+					$sql="UPDATE recommendation SET gender='".$gender."' WHERE id_recommendation='".$id."'";
+					mysqli_query($conn, $sql);
+					header("location:update.php?UpdateCompletGender=Update with success!");
+				}
+				else
+				{
+					if(isset($_POST['updateDescR'])  && !empty($desc))
+					{
+						$sql="UPDATE recommendation SET description='".$desc."' WHERE id_recommendation='".$id."'";
+						mysqli_query($conn, $sql);
+						header("location:update.php?UpdateCompletDr=Update with success!");
+					}
+					else
+					{
+						if(isset($_POST['updateImageR']) && !empty($imagePath))
+						{
+							$sql="UPDATE recommendation SET imagePath='".$imagePath."' WHERE id_recommendation='".$id."'";
+							mysqli_query($conn, $sql);
+							header("location:update.php?UpdateCompletIr=Update with success!");
+						}
+						else
+						{
+							if(isset($_POST['updateEvent']) && !empty($event))
+							{
+								$sql="UPDATE recommendation SET event='".$event."' WHERE id_recommendation='".$id."'";
+								mysqli_query($conn, $sql);
+								header("location:update.php?UpdateCompletEvent=Update with success!");
+							}
+							else
+							{
+								if(isset($_POST['updateStyle']) && !empty($style))
+								{
+									$sql="UPDATE recommendation SET style='".$style."' WHERE id_recommendation='".$id."'";
+									mysqli_query($conn, $sql);
+									header("location:update.php?UpdateCompletStyle=Update with success!");
+								}
+								else
+								{
+									if(isset($_POST['updateSeason']) && !empty($season))
+									{
+										$sql="UPDATE recommendation SET season='".$season."' WHERE id_recommendation='".$id."'";
+										mysqli_query($conn, $sql);
+										header("location:update.php?UpdateCompletSeason=Update with success!");
+									}
+									else 
+									{
+										if(isset($_POST['updateBrand']) && !empty($brand))
+										{
+											$sql="UPDATE recommendation SET brand='".$brand."' WHERE id_recommendation='".$id."'";
+											mysqli_query($conn, $sql);
+											header("location:update.php?UpdateCompletBrand=Update with success!");
+										}
+										else
+										{
+										
+											if(isset($_POST['updateColor']) && !empty($color))
+											{
+												$sql="UPDATE recommendation SET color='".$color."' WHERE id_recommendation='".$id."'";
+												mysqli_query($conn, $sql);
+												header("location:update.php?UpdateCompletColor=Update with success!");
+											}
+											else
+											{
+												if(isset($_POST['updateTrend']) && !empty($trend))
+												{
+													$sql="UPDATE recommendation SET trends='".$trend."' WHERE id_recommendation='".$id."'";
+													mysqli_query($conn, $sql);
+													header("location:update.php?UpdateCompletTrend=Update with success!");
+												}
+												else
+													header("location:update.php");
+													
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}	
 		}
 	}
 	else

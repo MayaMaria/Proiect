@@ -9,10 +9,12 @@ include '../phpfiles/showDataBase.php';
 
 <body>
 
-<center><h1>Update Page</h1></center>
+<div class="top">
+<h1>Update Page</h1>
+</div>
 
 <div class="vertical-menu">
-  <a class="active">Options</a>
+  <a class="active" href="../admin.php">Options</a>
   <a href="#">Update</a>
   <a href="adminOptions/delete.php">Delete</a>
   <a href="adminOptions/insert.php">Insert</a>
@@ -71,7 +73,20 @@ include '../phpfiles/showDataBase.php';
 				}
 			?>
 	<div>
-<hr><hr>
+<hr>
+<p>Suggestion table</p>
+	<table>
+		<tr>
+			<th>id_suggestion</th>
+			<th>title</th> 
+			<th>gender</th>
+			<th>description</th>
+			<th>imagePath</th>
+		</tr>
+	<?php	showSuggestions();?>
+	</table>
+
+<hr>
 	<div>
 		<p>Update Recommendations</p>
 		<form  method="POST" action="updateRecommendation.php"> 
@@ -181,8 +196,27 @@ include '../phpfiles/showDataBase.php';
 				
 			</form>
 	<div>
-
 	<br /> <br />
+	
+	<hr>
+		<p> Recommendation table</p>
+	<table>
+		<tr>
+				<th>id_recommendation</th>
+				<th>name</th> 
+				<th>description</th>
+				<th>imagePath</th>
+				<th>event</th>
+				<th>season</th>
+				<th>style</th>
+				<th>color</th>
+				<th>trends</th>
+		</tr>
+	<?php	showRecommendations();?>
+	</table>
+	
+	<br />
+	<br />
 </body>
 
 

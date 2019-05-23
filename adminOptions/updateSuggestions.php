@@ -26,33 +26,47 @@
 			header("location:update.php?UpdateCompletAll=Update with success!");
 			
 		}
-		if(isset($_POST['updateTitle']) && !empty($title))
+		else
 		{
-			$sql="UPDATE suggestions SET title='".$title."' WHERE id_suggestion='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletT=Update with success!");
+			if(isset($_POST['updateTitle']) && !empty($title))
+			{
+				$sql="UPDATE suggestions SET title='".$title."' WHERE id_suggestion='".$id."'";
+				mysqli_query($conn, $sql);
+				header("location:update.php?UpdateCompletT=Update with success!");
+			}
+			else
+			{
+			
+				if(isset($_POST['updateGender']) && !empty($gender))
+				{
+					$sql="UPDATE suggestions SET gender='".$gender."' WHERE id_suggestion='".$id."'";
+					mysqli_query($conn, $sql);
+					header("location:update.php?UpdateCompletG=Update with success!");
+				}
+				else
+				{
+					if(isset($_POST['updateDesc'])  && !empty($desc))
+					{
+						$sql="UPDATE suggestions SET description='".$desc."' WHERE id_suggestion='".$id."'";
+						mysqli_query($conn, $sql);
+						header("location:update.php?UpdateCompletD=Update with success!");
+					}
+					else
+					{
+					
+						if(isset($_POST['updateImage']) && !empty($imagePath))
+						{
+							$sql="UPDATE suggestions SET imagePath='".$imagePath."'  WHERE id_suggestion='".$id."'";
+							mysqli_query($conn, $sql);
+							header("location:update.php?UpdateCompletI=Update with success!");
+						}
+						else
+						header("location:update.php");
+					}
+				}
+			}
 		}
-		
-		if(isset($_POST['updateGender']) && !empty($gender))
-		{
-			$sql="UPDATE suggestions SET gender='".$gender."' WHERE id_suggestion='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletG=Update with success!");
-		}
-		
-		if(isset($_POST['updateDesc'])  && !empty($desc))
-		{
-			$sql="UPDATE suggestions SET description='".$desc."' WHERE id_suggestion='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletD=Update with success!");
-		}
-		
-		if(isset($_POST['updateImage']) && !empty($imagePath))
-		{
-			$sql="UPDATE suggestions SET imagePath='".$imagePath."'  WHERE id_suggestion='".$id."'";
-			mysqli_query($conn, $sql);
-			header("location:update.php?UpdateCompletI=Update with success!");
-		}
+	
 	}
 	else
 		header("location:update.php");
