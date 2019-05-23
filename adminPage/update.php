@@ -14,10 +14,10 @@ include '../phpfiles/showDataBase.php';
 </div>
 
 <div class="vertical-menu">
-  <a class="active" href="../admin.php">Options</a>
+  <a class="active" href="admin.php">Options</a>
   <a href="#">Update</a>
-  <a href="adminOptions/delete.php">Delete</a>
-  <a href="adminOptions/insert.php">Insert</a>
+  <a href="delete.php">Delete</a>
+  <a href="insert.php">Insert</a>
 </div>
 
 
@@ -72,7 +72,7 @@ include '../phpfiles/showDataBase.php';
 						echo "<p style='background-color:green; color:white;'>".$_GET['UpdateCompletAll']."</p>";
 				}
 			?>
-	<div>
+	</div>
 <hr>
 <p>Suggestion table</p>
 	<table>
