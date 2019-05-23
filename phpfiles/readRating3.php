@@ -89,4 +89,3 @@
 				$rating5_8=$row["rating5"];
 			}
 
-?>

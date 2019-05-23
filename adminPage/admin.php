@@ -21,6 +21,7 @@ include '../phpfiles/showDataBase.php';
 </div>
 
 <div class="vertical-menu">
+	<a href="../phpfiles/logout.php?logout">Logout</a>
   <a class="active">Options</a>
   <a href="update.php">Update</a>
   <a href="delete.php">Delete</a>

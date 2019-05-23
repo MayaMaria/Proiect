@@ -1,7 +1,7 @@
 <?php 
 	include 'phpfiles/suggestion_controller.php';
 	include 'phpfiles/calculateRating.php';
-	include 'phpfiles/readRating3.php';
+	require 'phpfiles/readRating3.php';
 ?>
 
 <!DOCTYPE html>
@@ -122,10 +122,7 @@
             <div class="side right">
               <div>
 			   <?php
-			  if(@$_GET['Rating5_1'] == true)
-					{
-						$rating5_8=$_GET['Rating5_1'];
-					}	
+			 
 			 echo $rating5_8;
 			?>
 			  </div>
@@ -141,10 +138,7 @@
             <div class="side right">
               <div>
 			   <?php
-			  if(@$_GET['Rating4_1'] == true)
-					{
-						$rating4_8=$_GET['Rating4_1'];
-					}	
+			 
 			 echo $rating4_8;
 			?>
 			  </div>
@@ -160,10 +154,7 @@
             <div class="side right">
               <div>
 			   <?php
-			  if(@$_GET['Rating3_1'] == true)
-					{
-						$rating3_8=$_GET['Rating3_1'];
-					}	
+			 
 			 echo $rating3_8;
 			?>
 			  </div>
@@ -179,10 +170,7 @@
             <div class="side right">
               <div>
 			   <?php
-			  if(@$_GET['Rating2_1'] == true)
-					{
-						$rating2_8=$_GET['Rating2_1'];
-					}	
+			 
 			 echo $rating2_8;
 			?>
 			  </div>
@@ -198,10 +186,7 @@
             <div class="side right">
               <div>
 			  <?php
-			  if(@$_GET['Rating1_1'] == true)
-					{
-						$rating1_8=$_GET['Rating1_1'];
-					}	
+		
 			 echo $rating1_8;
 			?>
 			  </div>
