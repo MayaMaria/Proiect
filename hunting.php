@@ -92,15 +92,13 @@
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+		   data-text="The hunting season is near " 
+		   data-url="http://M&amp;Ainspiration.com"
+		   data-via="m&amp;aInsipiration"
+		   data-hashtags="huntingComoShoes" 
+		   data-lang="en"
+		   data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php

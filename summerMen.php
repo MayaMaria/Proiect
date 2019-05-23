@@ -82,15 +82,12 @@
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+			data-text="Havaianas shoes come with a qualifier: They are to be worn at the beach or by the pool only But in those two locations, it`s hard to beat a good pair of sandals." data-url="http://M&amp;Ainspiration.com" 
+			data-via="m&amp;aInsipiration" 
+			data-hashtags="summerMen"
+			data-lang="en" 
+			data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php
@@ -251,15 +248,13 @@
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+		   data-text="If you want to fully embrace that laid-back spring vibe, go with a pair of sneakers worn by every California surfer and skater since the dawn of time" 
+		   data-url="http://M&amp;Ainspiration.com" 
+		   data-via="m&amp;aInsipiration" 
+		   data-hashtags="vansSummerMen"
+		   data-lang="en" 
+		   data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php
@@ -420,15 +415,12 @@
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+		   data-text="More acceptable than flops: Birkenstocks. These are waterproof, so they`re a sure bet around water." 
+		   data-url="http://M&amp;Ainspiration.com" data-via="m&amp;aInsipiration" 
+		   data-hashtags="summerMen" 
+		   data-lang="en" 
+		   data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php

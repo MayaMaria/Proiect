@@ -87,15 +87,13 @@
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+			data-text="Whether you`re a routine marathon runner, or you simply enjoy the occasional light jog, there`s no denying that a gorgeous, sunny day can motivate just about anyone to get out there and pound the pavement."
+			data-url="http://M&amp;Ainspiration.com" 
+			data-via="m&amp;aInsipiration" 
+			data-hashtags="nikeShoesRun" 
+			data-lang="en" 
+			data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php

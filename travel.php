@@ -79,15 +79,14 @@ include 'phpfiles/calculateRating.php';
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+			data-text="Are you going on a spring travel? And you don&#39;t have the right shoes?"
+			data-url="http://M&amp;Ainspiration.com" 
+			data-via="m&amp;aInsipiration" 
+			data-hashtags="FlatsPerfectForTravel"
+			data-lang="en"
+			data-show-count="false">Tweet
+			</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php
@@ -247,15 +246,13 @@ include 'phpfiles/calculateRating.php';
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+			data-text="Are you going on a spring travel? And you don&#39;t have the right shoes?" 
+			data-url="http://M&amp;Ainspiration.com" 
+			data-via="m&amp;aInsipiration" 
+			data-hashtags="cottonShoesPerfectForTravel"
+			data-lang="en"			
+			data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php
@@ -415,15 +412,14 @@ include 'phpfiles/calculateRating.php';
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+			data-text="Are you going on a spring travel? And you don&#39;t have the right shoes?" 
+			data-url="http://M&amp;Ainspiration.com"
+			data-via="m&amp;aInsipiration" 
+			data-hashtags="BootsPerfectForTravel"
+			 data-lang="en"
+			data-show-count="false">Tweet
+			</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php

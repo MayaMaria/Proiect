@@ -80,29 +80,27 @@ include 'phpfiles/calculateRating.php';
           <br /><br />
           <br />
           <p><b>Share this on </b></p>
-		<?php
-		  if(isset($_SESSION['login'])){
-			  ?>
-          <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
-          </p>
-		  
-		<?php
-		  }
-		  else 
-		  {
-			  echo "<a href='login.php'>Login</a> for share!";
-		  }
-		  
-		  ?>
+				<?php
+				  if(isset($_SESSION['login'])){
+					  ?>
+				  <p class="buton-share">
+					<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+					data-text="Oh, yes, it&#39;s Ladies&#39; Night! " 
+					data-url="http://M&amp;Ainspiration.com" 
+					data-via="m&amp;aInsipiration" 
+					data-hashtags="timeToDanceKittenHeels" 
+					data-show-count="false">Tweet
+					</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				  </p>
+				  
+				<?php
+				  }
+				  else 
+				  {
+					  echo "<a href='login.php'>Login</a> for share!";
+				  }
+				  
+				  ?>
 		  
           <br /><br />
           <hr />
@@ -257,8 +255,13 @@ include 'phpfiles/calculateRating.php';
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="Perfect for club :) wedges" data-hashtags="timeToDance" 
-		   data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+		   data-text="Oh, yes, it&#39;s Ladies&#39; Night! "
+		   data-url="http://M&amp;Ainspiration.com"
+		   data-via="m&amp;aInsipiration" 
+		   data-hashtags="timeToDanceWedgesShoes" 
+		   data-show-count="false">Tweet
+		   </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php
@@ -423,15 +426,13 @@ include 'phpfiles/calculateRating.php';
 		  if(isset($_SESSION['login'])){
 			  ?>
           <p class="buton-share">
-            <a
-              class="facebook"
-              href="https://www.facebook.com/sharer/sharer.php?u=#url"
-              target="blank"
-              ><i class="fa fa-facebook"></i
-            ></a>
-            <a class="twitter" href="http://twitter.com/share" target="blank"
-              ><i class="fa fa-twitter"></i
-            ></a>
+             <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+		   data-text="Oh, yes, it&#39;s Ladies&#39; Night! "
+		   data-url="http://M&amp;Ainspiration.com"
+		   data-via="m&amp;aInsipiration" 
+		   data-hashtags="timeToDanceChunkyHeelsShoes" 
+		   data-show-count="false">Tweet
+		   </a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </p>
 		  
 		<?php
