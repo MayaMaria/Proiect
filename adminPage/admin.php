@@ -14,8 +14,9 @@ include '../phpfiles/showDataBase.php';
 
 <div id="header">
 	<center>
-		<img src="../imagini/admin.png">
+		<img src="../imagini/admin.png" id="gif">
 		<h1> Welcome to Admin Panel | M&A Insipiration</h1>
+		<img src="../imagini/admingif.gif">
 	</center>
 </div>
 

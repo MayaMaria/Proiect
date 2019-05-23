@@ -10,10 +10,18 @@ body{
 	background: #00264d;
 }
 
+#gif{
+	width: 180px;
+	height: 180px;
+}
 
 img{
-	width: 80px;
-	height: 80px;
+	width: 400px;
+	height: 300px;
+}
+
+h1{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 	
 .top{
