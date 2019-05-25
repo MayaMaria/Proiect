@@ -1,5 +1,5 @@
 <?php
-
+require 'database_con.php';
 $sql = "SELECT * FROM ratings WHERE id_suggestion='55'";
 $result = mysqli_query($conn, $sql);
 	
@@ -40,13 +40,9 @@ if(isset($_POST['stars1'])) {
 		$sql3 = "UPDATE ratings SET rating5=".$rating5." WHERE id_suggestion='55'";
 		mysqli_query($conn, $sql3);
 	}	
+	header("location:../summerMen.php");
 }
 
-header("location:../summerMen.php?Rating1_1=".$rating1." ");
-header("location:../summerMen.php?Rating2_1=".$rating2." ");
-header("location:../summerMen.php?Rating3_1=".$rating3." ");
-header("location:../summerMen.php?Rating4_1".$rating4." ");
-header("location:../summerMen.php?Rating5_1=".$rating5." ");
 
 
 
@@ -90,12 +86,6 @@ if(isset($_POST['stars2'])) {
 		$sql3 = "UPDATE ratings SET rating5=".$rating5." WHERE id_suggestion='56'";
 		mysqli_query($conn, $sql3);
 	}	
+	header("location:../summerMen.php");
 }
-
-header("location:../summerMen.php?Rating1_2=".$rating1." ");
-header("location:../summerMen.php?Rating2_2=".$rating2." ");
-header("location:../summerMen.php?Rating3_2=".$rating3." ");
-header("location:../summerMen.php?Rating4_2=".$rating4." ");
-header("location:../summerMen.php?Rating5_2=".$rating5." ");
-
 ?>
