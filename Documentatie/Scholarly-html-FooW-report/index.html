@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>FooW Scholarly HTML report</title>
+    <link rel="stylesheet" href="css/scholarly.min.css">
+    <script src="js/scholarly.min.js"></script>
+  </head>
+  <body prefix="schema: http://schema.org">
+    <header>
+      <div class="banner">
+        <img src="scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+        <div class="status">FooW project</div>
+      </div>
+      <h1>Footwear Web Assistant report</h1>
+    </header>
+    <div role="contentinfo">
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          Andreea Bucătaru
+          &amp;
+          Maria Bulboacă
+          &amp;
+          Matei Alexandru
+        </dd>
+      </dl>
+    </div>
+    <section id="introduction" role="doc-introduction">
+      <h2>Descrierea proiectului</h2>
+      <p>
+        “Unele persoane pot întâmpina dificultăți în alegerea încălțămintei potrivite pentru anumite ocazii: interviu de angajare, spectacol, campionat de șah etc. 
+      </p>
+      <p> 
+        Este necesară o aplicație Web ce permite alegerea pieselor de încălțăminte, oferindu-se și diverse recomandări conform sezonului, cromaticii, mărcii preferate, tendințelor modei, caracteristicilor speciale și/sau stilului vestimentar adoptat de persoana respectivă -- de exemplu, ținută sportivă, pentru birou și altele. 
+      </p>
+      <p>
+        Se vor prezenta informații referitoare la achiziționarea unor produse de interes (e.g., sugestii de genul "se apropie vara, pentru plimbări nocturne ar fi utile niște botine fosforescente" sau "pentru ceremonii dansante e indicat să porți pantofi cu toc de inox; asortează-i cu o togă argintie"). 
+      </p>
+      <p>
+        Fiecare sugestie oferită utilizatorului va fi expediată și prin poșta electronică, suplimentar putând fi partajată pe o rețea socială și votată (i.e. apreciată cu 1, 2, ..., 5 "stele" sau calificative), astfel încât să poată fi propusă și altor persoane având preferințe similare.”
+      </p>
+    </section>
+    <section id="structure">
+      <h2>Tehnologii utilizate</h2>
+      <p>
+        Pentru crearea interfeței utilizatorului, am folosit limbajele HTML și CSS.
+      </p>
+      <p>
+        Partea de back-end a interfeței a fost realizată cu ajutorul PHP și JavaScript.
+      </p>
+      <p>
+          Stocarea și managementul datelor au fost realizare utilizând un server de baze de date relațional, MySql. 
+      </p>
+    </section>
+    <section id="semantics">
+      <h2>Diagrame</h2>
+      <section id="Root">
+        <h3>Diagrama bazei de date</h3>
+        <img src="./diagrame/db.png">
+      </section>
+      <section id="Root">
+          <h3>Diagrame UseCase</h3>
+          <img src="./diagrame/useCase.png">
+      </section>
+      <section id="Root">
+          <h3>Arhitectura aplicației</h3>
+          <img src="./diagrame/arhitectura.png">
+      </section>
+      <section id="Root">
+          <h3>Diagrame de activitate</h3>
+          <img src="./diagrame/activitate1.png">
+          <img src="./diagrame/activitate2.png">
+      </section>
+    </section>
+  </body>
+</html>
