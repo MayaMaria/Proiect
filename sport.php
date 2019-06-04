@@ -1,7 +1,7 @@
 <?php 
 	include 'phpfiles/suggestion_controller.php';
 	include 'phpfiles/calculateRating.php';
-	require 'phpfiles/readRating3.php';
+	include  'phpfiles/readRating3.php';
 ?>
 
 <!DOCTYPE html>
@@ -120,9 +120,8 @@
             <div class="side right">
               <div>
 			   <?php
-			 
-			 echo $rating5_8;
-			?>
+				echo $rating5_8;
+				?>
 			  </div>
             </div>
             <div class="side">

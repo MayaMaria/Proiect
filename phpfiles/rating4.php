@@ -4,7 +4,7 @@ $sql = "SELECT * FROM ratings WHERE id_suggestion='50'";
 $result = mysqli_query($conn, $sql);
 	
 while($row = mysqli_fetch_assoc($result)) {
-  $rating1 = $row["rating1"];
+	$rating1 = $row["rating1"];
 	$rating2 = $row["rating2"];
 	$rating3 = $row["rating3"];
 	$rating4 = $row["rating4"];
@@ -36,17 +36,14 @@ if(isset($_POST['stars1'])) {
 	}
 	if($rating == 5){
 		$rating5 = $rating5+1;
-		
 		$sql3 = "UPDATE ratings SET rating5=".$rating5." WHERE id_suggestion='50'";
 		mysqli_query($conn, $sql3);
 	}	
+	header("location:../hunting.php");
+
 }
 
-header("location:../hunting.php?Rating1=".$rating1." ");
-header("location:../hunting.php?Rating2=".$rating2." ");
-header("location:../hunting.php?Rating3=".$rating3." ");
-header("location:../hunting.php?Rating4=".$rating4." ");
-header("location:../hunting.php?Rating5=".$rating5." ");
+
 
 
 
@@ -90,17 +87,7 @@ if(isset($_POST['stars2'])) {
 		$sql3 = "UPDATE ratings SET rating5=".$rating5." WHERE id_suggestion='54'";
 		mysqli_query($conn, $sql3);
 	}	
+	header("location:../summerMen.php");
 }
-
-header("location:../summerMen.php?Rating1=".$rating1." ");
-header("location:../summerMen.php?Rating2=".$rating2." ");
-header("location:../summerMen.php?Rating3=".$rating3." ");
-header("location:../summerMen.php?Rating4=".$rating4." ");
-header("location:../summerMen.php?Rating5=".$rating5." ");
-
-
-
-
-
 
 ?>

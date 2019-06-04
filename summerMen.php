@@ -112,13 +112,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating5'] == true)
-					{
-						$rating5_5=$_GET['Rating5'];
-					}	
-			 echo $rating5_5;
-			?>
+				<?php
+					echo $rating5_5;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -131,13 +127,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating4'] == true)
-					{
-						$rating4_5=$_GET['Rating4'];
-					}	
-			 echo $rating4_5;
-			?>
+				<?php
+					echo $rating4_5;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -150,13 +142,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating3'] == true)
-					{
-						$rating3_5=$_GET['Rating3'];
-					}	
-			 echo $rating3_5;
-			?>
+				<?php
+					echo $rating3_5;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -169,13 +157,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating2'] == true)
-					{
-						$rating2_5=$_GET['Rating2'];
-					}	
-			 echo $rating2_5;
-			?>
+				<?php
+					echo $rating2_5;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -188,13 +172,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating1'] == true)
-					{
-						$rating1_5=$_GET['Rating1'];
-					}	
-			 echo $rating1_5;
-			?>
+				<?php
+					echo $rating1_5;
+				?>
 			  </div>
             </div>
           </div>
@@ -279,13 +259,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating5_1'] == true)
-					{
-						$rating5_6=$_GET['Rating5_1'];
-					}	
-			 echo $rating5_6;
-			?>
+				<?php
+					echo $rating5_6;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -298,13 +274,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating4_1'] == true)
-					{
-						$rating4_6=$_GET['Rating4_1'];
-					}	
-			 echo $rating4_6;
-			?>
+				<?php
+					echo $rating4_6;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -317,13 +289,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating3_1'] == true)
-					{
-						$rating3_6=$_GET['Rating3_1'];
-					}	
-			 echo $rating3_6;
-			?>
+				<?php
+					echo $rating3_6;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -336,13 +304,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating2_1'] == true)
-					{
-						$rating2_6=$_GET['Rating2_1'];
-					}	
-			 echo $rating2_6;
-			?>
+				<?php
+				   echo $rating2_6;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -355,13 +319,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating1_1'] == true)
-					{
-						$rating1_6=$_GET['Rating1_1'];
-					}	
-			 echo $rating1_6;
-			?>
+				<?php
+					echo $rating1_6;
+				?>
 			  </div>
             </div>
           </div>
@@ -446,13 +406,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating5_2'] == true)
-					{
-						$rating5_7=$_GET['Rating5_2'];
-					}	
-			 echo $rating5_7;
-			?>
+				<?php
+				   echo $rating5_7;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -465,13 +421,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating4_2'] == true)
-					{
-						$rating4_7=$_GET['Rating4_2'];
-					}	
-			 echo $rating4_7;
-			?>
+				<?php
+					echo $rating4_7;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -484,13 +436,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating3_2'] == true)
-					{
-						$rating3_7=$_GET['Rating3_2'];
-					}	
-			 echo $rating3_7;
-			?>
+				<?php
+					echo $rating3_7;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -503,13 +451,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating2_2'] == true)
-					{
-						$rating2_7=$_GET['Rating2_2'];
-					}	
-			 echo $rating2_7;
-			?>
+				<?php
+					echo $rating2_7;
+				?>
 			  </div>
             </div>
             <div class="side">
@@ -522,13 +466,9 @@
             </div>
             <div class="side right">
               <div>
-			  <?php
-			  if(@$_GET['Rating1_2'] == true)
-					{
-						$rating1_7=$_GET['Rating1_2'];
-					}	
-			 echo $rating1_7;
-			?>
+				 <?php
+					echo $rating1_7;
+				?>
 			  </div>
             </div>
           </div>
