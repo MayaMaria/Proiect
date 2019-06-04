@@ -45,6 +45,26 @@
           </div>
         </div>
 
+        <div class = "selector">
+          <button class="collapsible" type="button">Trends</button>
+          <div class = "content">
+            <input type="radio" name="style" value="none"> None <br>
+            <?php
+                filterTrends();
+            ?>
+          </div>
+        </div>
+
+        <div class = "selector">
+          <button class="collapsible" type="button">Seasons</button>
+          <div class = "content">
+            <input type="radio" name="style" value="none"> None <br>
+            <?php
+                filterSeasons();
+            ?>
+          </div>
+        </div>
+
         <input type="submit">
 
       </form>

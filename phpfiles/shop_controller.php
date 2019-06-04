@@ -9,13 +9,15 @@
     global $allColors, $allBrands, $allStyles;
 
     function getFilters() {
-        global $conn, $sql, $allColors, $allBrands, $allStyles;
+        global $conn, $sql, $allColors, $allBrands, $allStyles, $allTrends, $allSeasons;
         $result = mysqli_query($conn, $sql);
         $i = 0;
         while($row = mysqli_fetch_assoc($result)) {
             $allColors[$i] = $row["color"];
             $allBrands[$i] = $row["brand"];
             $allStyles[$i] = $row["style"];
+            $allTrends[$i] = $row["trends"];
+            $allSeasons[$i] = $row["season"];
             $i++;
         }
     }
@@ -24,7 +26,6 @@
         global $sql, $conn, $id, $name, $imagePath, $description, $gender, $event, $season, $style, $color, $trends, $brand;
         $whereClause = '';
         if(isset($_GET["brand"])) {
-            
             if($_GET["brand"] == "none") $whereClause = ";";
             $whereClause = sprintf(" AND brand = '%s';", $_GET["brand"]);
         }
@@ -35,6 +36,15 @@
         if(isset($_GET["style"])) {
             if($_GET["style"] == "none") $whereClause = ";";
             $whereClause = sprintf(" AND style = '%s';", $_GET["style"]);
+        }
+        if(isset($_GET["event"])) {
+            $whereClause = sprintf(" AND event = '%s';", $_GET["event"]);
+        }
+        if(isset($_GET["trends"])) {
+            $whereClause = sprintf(" AND trends = '%s';", $_GET["trends"]);
+        }
+        if(isset($_GET["season"])) {
+            $whereClause = sprintf(" AND season = '%s';", $_GET["season"]);
         }
 
         $sql = rtrim($sql, ';');
@@ -102,6 +112,28 @@
         for($i = 0; $i < $length; $i++) {
             echo 
             "<input type=\"radio\" name=\"style\" value=\"$allStyles[$i]\">$allStyles[$i] <br>";        
+        }
+    }
+
+    function filterTrends() {
+        global $allTrends, $actual_link;
+        $allTrends = array_unique($allTrends);
+        $length = count($allTrends);
+        $allTrends = array_values($allTrends);
+        for($i = 0; $i < $length; $i++) {
+            echo 
+            "<input type=\"radio\" name=\"trends\" value=\"$allTrends[$i]\">$allTrends[$i] <br>";        
+        }
+    }
+
+    function filterSeasons() {
+        global $allSeasons, $actual_link;
+        $allSeasons = array_unique($allSeasons);
+        $length = count($allSeasons);
+        $allSeasons = array_values($allSeasons);
+        for($i = 0; $i < $length; $i++) {
+            echo 
+            "<input type=\"radio\" name=\"season\" value=\"$allSeasons[$i]\">$allSeasons[$i] <br>";        
         }
     }
 ?>

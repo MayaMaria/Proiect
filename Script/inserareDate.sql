@@ -19,12 +19,22 @@ VALUES ("Șlapi","Șlapi cu barete de cauciuc și cu talpă canelată de etilen 
 INSERT INTO `recommendation`(`name`, `description`, `imagePath`, `gender`, `event`, `season`, `style`, `brand`, `color`, `trends`) 
 VALUES ("Sandale cu barete multicolore","Sandale cu două barete. Exterior textil împletit, cu modele şi culori diferite. Formă clasică, cu talpă dublă. Închidere prin intermediul unei barete cu cataramă aurie în partea din spate.","imagini/Men/sandale.jpg","male","evening","summer","casual","Zara","black","modern");
 
+INSERT INTO `recommendation`(`name`, `description`, `imagePath`, `gender`, `event`, `season`, `style`, `brand`, `color`, `trends`) 
+VALUES ("Gheată Lasocki","Gheată Lasocki pentru bărbați.","imagini/Men/lasocki.jpg","male","interview","spring","modern","CCC","brown","'90s Remix");
+
+INSERT INTO `recommendation`(`name`, `description`, `imagePath`, `gender`, `event`, `season`, `style`, `brand`, `color`, `trends`) 
+VALUES ("Gheată Lasocki","Gheată Lasocki pentru bărbați.","imagini/Men/lasockiBlack.jpg","male","wedding","autumn","modern","CCC","black","'90s Remix");
+
+INSERT INTO `recommendation`(`name`, `description`, `imagePath`, `gender`, `event`, `season`, `style`, `brand`, `color`, `trends`) 
+VALUES ("Gheată Lanetti","Gheată Lanetti pentru bărbați.","imagini/Men/lanetti.jpg","male","graduation","spring","modern","CCC","beige","sweetsneaks");
+
 -- children
 INSERT INTO `recommendation`(`name`, `description`, `imagePath`, `gender`, `event`, `season`, `style`, `brand`, `color`, `trends`) 
 VALUES ("Pantofi sport combinați","Pantofi sport cu construcţie tip şosetă. Combinaţie de materiale şi culori. Închidere prin intermediul unor şireturi ajustabile. Gaică în partea din spate, pentru o încălţare mai uşoară. Căptuşeală şi branţ din ţesătură. Talpă voluminoasă.","imagini/Children/sport.jpg","child","sport","spring","casual","Zara","pastel","modern");
 
 INSERT INTO `recommendation`(`name`, `description`, `imagePath`, `gender`, `event`, `season`, `style`, `brand`, `color`, `trends`) 
 VALUES ("Balerini cu fundiță","Balerini cu bombeu contrastant şi fundiţă decorativă. Căptuşeală şi branţ din ţesătură.","imagini/Children/balerini.jpg","child","party","summer","modern","Zara","beige","modern");
+
 
 
 
