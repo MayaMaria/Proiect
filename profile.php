@@ -149,6 +149,9 @@
 
 	
 	<form  method="POST" action="phpfiles/change_profile.php"> 
+		<p>Choose your profile photo</p>
+		<input type="file" name="profile"><br />
+		<input type="submit" name="updateImage" value="Update"><br />
 		 <input type="text" name="username" placeholder="Username"><br />
 		 <input type="submit" name="updateUsername" value="Update"><br />
 		<input type="text" name="country" placeholder="Country"><br />

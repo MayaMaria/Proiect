@@ -3,6 +3,15 @@
 	  if(isset($_SESSION['login'])){
 		  $old_name=$_SESSION['login'];
 		  require_once 'database_con.php';
+			if(isset($_POST['updateImage']))
+			{	
+				if(isset($_POST['profile'])){
+					$profile=$_POST['profile'];
+					$sql="UPDATE users SET profileImage='".$profile."' WHERE username='".$old_name."'";
+					$_SESSION['image']=$profile;
+					mysqli_query($conn, $sql);
+				}
+			}
 			if(isset($_POST['updateName']))
 			{	
 				if(isset($_POST['name'])){

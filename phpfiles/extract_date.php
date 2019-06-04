@@ -7,8 +7,13 @@
 	$sql = "SELECT * FROM users where username='".$_SESSION['login']."'";
 	$result = mysqli_query($conn,$sql);
 	$row = mysqli_fetch_assoc($result);
+	if(empty($row["profileImage"]))
+		$profile="user.png";
+	else
+		$profile=$row["profileImage"];
+	
 		$message= "<a style='border: 2px solid ; border: 30px;' href='profile.php'>
-		<img src='imagini/".$row["profileImage"]."' width='30' height='20' align='middle'>".$_SESSION['login']."
+		<img src='imagini/".$profile."' width='40' height='30' align='middle'>".$_SESSION['login']."
 		</a> <a href='phpfiles/logout.php?logout'>Logout</a>";
 		$old_name=$_SESSION['login'];
 	  }

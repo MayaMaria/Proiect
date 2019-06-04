@@ -4,9 +4,7 @@
 		require 'database_con.php';
 		if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['country']) && isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email'])
 			&& isset($_POST['repeatPass'])){
-				if(!isset($_POST['profile']))
-					$profile="user.png";
-				else 
+				if(isset($_POST['profile']))
 					$profile=$_POST['profile'];
 		
 			$name=$_POST['name'];

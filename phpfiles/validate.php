@@ -13,6 +13,8 @@
 			
 			if($resultNumberRows == 1 )
 			{
+				$row=mysqli_fetch_row($result);
+				
 				if(isset($_POST['remember-me'])){
 
 					setCookie('username',$username,time()+60*60*7);
@@ -26,6 +28,7 @@
 				else
 				{
 					$_SESSION['login']=$username;
+					$_SESSION['image']=$row["imagePath"];
 					header("location:../welcome.php");
 				}	
 			}
