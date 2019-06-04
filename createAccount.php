@@ -149,6 +149,16 @@
       <hr />
 	  <?php 
 	  
+		if(@$_GET['UserExist'] == true)
+			{
+			?>
+			<div>
+				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
+				<?php echo $_GET['UserExist']?>
+				</div>
+						
+			<?php
+			}
 			if(@$_GET['InvalidPass'] == true)
 			{
 			?>
@@ -190,6 +200,7 @@
 		<p>Choose your profile photo</p>
 		<input type="file" name="profile">
 	  <br>
+		<span id="eroare"></span>
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input 
 			type="text" 
