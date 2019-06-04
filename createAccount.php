@@ -40,25 +40,27 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="shop.php?gender=male">Interview Shoes</a>
-              <a href="shop.php?gender=male">Wedding Shoes</a>
-              <a href="shop.php?gender=male">Evening Events Shoes</a>
-              <a href="shop.php?gender=male">Graduation Shoes</a>
+              <a href="shop.php?gender=male&event=interview">Interview Shoes</a>
+              <a href="shop.php?gender=male&event=wedding">Wedding Shoes</a>
+              <a href="shop.php?gender=male&event=evening">Evening Events Shoes</a>
+              <a href="shop.php?gender=male&event=graduation">Graduation Shoes</a>
               <h3>Trends</h3>
-              <a href="shop.php?gender=male">Sweet Sneaks</a>
-              <a href="shop.php?gender=male">'90s Remix</a>
-              <a href="shop.php?gender=male">Looks We Love</a>
+              <a href="shop.php?gender=male&trends=sweetsneaks">Sweet Sneaks</a>
+              <a href="shop.php?gender=male&trends=90remix">'90s Remix</a>
+              <a href="shop.php?gender=male&trends=lookslove">Looks We Love</a>
+              <a href="shop.php?gender=male&trends=modern">Modern</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="shop.php?gender=male">Summer</a>
-              <a href="shop.php?gender=male">Autumn</a>
-              <a href="shop.php?gender=male">Winter</a>
-              <a href="shop.php?gender=male">Spring</a>
+              <a href="shop.php?gender=male&season=summer">Summer</a>
+              <a href="shop.php?gender=male&season=autumn">Autumn</a>
+              <a href="shop.php?gender=male&season=winter">Winter</a>
+              <a href="shop.php?gender=male&season=spring">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="shop.php?gender=male">Nike Airmax</a>
-              <a href="shop.php?gender=male">Gucci</a>
-              <a href="shop.php?gender=male">Supreme</a>
+              <a href="shop.php?gender=male&brand=nikeair">Nike Airmax</a>
+              <a href="shop.php?gender=male&brand=gucci">Gucci</a>
+              <a href="shop.php?gender=male&brand=supreme">Supreme</a>
+
               <a href="shop.php?gender=male" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>
@@ -74,25 +76,26 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="shop.php?gender=female">Interview Shoes</a>
-              <a href="shop.php?gender=female">Wedding Shoes</a>
-              <a href="shop.php?gender=female">Evening Events Shoes</a>
-              <a href="shop.php?gender=female">Graduation Shoes</a>
+              <a href="shop.php?gender=female&event=interview">Interview Shoes</a>
+              <a href="shop.php?gender=female&event=wedding">Wedding Shoes</a>
+              <a href="shop.php?gender=female&event=evening">Evening Events Shoes</a>
+              <a href="shop.php?gender=female&event=graduation">Graduation Shoes</a>
               <h3>Trends</h3>
-              <a href="shop.php?gender=female">Sweet Sneaks</a>
-              <a href="shop.php?gender=female">'90s Remix</a>
-              <a href="shop.php?gender=female">Looks We Love</a>
+              <a href="shop.php?gender=female&trends=sweetsneaks">Sweet Sneaks</a>
+              <a href="shop.php?gender=female&trends=90remix">'90s Remix</a>
+              <a href="shop.php?gender=female&trends=lookslove">Looks We Love</a>
+              <a href="shop.php?gender=female&trends=modern">Modern</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="shop.php?gender=female">Summer</a>
-              <a href="shop.php?gender=female">Autumn</a>
-              <a href="shop.php?gender=female">Winter</a>
-              <a href="shop.php?gender=female">Spring</a>
+              <a href="shop.php?gender=female&season=summer">Summer</a>
+              <a href="shop.php?gender=female&season=autumn">Autumn</a>
+              <a href="shop.php?gender=female&season=winter">Winter</a>
+              <a href="shop.php?gender=female&season=spring">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="shop.php?gender=female">Nike Airmax</a>
-              <a href="shop.php?gender=female">Gucci</a>
-              <a href="shop.php?gender=female">Supreme</a>
+              <a href="shop.php?gender=female&brand=nikeair">Nike Airmax</a>
+              <a href="shop.php?gender=female&brand=gucci">Gucci</a>
+              <a href="shop.php?gender=female&brand=supreme">Supreme</a>
               <a href="shop.php?gender=female" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>
@@ -108,25 +111,26 @@
           <div class="row_submenu">
             <div class="column_submenu">
               <h3>Events</h3>
-              <a href="shop.php?gender=child">Interview Shoes</a>
-              <a href="shop.php?gender=child">Birthday Shoes</a>
-              <a href="shop.php?gender=child">Evening Events Shoes</a>
-              <a href="shop.php?gender=child">Christening Shoes</a>
+              <a href="shop.php?gender=child&event=interview">Interview Shoes</a>
+              <a href="shop.php?gender=child&event=wedding">Wedding Shoes</a>
+              <a href="shop.php?gender=child&event=evening">Evening Events Shoes</a>
+              <a href="shop.php?gender=child&event=graduation">Graduation Shoes</a>
               <h3>Trends</h3>
-              <a href="shop.php?gender=child">Sweet Sneaks</a>
-              <a href="shop.php?gender=child">'90s Remix</a>
-              <a href="shop.php?gender=child">Looks We Love</a>
+              <a href="shop.php?gender=child&trends=sweetsneaks">Sweet Sneaks</a>
+              <a href="shop.php?gender=child&trends=90remix">'90s Remix</a>
+              <a href="shop.php?gender=child&trends=lookslove">Looks We Love</a>
+              <a href="shop.php?gender=child&trends=modern">Modern</a>
             </div>
             <div class="column_submenu">
               <h3>Seasons</h3>
-              <a href="shop.php?gender=child">Summer</a>
-              <a href="shop.php?gender=child">Autumn</a>
-              <a href="shop.php?gender=child">Winter</a>
-              <a href="shop.php?gender=child">Spring</a>
+              <a href="shop.php?gender=child&season=summer">Summer</a>
+              <a href="shop.php?gender=child&season=autumn">Autumn</a>
+              <a href="shop.php?gender=child&season=winter">Winter</a>
+              <a href="shop.php?gender=child&season=spring">Spring</a>
               <h3>New Arrivals</h3>
-              <a href="shop.php?gender=child">Nike Airmax</a>
-              <a href="shop.php?gender=child">Gucci</a>
-              <a href="shop.php?gender=child">Supreme</a>
+              <a href="shop.php?gender=child&brand=nikeair">Nike Airmax</a>
+              <a href="shop.php?gender=child&brand=gucci">Gucci</a>
+              <a href="shop.php?gender=child&brand=supreme">Supreme</a>
               <a href="shop.php?gender=child" style="padding-top: 15px;"><b>ALL</b></a>
             </div>
           </div>

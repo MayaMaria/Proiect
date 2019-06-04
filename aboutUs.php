@@ -39,7 +39,7 @@
         </div>
 
         <div class="news">
-          <form>
+          <form method="POST" id = "subscribe-form">
             <div class="newsInput">
               <label for="mail">E-mail</label>
               <input
@@ -53,17 +53,15 @@
             <div class="newsInput">
               <label>Subject of interest</label>
               <select id="types" name="subjects">
-                <option disabled="disabled" selected="selected"
-                  >Select your option</option
-                >
-                <option> Send me everything </option>
-                <option> Women</option>
-                <option> Men</option>
-                <option> Children </option>
+                <option disabled="disabled" selected="selected" value="all"> Select your option </option>
+                <option value="all"> Send me everything </option>
+                <option value="women"> Women</option>
+                <option value="men"> Men</option>
               </select>
             </div>
-            <input type="submit" value="SUBSCRIBE" />
+            <input type="button" value="SUBSCRIBE" name="submit" id="subscribe-submit"/>
           </form>
+          <div id="subscribedFeedback" style="display:none">You're subscribed!</div>
         </div>
       </div>
 
@@ -76,15 +74,13 @@
               target="_blank"
               style="color: white"
             >
-              <i class="fa fa-facebook-square"> Facebook</i></a
-            >
+              <i class="fa fa-facebook-square"> Facebook</i></a>
             <a
               href="https://www.twitter.com"
               target="_blank"
               style="color: white"
             >
-              <i class="fa fa-twitter-square"> Twitter</i></a
-            >
+              <i class="fa fa-twitter-square"> Twitter</i></a>
           </div>
         </div>
       </div>
@@ -94,4 +90,7 @@
       </div>
     </footer>
   </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="./index.js"> </script>
 </html>
