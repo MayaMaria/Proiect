@@ -58,7 +58,7 @@
         <div class = "selector">
           <button class="collapsible" type="button">Seasons</button>
           <div class = "content">
-            <input type="radio" name="seasons" value="none"> None <br>
+            <input type="radio" name="season" value="none"> None <br>
             <?php
                 filterSeasons();
             ?>

@@ -25,32 +25,50 @@
     function getProductsFromDatabase() {
         global $sql, $conn, $id, $name, $imagePath, $description, $gender, $event, $season, $style, $color, $trends, $brand;
         $whereClause = '';
-        if(isset($_GET["brand"])) {
-            if($_GET["brand"] == "none") $whereClause = ";";
-            $whereClause = sprintf(" AND brand = '%s';", $_GET["brand"]);
+
+        $stmtFormat = '';
+        $stmtInfo = array();
+        if(isset($_GET["brand"]) && $_GET["brand"] != "none") {
+            $whereClause = " AND brand = ?";
+            $stmtFormat = $stmtFormat . "s";
+            array_push($stmtInfo, $_GET["brand"]);
         }
-        if(isset($_GET["color"])) {
-            if($_GET["color"] == "none") $whereClause = ";";
-            $whereClause = sprintf(" AND color = '%s';", $_GET["color"]);
+        if(isset($_GET["color"]) && $_GET["color"] != "none") {
+            $whereClause = $whereClause . " AND color = ?";
+            $stmtFormat = $stmtFormat . "s";
+            array_push($stmtInfo, $_GET["color"]);
         }
-        if(isset($_GET["style"])) {
-            if($_GET["style"] == "none") $whereClause = ";";
-            $whereClause = sprintf(" AND style = '%s';", $_GET["style"]);
+        if(isset($_GET["style"]) && $_GET["style"] != "none") {
+            $whereClause = $whereClause . " AND style = ?";
+            $stmtFormat = $stmtFormat . "s";
+            array_push($stmtInfo, $_GET["style"]);
         }
-        if(isset($_GET["event"])) {
-            $whereClause = sprintf(" AND event = '%s';", $_GET["event"]);
+        if(isset($_GET["event"]) && $_GET["event"] != "none") {
+            $whereClause = $whereClause . " AND event = ?";
+            $stmtFormat = $stmtFormat . "s";
+            array_push($stmtInfo, $_GET["event"]);
         }
-        if(isset($_GET["trends"])) {
-            $whereClause = sprintf(" AND trends = '%s';", $_GET["trends"]);
+        if(isset($_GET["trends"]) && $_GET["trends"] != "none") {
+            $whereClause = $whereClause . " AND trends = ?";
+            $stmtFormat = $stmtFormat . "s";
+            array_push($stmtInfo, $_GET["trends"]);
         }
-        if(isset($_GET["season"])) {
-            $whereClause = sprintf(" AND season = '%s';", $_GET["season"]);
+        if(isset($_GET["season"]) && $_GET["season"] != "none") {
+            $whereClause = $whereClause . " AND season = ?";
+            $stmtFormat = $stmtFormat . "s";
+            array_push($stmtInfo, $_GET["season"]);
         }
 
         $sql = rtrim($sql, ';');
         $sql = $sql . $whereClause;
 
-        $result = mysqli_query($conn, $sql);
+        $stmt = $conn->prepare($sql);
+        if ($stmtFormat != '')
+            $stmt->bind_param($stmtFormat, ...$stmtInfo);
+        $stmt->execute();
+
+        // $result = mysqli_query($conn, $sql);
+        $result = $stmt->get_result();
         $i = 0;
         while($row = mysqli_fetch_assoc($result)) {
             $id[$i] = $row["id_recommendation"];
@@ -70,6 +88,8 @@
 
     function showProducts() {
         global $imagePath, $name, $id;
+        if ($id == null)
+            return;
         $length = count($id);
         for($i = 0; $i < $length; $i++) {
             echo 
