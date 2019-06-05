@@ -6,6 +6,7 @@ include './phpfiles/header.php';
         <div class="container">
           <div class="signin-content">
             <div class="signin-image">
+			<p>WELCOME</p>
               <figure>
                 <img src="imagini/draw.jpg" alt="sign up image" />
               </figure>

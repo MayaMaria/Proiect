@@ -207,7 +207,6 @@
 			name="name" 
 			id="name" 
 			placeholder="Name"
-			value="<?php if(isset($_COOKIE['name'])) {echo $_COOKIE['name'];}?>"
 			required />
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input
@@ -215,7 +214,6 @@
           name="surname"
           id="surname"
           placeholder="Surname"
-		  value="<?php if(isset($_COOKIE['surname'])) {echo $_COOKIE['surname'];}?>"
           required
         />
         <label id="icon" for="name"><i class="icon-user"></i></label>
@@ -224,7 +222,6 @@
           name="username"
           id="username"
           placeholder="Username"
-		  value="<?php if(isset($_COOKIE['usernameR'])) {echo $_COOKIE['usernameR'];}?>"
           required
         />
         <label id="icon" for="name"><i class="icon-envelope "></i></label>
@@ -233,7 +230,6 @@
 			name="email" 
 			id="email" 
 			placeholder="Email" 
-			value="<?php if(isset($_COOKIE['email'])) {echo $_COOKIE['email'];}?>"
 			required />
         <br />
         <label id="icon" for="name"><i class="icon-globe"></i></label>
@@ -242,7 +238,6 @@
           name="country"
           id="country"
           placeholder="Country"
-		  value="<?php if(isset($_COOKIE['country'])) {echo $_COOKIE['country'];}?>"
           required
         />
         <label id="icon" for="name"><i class="icon-shield"></i></label>
@@ -251,7 +246,6 @@
           name="password"
           id="pass"
           placeholder="Password"
-		  value="<?php if(isset($_COOKIE['pass'])) {echo $_COOKIE['pass'];}?>"
           required
         />
         <label id="icon" for="name"><i class="icon-shield"></i></label>
@@ -260,18 +254,15 @@
           name="repeatPass"
           id="passr"
           placeholder="Repeat password"
-		  value="<?php if(isset($_COOKIE['rePass'])) {echo $_COOKIE['rePass'];}?>"
           required
         />
        
 		<div>
-                  <input
-                    type="submit"
-                    name="register"
-                    id="signin"
-                    value="Register"
-	
-                  />
+            <input
+              type="submit"
+              name="register"
+              id="signin"
+              value="Register" />
          </div>
 		
       </form>

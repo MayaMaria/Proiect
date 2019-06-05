@@ -14,12 +14,6 @@
 			if($resultNumberRows == 1 )
 			{
 				$row=mysqli_fetch_row($result);
-				
-				if(isset($_POST['remember-me'])){
-
-					setCookie('username',$username,time()+60*60*7);
-					setCookie('password',$password,time()+60*60*7);
-				}
 				if ($username=="admin" && $password=="admin")
 				{
 					$_SESSION['admin']=$username;
