@@ -18,6 +18,7 @@
       href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"
       rel="stylesheet"
     />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <title>M&A Inspiration</title>
   </head>
 
@@ -147,58 +148,10 @@
     <div class="testbox">
       <h5 id="title">Registration</h5>
       <hr />
-	  <?php 
-	  
-		if(@$_GET['UserExist'] == true)
-			{
-			?>
-			<div>
-				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
-				<?php echo $_GET['UserExist']?>
-				</div>
-						
-			<?php
-			}
-			if(@$_GET['InvalidPass'] == true)
-			{
-			?>
-			<div>
-				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
-				<?php echo $_GET['InvalidPass']?>
-				</div>
-						
-			<?php
-			}
-		
-			
-			if(@$_GET['InvalidEmail'] == true)
-			{
-			?>
-			<div>
-				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
-				<?php echo $_GET['InvalidEmail']?>
-				</div>
-						
-			<?php
-			}
-			
-			
-			if(@$_GET['InvalidEmailPas'] == true)
-			{
-			?>
-			<div>
-				<img style="height:2%; width:2%;" src="imagini/wrong.jpg"/>
-				<?php echo $_GET['InvalidEmailPas']?>
-				</div>
-						
-			<?php
-			}
-		?>
-		
-
-      <form  method="POST" action="phpfiles/register.php">
+      <form>
+	  <div class="display-error" style="display:none"></div>
 		<p>Choose your profile photo</p>
-		<input type="file" name="profile">
+		<input type="file" name="profile" required>
 	  <br>
 		<span id="eroare"></span>
         <label id="icon" for="name"><i class="icon-user"></i></label>
@@ -244,7 +197,7 @@
         <input
           type="password"
           name="password"
-          id="pass"
+          id="password"
           placeholder="Password"
           required
         />
@@ -252,7 +205,7 @@
         <input
           type="password"
           name="repeatPass"
-          id="passr"
+          id="passwordRepeat"
           placeholder="Repeat password"
           required
         />
@@ -260,12 +213,45 @@
 		<div>
             <input
               type="submit"
-              name="register"
-              id="signin"
+              name="submit"
+              id="submit"
               value="Register" />
          </div>
 		
       </form>
     </div>
   </body>
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+
+      $('#submit').click(function(e){
+        e.preventDefault();
+
+
+        var username = $("#username").val();
+        var email = $("#email").val();
+		var password= $("#password").val();
+		var passwordRepeat = $("#passwordRepeat").val();
+        $.ajax({
+            type: "POST",
+            url: "phpfiles/verify.php",
+            dataType: "json",
+            data: {username:username, email:email,password:password,passwordRepeat:passwordRepeat},
+            success : function(data){
+                if (data.code == "200"){
+                    alert("Success: " +data.msg);
+                } else {
+                    $(".display-error").html("<b>"+data.msg+"</b>");
+                    $(".display-error").css("display","block");
+					$(".display-error").css("color","red");
+                }
+            }
+        });
+
+
+      });
+  });
+</script>
+  
 </html>

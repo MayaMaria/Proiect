@@ -17,11 +17,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="fonts/material-icon/css/material-design-iconic-font.min.css"
-    />
 	 <link rel="stylesheet" href="styles/login.css" />
+	
     <title>M&A Inspiration</title>
   </head>
 
@@ -192,9 +189,7 @@
 			
               <form class="register-form" id="login-form" method="POST" action="phpfiles/validate.php">
                 <div class="form-group">
-                  <label for="your_name"
-                    ><i class="zmdi zmdi-account material-icons-name"></i
-                  ></label>
+                  
                   <input
                     type="text"
                     name="your_name"
@@ -204,7 +199,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                  
                   <input
                     type="password"
                     name="your_pass"
