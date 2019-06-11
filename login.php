@@ -159,18 +159,6 @@
 
 			
             <div class="signin-form">
-			<?php
-			if(@$_GET['LoginR'] == true)
-					{
-						?>
-						<div>
-							<img style="height:15%; width:10%;" src="imagini/good.png"/>
-							<h4><?php echo $_GET['LoginR']?></h4>
-						</div>
-						
-					<?php
-					}
-			?>
               <h2 class="form-title">Sign up</h2>
 			  
 			  

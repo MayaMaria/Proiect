@@ -149,9 +149,10 @@
       <h5 id="title">Registration</h5>
       <hr />
       <form>
+	   <div class="display-complet" style="display:none"></div>
 	  <div class="display-error" style="display:none"></div>
 		<p>Choose your profile photo</p>
-		<input type="file" name="profile" required>
+		<input type="file" name="profile" id="profile">
 	  <br>
 		<span id="eroare"></span>
         <label id="icon" for="name"><i class="icon-user"></i></label>
@@ -160,14 +161,13 @@
 			name="name" 
 			id="name" 
 			placeholder="Name"
-			required />
+			/>
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input
           type="text"
           name="surname"
           id="surname"
           placeholder="Surname"
-          required
         />
         <label id="icon" for="name"><i class="icon-user"></i></label>
         <input
@@ -175,7 +175,6 @@
           name="username"
           id="username"
           placeholder="Username"
-          required
         />
         <label id="icon" for="name"><i class="icon-envelope "></i></label>
         <input 
@@ -183,7 +182,7 @@
 			name="email" 
 			id="email" 
 			placeholder="Email" 
-			required />
+		 />
         <br />
         <label id="icon" for="name"><i class="icon-globe"></i></label>
         <input
@@ -191,7 +190,6 @@
           name="country"
           id="country"
           placeholder="Country"
-          required
         />
         <label id="icon" for="name"><i class="icon-shield"></i></label>
         <input
@@ -199,7 +197,6 @@
           name="password"
           id="password"
           placeholder="Password"
-          required
         />
         <label id="icon" for="name"><i class="icon-shield"></i></label>
         <input
@@ -207,7 +204,6 @@
           name="repeatPass"
           id="passwordRepeat"
           placeholder="Repeat password"
-          required
         />
        
 		<div>
@@ -221,37 +217,6 @@
       </form>
     </div>
   </body>
-  <script type="text/javascript">
-  $(document).ready(function() {
-
-
-      $('#submit').click(function(e){
-        e.preventDefault();
-
-
-        var username = $("#username").val();
-        var email = $("#email").val();
-		var password= $("#password").val();
-		var passwordRepeat = $("#passwordRepeat").val();
-        $.ajax({
-            type: "POST",
-            url: "phpfiles/verify.php",
-            dataType: "json",
-            data: {username:username, email:email,password:password,passwordRepeat:passwordRepeat},
-            success : function(data){
-                if (data.code == "200"){
-                    alert("Success: " +data.msg);
-                } else {
-                    $(".display-error").html("<b>"+data.msg+"</b>");
-                    $(".display-error").css("display","block");
-					$(".display-error").css("color","red");
-                }
-            }
-        });
-
-
-      });
-  });
-</script>
+  <script src="./jsfiles/createAccount.js"> </script>
   
 </html>
