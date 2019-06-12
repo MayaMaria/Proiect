@@ -1,7 +1,5 @@
 <?php 
 	include 'phpfiles/suggestion_controller.php';
-	include 'phpfiles/readRating3.php';
-	include 'phpfiles/calculateRating.php';
 ?>
 
 
@@ -23,6 +21,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>M&A Inspiration</title>
+	<script src="./jsfiles/pollFunction.js"></script>
   </head>
 
   <body style="background-color:#FFFCFC">
@@ -61,20 +60,22 @@
 		  session_start();
 		  if(isset($_SESSION['login'])){
 			  ?>
-			   <form method="POST" action="phpfiles/rating4.php">
+			  <div id="poll">
+			   <form>
 				<fieldset class="stars">
-					<input type="submit" id="star10" name="stars1" value="5" />
+					<input type="radio" id="star10" name="stars1" value="5"  onclick="getVote(this.value,50,'poll')"/>
 					<label class="full" for="star10" title="Awesome"></label>
-					<input type="submit" id="star9" name="stars1" value="4" />
+					<input type="radio" id="star9" name="stars1" value="4" onclick="getVote(this.value,50,'poll')" />
 					<label class="full" for="star9" title="Pretty good"></label>
-					<input type="submit" id="star8" name="stars1" value="3" />
+					<input type="radio" id="star8" name="stars1" value="3"  onclick="getVote(this.value,50,'poll')" />
 					<label class="full" for="star8" title="Ok"></label>
-					<input type="submit" id="star7" name="stars1" value="2" />
+					<input type="radio" id="star7" name="stars1" value="2" onclick="getVote(this.value,50,'poll')" />
 					<label class="full" for="star7" title="Kinda bad"></label>
-					<input type="submit" id="star6" name="stars1" value="1" />
+					<input type="radio" id="star6" name="stars1" value="1" onclick="getVote(this.value,50,'poll')" />
 					<label class="full" for="star6" title="Vote"></label>
 				 </fieldset>
 				</form>
+			</div>
 		<?php
 		
 		  }
@@ -109,96 +110,7 @@
 		  }
 		  
 		  ?>
-   
-          <hr />
-
-          <div class="row">
-            <div class="side">
-              <div>5 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-5"<?php echo "style='width:".$rating5_4."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating5_4;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>4<span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-4"<?php echo "style='width:".$rating4_4."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating4_4;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>3 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-3"<?php echo "style='width:".$rating3_4."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating3_4;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>2 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-2"<?php echo "style='width:".$rating2_4."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating2_4;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>1 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-1"<?php echo "style='width:".$rating1_4."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating1_4;
-				?>
-			  </div>
-            </div>
-          </div>
-		  <p>
-            <br />
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <?php 
-				calculateRating($rating1_4,$rating2_4,$rating3_4,$rating4_4,$rating5_4);
-			?>
-          </p>
-        </div>
-		
-
+       </div>
         <div class="column2">
            <?php 
 		$name="hunting3";

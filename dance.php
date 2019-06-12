@@ -1,7 +1,5 @@
 <?php
-include 'phpfiles/readRating.php';
 include 'phpfiles/suggestion_controller.php';
-include 'phpfiles/calculateRating.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +20,8 @@ include 'phpfiles/calculateRating.php';
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>M&A Inspiration</title>
+	
+	<script src="./jsfiles/pollFunction.js"></script>
   </head>
 
   <body style="background-color:#FFFCFC">
@@ -52,20 +52,22 @@ include 'phpfiles/calculateRating.php';
 		  session_start();
 		  if(isset($_SESSION['login'])){
 			  ?>
-		<form method="POST" action="phpfiles/rating.php">
-          <fieldset class="stars">
-            <input type="submit" id="star15" name="stars2" value="5" />
-            <label class="full" for="star15" title="Very Good"></label>
-            <input type="submit" id="star14" name="stars2" value="4" />
-            <label class="full" for="star14" title="Pretty good"></label>
-            <input type="submit" id="star13" name="stars2" value="3" />
-            <label class="full" for="star13" title="Ok"></label>
-            <input type="submit" id="star12" name="stars2" value="2" />
-            <label class="full" for="star12" title="Kinda bad"></label>
-            <input type="submit" id="star11" name="stars2" value="1" />
-            <label class="full" for="star11" title="Bad"></label>
-          </fieldset>
-		  </form>
+			  <div id="poll">
+				<form>
+				  <fieldset class="stars">
+					<input type="radio" id="star15" name="stars2" value="5" onclick="getVote(this.value,38,'poll')" />
+					<label class="full" for="star15" title="Very Good"></label>
+					<input type="radio" id="star14" name="stars2" value="4" onclick="getVote(this.value,38,'poll')"  />
+					<label class="full" for="star14" title="Pretty good"></label>
+					<input type="radio" id="star13" name="stars2" value="3" onclick="getVote(this.value,38,'poll')" />
+					<label class="full" for="star13" title="Ok"></label>
+					<input type="radio" id="star12" name="stars2" value="2" onclick="getVote(this.value,38,'poll')" />
+					<label class="full" for="star12" title="Kinda bad"></label>
+					<input type="radio" id="star11" name="stars2" value="1" onclick="getVote(this.value,38,'poll')" />
+					<label class="full" for="star11" title="Bad"></label>
+				  </fieldset>
+				 </form>
+			</div>
 		<?php
 		
 		  }
@@ -103,96 +105,7 @@ include 'phpfiles/calculateRating.php';
 				  ?>
 		  
           <br /><br />
-          <hr />
-
-          <div class="row">
-            <div class="side">
-              <div>5 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-5" <?php echo "style='width:".$rating5_1."%';" ?> ></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating5_1;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>4<span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-4" <?php echo "style='width:".$rating4_1."%';" ?> >
-				</div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating4_1;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>3 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-3" <?php echo "style='width:".$rating3_1."%';" ?> ></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating3_1;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>2 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-2" <?php echo "style='width:".$rating2_1."%';" ?> ></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating2_1;
-				?>
-			  
-			  </div>
-            </div>
-            <div class="side">
-              <div>1 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-1" <?php echo "style='width:".$rating1_1."%';" ?> ></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating1_1;
-				?>
-			  </div>
-            </div>
-			<hr />
-			<p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-			<?php 
-				calculateRating($rating1_1,$rating2_1,$rating3_1,$rating4_1,$rating5_1);
-			?>
-          </p>
-          </div>
-        </div>
-
+      </div>
         <div class="column2">
          <?php 
 			$name="timeToDance2";
@@ -203,20 +116,22 @@ include 'phpfiles/calculateRating.php';
 		  <?php
 		  if(isset($_SESSION['login'])){
 			  ?>
-			 <form method="POST" action="phpfiles/rating.php">
-				<fieldset class="stars">
-					<input type="submit" id="star10" name="stars1" value="5" />
-					<label class="full" for="star10" title="Awesome"></label>
-					<input type="submit" id="star9" name="stars1" value="4" />
-					<label class="full" for="star9" title="Pretty good"></label>
-					<input type="submit" id="star8" name="stars1" value="3" />
-					<label class="full" for="star8" title="Ok"></label>
-					<input type="submit" id="star7" name="stars1" value="2" />
-					<label class="full" for="star7" title="Kinda bad"></label>
-					<input type="submit" id="star6" name="stars1" value="1" />
-					<label class="full" for="star6" title="Pff"></label>
-				  </fieldset>
-		  </form>
+			  <div id="poll2">
+				 <form>
+					<fieldset class="stars">
+						<input type="radio" id="star10" name="stars1" value="5" onclick="getVote(this.value,39,'poll2')" />
+						<label class="full" for="star10" title="Awesome"></label>
+						<input type="radio" id="star9" name="stars1" value="4" onclick="getVote(this.value,39,'poll2')" />
+						<label class="full" for="star9" title="Pretty good"></label>
+						<input type="radio" id="star8" name="stars1" value="3" onclick="getVote(this.value,39,'poll2')" />
+						<label class="full" for="star8" title="Ok"></label>
+						<input type="radio" id="star7" name="stars1" value="2" onclick="getVote(this.value,39,'poll2')" />
+						<label class="full" for="star7" title="Kinda bad"></label>
+						<input type="radio" id="star6" name="stars1" value="1" onclick="getVote(this.value,39,'poll2')" />
+						<label class="full" for="star6" title="Pff"></label>
+					  </fieldset>
+			  </form>
+		  </div>
 		<?php
 		
 		  }
@@ -253,96 +168,7 @@ include 'phpfiles/calculateRating.php';
 		  
 		  ?>
           <br /><br />
-       
-          <hr />
-
-          <div class="row">
-            <div class="side">
-              <div>5 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-5" <?php echo "style='width:".$rating5_2."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating5_2;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>4<span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-4" <?php echo "style='width:".$rating4_2."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating4_2;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>3 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-3" <?php echo "style='width:".$rating3_2."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating3_2;
-				?>
-			  
-			  </div>
-            </div>
-            <div class="side">
-              <div>2 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-2" <?php echo "style='width:".$rating2_2."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating2_2;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>1 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-1" <?php echo "style='width:".$rating1_2."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating1_2;
-				?>
-			  </div>
-            </div>
-			 
-          </div>
-          <p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <?php 
-				calculateRating($rating1_2,$rating2_2,$rating3_2,$rating4_2,$rating5_2);
-			?>
-          </p>
-        </div>
-
+     </div>
         <div class="column2">
            <?php 
 			$name="timeToDance3";
@@ -354,20 +180,22 @@ include 'phpfiles/calculateRating.php';
 		  <?php
 		  if(isset($_SESSION['login'])){
 			  ?>
-			  <form method="POST" action="phpfiles/rating.php">
+			  <div id="poll3">
+			  <form>
 				<fieldset class="stars">
-					<input type="submit" id="star5" name="stars" value="5" />
+					<input type="radio" id="star5" name="stars" value="5" onclick="getVote(this.value,40,'poll3')" />
 					<label class="full" for="star5" title="Awesome"></label>
-					<input type="submit" id="star4" name="stars" value="4" />
+					<input type="radio" id="star4" name="stars" value="4" onclick="getVote(this.value,40,'poll3')" />
 					<label class="full" for="star4" title="Pretty good"></label>
-					<input type="submit" id="star3" name="stars" value="3" />
+					<input type="radio" id="star3" name="stars" value="3" onclick="getVote(this.value,40,'poll3')" />
 					<label class="full" for="star3" title="Ok"></label>
-					<input type="submit" id="star2" name="stars" value="2" />
+					<input type="radio" id="star2" name="stars" value="2" onclick="getVote(this.value,40,'poll3')" />
 					<label class="full" for="star2" title="Kinda bad"></label>
-					<input type="submit" id="star1" name="stars" value="1" />
+					<input type="radio" id="star1" name="stars" value="1" onclick="getVote(this.value,40,'poll3')" />
 					<label class="full" for="star1" title="Pff"></label>
 				</fieldset>
 				</form>
+				</div>
 		<?php
 		
 		  }
@@ -404,94 +232,6 @@ include 'phpfiles/calculateRating.php';
 		  
 		  ?>
           <br /><br />
-          <hr />
-
-          <div class="row">
-            <div class="side">
-              <div>5 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-5"<?php echo "style='width:".$rating5_3."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating5_3;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>4<span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-4" <?php echo "style='width:".$rating4_3."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating4_3;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>3 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-3" <?php echo "style='width:".$rating3_3."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating3_3;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>2 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-2"<?php echo "style='width:".$rating2_3."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating2_3;
-				?>
-			  </div>
-            </div>
-            <div class="side">
-              <div>1 <span class="fa fa-star checked"></span></div>
-            </div>
-            <div class="middle">
-              <div class="bar-container">
-                <div class="bar-1" <?php echo "style='width:".$rating1_3."%';" ?>></div>
-              </div>
-            </div>
-            <div class="side right">
-              <div>
-				<?php
-					echo $rating1_3;
-				?>
-			  
-			  </div>
-            </div>
-			 
-          </div>
-          <p>
-            <span><b>User Rating &emsp;&emsp;</b></span>
-            <?php 
-				calculateRating($rating1_3,$rating2_3,$rating3_3,$rating4_3,$rating5_3);
-			?>
-          </p>
-        </div>
     </section>
 
     <br />
