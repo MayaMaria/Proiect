@@ -1,8 +1,4 @@
-<?php 
-	 require_once 'extract_date.php';
-?>
-	  
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -25,6 +21,10 @@
   </head>
 
   <body>
+	<?php 
+	 require_once 'extract_date.php';
+	?>
+	
     <header id="top">
       <img src="imagini/banner2.png" alt="M&A Inspiration" class="banner" />
       <h1>M&A Inspiration</h1>

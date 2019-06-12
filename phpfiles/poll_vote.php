@@ -4,6 +4,7 @@ require 'database_con.php';
 
 $vote = $_REQUEST['vote'];
 $suggestion=$_REQUEST['number'];
+
 $sql = "SELECT  * FROM ratings WHERE id_suggestion='".$suggestion."'";
 		$result_2 = mysqli_query($conn,$sql);
 			

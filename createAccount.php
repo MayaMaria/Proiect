@@ -18,7 +18,7 @@
       href="https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"
       rel="stylesheet"
     />
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <title>M&A Inspiration</title>
   </head>
 
@@ -154,29 +154,28 @@
 		<p>Choose your profile photo</p>
 		<input type="file" name="profile" id="profile">
 	  <br>
-		<span id="eroare"></span>
-        <label id="icon" for="name"><i class="icon-user"></i></label>
+        <label for="name"><i class="icon-user"></i></label>
         <input 
 			type="text" 
 			name="name" 
 			id="name" 
 			placeholder="Name"
 			/>
-        <label id="icon" for="name"><i class="icon-user"></i></label>
+        <label for="surname"><i class="icon-user"></i></label>
         <input
           type="text"
           name="surname"
           id="surname"
           placeholder="Surname"
         />
-        <label id="icon" for="name"><i class="icon-user"></i></label>
+        <label for="username"><i class="icon-user"></i></label>
         <input
           type="text"
           name="username"
           id="username"
           placeholder="Username"
         />
-        <label id="icon" for="name"><i class="icon-envelope "></i></label>
+        <label  for="email"><i class="icon-envelope "></i></label>
         <input 
 			type="text"
 			name="email" 
@@ -184,21 +183,21 @@
 			placeholder="Email" 
 		 />
         <br />
-        <label id="icon" for="name"><i class="icon-globe"></i></label>
+        <label  for="country"><i class="icon-globe"></i></label>
         <input
           type="text"
           name="country"
           id="country"
           placeholder="Country"
         />
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
+        <label for="password"><i class="icon-shield"></i></label>
         <input
           type="password"
           name="password"
           id="password"
           placeholder="Password"
         />
-        <label id="icon" for="name"><i class="icon-shield"></i></label>
+        <label  for="passwordRepeat"><i class="icon-shield"></i></label>
         <input
           type="password"
           name="repeatPass"
@@ -216,7 +215,8 @@
 		
       </form>
     </div>
+	<script src="./jsfiles/createAccount.js"> </script>
   </body>
-  <script src="./jsfiles/createAccount.js"> </script>
+  
   
 </html>
