@@ -3,7 +3,7 @@ include '../phpfiles/showDataBase.php';
 ?>
 
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <title> Admin Panel</title>
 <link rel="stylesheet" type="text/css" href="styles/styles.css" />
@@ -13,11 +13,9 @@ include '../phpfiles/showDataBase.php';
 <body>
 
 <div id="header">
-	<center>
-		<img src="../imagini/admin.png" id="gif">
+		<img src="../imagini/admin.png" id="gif" alt="imagine">
 		<h1> Welcome to Admin Panel | M&A Insipiration</h1>
-		<img src="../imagini/admingif.gif">
-	</center>
+		<img src="../imagini/admingif.gif" alt="Minon gif">
 </div>
 
 <div class="vertical-menu">

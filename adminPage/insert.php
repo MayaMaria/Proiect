@@ -2,9 +2,10 @@
 include '../phpfiles/showDataBase.php';
 ?>
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+<title>Insert</title>
 </head>
 
 <body>
@@ -26,8 +27,8 @@ include '../phpfiles/showDataBase.php';
 	<p>Insert Suggestion</p>
 		<form  method="POST" action="insertDate.php"> 
 				<input type="text" name="title" placeholder="Title" required /><br /><br />
-				 <input type="text" name="gender" placeholder="Gender" required /><br /></br>
-				 <input type="text" name="description" placeholder="Description"required /><br /><br />
+				 <input type="text" name="gender" placeholder="Gender" required /><br /><br/>
+				 <input type="text" name="description" placeholder="Description" required /><br /><br />
 				<input type="text" name="imagePath" placeholder="imagePath"><br /> <br />
 				<input type="submit" name="insertS" value="Insert"><br />
 			</form>
@@ -59,14 +60,14 @@ include '../phpfiles/showDataBase.php';
 		<form  method="POST" action="insertDate.php"> 
 				<input type="text" name="nameR" placeholder="Name" required><br /><br />
 				 <input type="text" name="descriptionR" placeholder="Description" required><br /><br />
-				 <input type="text" name="imagePathR" placeholder="ImagePath"required><br /><br />
-				 <input type="text" name="genderR" placeholder="Gender"required><br /><br />
-				  <input type="text" name="event" placeholder="Event"required><br /><br />
-				  <input type="text" name="season" placeholder="Season"required><br /><br />
-				  <input type="text" name="style" placeholder="Style"required><br /><br />
-				  <input type="text" name="brand" placeholder="Brand"required><br /><br />
-				  <input type="text" name="color" placeholder="Color"required><br /><br />
-				  <input type="text" name="trend" placeholder="Trend"required><br /><br />
+				 <input type="text" name="imagePathR" placeholder="ImagePath" required><br /><br />
+				 <input type="text" name="genderR" placeholder="Gender" required><br /><br />
+				  <input type="text" name="event" placeholder="Event" required><br /><br />
+				  <input type="text" name="season" placeholder="Season" required><br /><br />
+				  <input type="text" name="style" placeholder="Style" required><br /><br />
+				  <input type="text" name="brand" placeholder="Brand" required><br /><br />
+				  <input type="text" name="color" placeholder="Color" required><br /><br />
+				  <input type="text" name="trend" placeholder="Trend" required><br /><br />
 				
 				<input type="submit" name="insertR" value="Insert"><br />
 				<?php 

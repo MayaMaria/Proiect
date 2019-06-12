@@ -2,9 +2,10 @@
 include '../phpfiles/showDataBase.php';
 ?>
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
 <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+<title>Delete</title>
 </head>
 
 <body>
@@ -58,7 +59,7 @@ include '../phpfiles/showDataBase.php';
 <div>
 		<p>Delete Recommendation</p>
 		<form  method="POST" action="deleteRec.php"> 
-				 <select id="types" name="idR">
+				 <select id="typesR" name="idR">
 					<option disabled="disabled" selected="selected">
 							Select id
 					 </option>
