@@ -38,70 +38,75 @@
 
       <div class="galery">
         <div class="column2">
-          <?php
-	  $name="summerM1";
-	  getSuggestionPhoto($name);
-	  ?>
-          <p>
-            <br /><b>Let us know if you liked it!<br />Vote below!</b>
-          </p>
-		  <?php
-		  session_start();
-		  if(isset($_SESSION['login'])){
-			  ?>
-			  <div id="poll">
-			  <form>
-				<fieldset class="stars">
-					<input type="radio" id="star5" name="stars2" value="5" onclick="getVote(this.value,54,'poll')" />
-					<label class="full" for="star5" title="Awesome"></label>
-					<input type="radio" id="star4" name="stars2" value="4" onclick="getVote(this.value,54,'poll')"/>
-					<label class="full" for="star4" title="Pretty good"></label>
-					<input type="radio" id="star3" name="stars2" value="3" onclick="getVote(this.value,54,'poll')"/>
-					<label class="full" for="star3" title="Ok"></label>
-					<input type="radio" id="star2" name="stars2" value="2" onclick="getVote(this.value,54,'poll')"/>
-					<label class="full" for="star2" title="Kinda bad"></label>
-					<input type="radio" id="star1" name="stars2" value="1" onclick="getVote(this.value,54,'poll')"/>
-					<label class="full" for="star1" title="Pff"></label>
-				</fieldset>
-				</form>
-				</div>
-		<?php
-		
-		  }
-		  else 
-		  {
-			  echo "<a href='login.php'>Login</a> for vote!";
-		  }
-		  
-		  ?>
-         
-          <br />
-          <br /><br />
-          <br />
-          <p><b>Share this on </b></p>
-       <?php
-		  if(isset($_SESSION['login'])){
-			  ?>
-          <p class="buton-share">
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
-			data-text="Havaianas shoes come with a qualifier: They are to be worn at the beach or by the pool only But in those two locations, it`s hard to beat a good pair of sandals." data-url="http://M&amp;Ainspiration.com" 
-			data-via="m&amp;aInsipiration" 
-			data-hashtags="summerMen"
-			data-lang="en" 
-			data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </p>
-		  
-		<?php
-		  }
-		  else 
-		  {
-			  echo "<a href='login.php'>Login</a> for share!";
-		  }
-		  
-		  ?>
-          <br /><br />
+			 <?php
+			  $name="summerM1";
+			  getSuggestionPhoto($name);
+			?>
+			
+			 <p>
+				<br /><b>Let us know if you liked it!<br />Vote below!</b>
+			 </p>
+				<?php
+				  session_start();
+				  if(isset($_SESSION['login'])){
+				  ?>
+				  <div id="poll">
+				  <form>
+					<fieldset class="stars">
+						<input type="radio" id="star5" name="stars2" value="5" onclick="getVote(this.value,54,'poll')" />
+						<label class="full" for="star5" title="Awesome"></label>
+						<input type="radio" id="star4" name="stars2" value="4" onclick="getVote(this.value,54,'poll')"/>
+						<label class="full" for="star4" title="Pretty good"></label>
+						<input type="radio" id="star3" name="stars2" value="3" onclick="getVote(this.value,54,'poll')"/>
+						<label class="full" for="star3" title="Ok"></label>
+						<input type="radio" id="star2" name="stars2" value="2" onclick="getVote(this.value,54,'poll')"/>
+						<label class="full" for="star2" title="Kinda bad"></label>
+						<input type="radio" id="star1" name="stars2" value="1" onclick="getVote(this.value,54,'poll')"/>
+						<label class="full" for="star1" title="Pff"></label>
+					</fieldset>
+					</form>
+					</div>
+					<?php
+				
+				  }
+				  else 
+				  {
+					  echo "<a href='login.php'>Login</a> for vote!";
+				  }
+				  
+				 ?>
+			 
+			  <br />
+			  <br /><br />
+			  <br />
+			  
+			  <p><b>Share this on </b></p>
+			  
+			   <?php
+					 if(isset($_SESSION['login'])){
+						  ?>
+					 <p class="buton-share">
+						<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" 
+						data-text="Havaianas shoes come with a qualifier: They are to be worn at the beach or by the pool only But in those two locations, it`s hard to beat a good pair of sandals." data-url="http://M&amp;Ainspiration.com" 
+						data-via="m&amp;aInsipiration" 
+						data-hashtags="summerMen"
+						data-lang="en" 
+						data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</p>
+				  
+				<?php
+				  }
+				  else 
+				  {
+					  echo "<a href='login.php'>Login</a> for share!";
+				  }
+				  
+				  ?>
+				  <br /><br />
 
          </div> 
+		 
+		 
         <div class="column2">
 			<?php
 			  $name="summerM2";
@@ -228,12 +233,16 @@
 		  }
 		  
 		  ?>
-          <br /><br />  
+          <br /><br /> 
+		  
       </div>
     </section>
+	
+	
     <br />
     <br />
     <br />
+	
     <footer>
       <div class="footer-newsletter">
         <div class="newsText">

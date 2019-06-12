@@ -41,47 +41,45 @@ include 'phpfiles/suggestion_controller.php';
       <div class="galery">
         <div class="column2">
 			<?php 
-			$name="timeToDance1";
-			getSuggestionPhoto($name);
+				$name="timeToDance1";
+				getSuggestionPhoto($name);
 			?>
-		  
-		  
+		 
           <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
 
 		  <?php
-		  session_start();
-		  if(isset($_SESSION['login'])){
-			  ?>
-			  <div id="poll">
-				<form>
-				  <fieldset class="stars">
-					<input type="radio" id="star15" name="stars2" value="5" onclick="getVote(this.value,38,'poll')" />
-					<label class="full" for="star15" title="Very Good"></label>
-					<input type="radio" id="star14" name="stars2" value="4" onclick="getVote(this.value,38,'poll')"  />
-					<label class="full" for="star14" title="Pretty good"></label>
-					<input type="radio" id="star13" name="stars2" value="3" onclick="getVote(this.value,38,'poll')" />
-					<label class="full" for="star13" title="Ok"></label>
-					<input type="radio" id="star12" name="stars2" value="2" onclick="getVote(this.value,38,'poll')" />
-					<label class="full" for="star12" title="Kinda bad"></label>
-					<input type="radio" id="star11" name="stars2" value="1" onclick="getVote(this.value,38,'poll')" />
-					<label class="full" for="star11" title="Bad"></label>
-				  </fieldset>
-				 </form>
-			</div>
-		<?php
+			  session_start();
+			  if(isset($_SESSION['login'])){
+				  ?>
+					<div id="poll">
+						<form>
+							<fieldset class="stars">
+								<input type="radio" id="star15" name="stars2" value="5" onclick="getVote(this.value,38,'poll')" />
+								<label class="full" for="star15" title="Very Good"></label>
+								<input type="radio" id="star14" name="stars2" value="4" onclick="getVote(this.value,38,'poll')"  />
+								<label class="full" for="star14" title="Pretty good"></label>
+								<input type="radio" id="star13" name="stars2" value="3" onclick="getVote(this.value,38,'poll')" />
+								<label class="full" for="star13" title="Ok"></label>
+								<input type="radio" id="star12" name="stars2" value="2" onclick="getVote(this.value,38,'poll')" />
+								<label class="full" for="star12" title="Kinda bad"></label>
+								<input type="radio" id="star11" name="stars2" value="1" onclick="getVote(this.value,38,'poll')" />
+								<label class="full" for="star11" title="Bad"></label>
+							</fieldset>
+						 </form>
+					</div>
+					<?php
 		
-		  }
-		  else 
-		  {
-			  echo "<a href='login.php'>Login</a> for vote!";
-		  }
-		  
-		  ?>
+				  }
+				  else 
+				  {
+					  echo "<a href='login.php'>Login</a> for vote!";
+				  }
+				  
+				  ?>
 		 
-		<br />
-          <br /><br />
-          <br />
-          <p><b>Share this on </b></p>
+		<br /><br /><br /><br />
+		
+        <p><b>Share this on </b></p>
 				<?php
 				  if(isset($_SESSION['login'])){
 					  ?>
@@ -105,33 +103,34 @@ include 'phpfiles/suggestion_controller.php';
 				  ?>
 		  
           <br /><br />
+		  
       </div>
         <div class="column2">
-         <?php 
-			$name="timeToDance2";
-			getSuggestionPhoto($name);
+			<?php 
+				$name="timeToDance2";
+				getSuggestionPhoto($name);
 			?>
-          <b><br />Let us know if you liked it!<br />Vote below!<br /></b>
-		  <br />
+          <b><br />Let us know if you liked it!<br />Vote below!<br /></b><br />
+		  
 		  <?php
 		  if(isset($_SESSION['login'])){
 			  ?>
 			  <div id="poll2">
-				 <form>
-					<fieldset class="stars">
-						<input type="radio" id="star10" name="stars1" value="5" onclick="getVote(this.value,39,'poll2')" />
-						<label class="full" for="star10" title="Awesome"></label>
-						<input type="radio" id="star9" name="stars1" value="4" onclick="getVote(this.value,39,'poll2')" />
-						<label class="full" for="star9" title="Pretty good"></label>
-						<input type="radio" id="star8" name="stars1" value="3" onclick="getVote(this.value,39,'poll2')" />
-						<label class="full" for="star8" title="Ok"></label>
-						<input type="radio" id="star7" name="stars1" value="2" onclick="getVote(this.value,39,'poll2')" />
-						<label class="full" for="star7" title="Kinda bad"></label>
-						<input type="radio" id="star6" name="stars1" value="1" onclick="getVote(this.value,39,'poll2')" />
-						<label class="full" for="star6" title="Pff"></label>
-					  </fieldset>
-			  </form>
-		  </div>
+					<form>
+						<fieldset class="stars">
+							<input type="radio" id="star10" name="stars1" value="5" onclick="getVote(this.value,39,'poll2')" />
+							<label class="full" for="star10" title="Awesome"></label>
+							<input type="radio" id="star9" name="stars1" value="4" onclick="getVote(this.value,39,'poll2')" />
+							<label class="full" for="star9" title="Pretty good"></label>
+							<input type="radio" id="star8" name="stars1" value="3" onclick="getVote(this.value,39,'poll2')" />
+							<label class="full" for="star8" title="Ok"></label>
+							<input type="radio" id="star7" name="stars1" value="2" onclick="getVote(this.value,39,'poll2')" />
+							<label class="full" for="star7" title="Kinda bad"></label>
+							<input type="radio" id="star6" name="stars1" value="1" onclick="getVote(this.value,39,'poll2')" />
+							<label class="full" for="star6" title="Pff"></label>
+						 </fieldset>
+					</form>
+				</div>
 		<?php
 		
 		  }
@@ -142,9 +141,8 @@ include 'phpfiles/suggestion_controller.php';
 		  
 		  ?>
           
-          <br />
-          <br /><br />
-          <br />
+          <br /> <br /><br /> <br />
+		  
           <p><b>Share this on </b></p>
          <?php
 		  if(isset($_SESSION['login'])){
@@ -171,8 +169,8 @@ include 'phpfiles/suggestion_controller.php';
      </div>
         <div class="column2">
            <?php 
-			$name="timeToDance3";
-			getSuggestionPhoto($name);
+				$name="timeToDance3";
+				getSuggestionPhoto($name);
 			?>
 		
           <b><br />Let us know if you liked it!<br />Vote below!<br /></b>
@@ -180,21 +178,21 @@ include 'phpfiles/suggestion_controller.php';
 		  <?php
 		  if(isset($_SESSION['login'])){
 			  ?>
-			  <div id="poll3">
-			  <form>
-				<fieldset class="stars">
-					<input type="radio" id="star5" name="stars" value="5" onclick="getVote(this.value,40,'poll3')" />
-					<label class="full" for="star5" title="Awesome"></label>
-					<input type="radio" id="star4" name="stars" value="4" onclick="getVote(this.value,40,'poll3')" />
-					<label class="full" for="star4" title="Pretty good"></label>
-					<input type="radio" id="star3" name="stars" value="3" onclick="getVote(this.value,40,'poll3')" />
-					<label class="full" for="star3" title="Ok"></label>
-					<input type="radio" id="star2" name="stars" value="2" onclick="getVote(this.value,40,'poll3')" />
-					<label class="full" for="star2" title="Kinda bad"></label>
-					<input type="radio" id="star1" name="stars" value="1" onclick="getVote(this.value,40,'poll3')" />
-					<label class="full" for="star1" title="Pff"></label>
-				</fieldset>
-				</form>
+				<div id="poll3">
+					<form>
+						<fieldset class="stars">
+							<input type="radio" id="star5" name="stars" value="5" onclick="getVote(this.value,40,'poll3')" />
+							<label class="full" for="star5" title="Awesome"></label>
+							<input type="radio" id="star4" name="stars" value="4" onclick="getVote(this.value,40,'poll3')" />
+							<label class="full" for="star4" title="Pretty good"></label>
+							<input type="radio" id="star3" name="stars" value="3" onclick="getVote(this.value,40,'poll3')" />
+							<label class="full" for="star3" title="Ok"></label>
+							<input type="radio" id="star2" name="stars" value="2" onclick="getVote(this.value,40,'poll3')" />
+							<label class="full" for="star2" title="Kinda bad"></label>
+							<input type="radio" id="star1" name="stars" value="1" onclick="getVote(this.value,40,'poll3')" />
+							<label class="full" for="star1" title="Pff"></label>
+						</fieldset>
+					</form>
 				</div>
 		<?php
 		
@@ -206,9 +204,8 @@ include 'phpfiles/suggestion_controller.php';
 		  
 		  ?>
         
-          <br />
-          <br /><br />
-          <br />
+          <br /><br /><br /><br />
+		  
           <p><b>Share this on </b></p>
          <?php
 		  if(isset($_SESSION['login'])){
@@ -232,11 +229,11 @@ include 'phpfiles/suggestion_controller.php';
 		  
 		  ?>
           <br /><br />
+		  
     </section>
 
-    <br />
-    <br />
-    <br />
+    <br /> <br /> <br />
+	
     <footer>
       <div class="footer-newsletter">
         <div class="newsText">

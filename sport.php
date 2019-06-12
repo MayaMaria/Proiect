@@ -21,11 +21,10 @@
     />
     <title>M&A Inspiration</title>
 	
-	
 	<script src="./jsfiles/pollFunction.js"></script>
-  </head>
+ </head>
 
-  <body style="background-color:#FFFCFC">
+<body style="background-color:#FFFCFC">
     <header id="top">
       <img src="imagini/banner2.png" alt="M&A Inspiration" class="banner" />
       <a href="index.php" id="back" title="BACK">BACK</a>
@@ -34,88 +33,91 @@
     <section>
       <a href="#top" id="up" title="UP">UP</a>
       <br />
-       <?php 
-		$name="sport";
-		getSuggestion($name);
-		?>
+		   <?php 
+			$name="sport";
+			getSuggestion($name);
+			?>
 
       <div class="galery">
-        <div class="column2">
-           <?php 
-		$name="sport1";
-		getSuggestionPhoto($name);
-		?>
-        </div>
-        <div class="column2">
-           <?php 
-		$name="sport2";
-		getSuggestionPhoto($name);
-		?>
-          <p>
-            <br /><b>Let us know if you liked it!<br />Vote below!<br /></b>
-          </p>
-		  <?php
-		  session_start();
-		  if(isset($_SESSION['login'])){
-			  ?>
-			  <div id="poll">
-				  <form>
-					<fieldset class="stars">
-						<input type="radio" id="star10" name="stars1" value="5" onclick="getVote(this.value,59,'poll')" />
-						<label class="full" for="star10" title="Awesome"></label>
-						<input type="radio" id="star9" name="stars1" value="4" onclick="getVote(this.value,59,'poll')"/>
-						<label class="full" for="star9" title="Pretty good"></label>
-						<input type="radio" id="star8" name="stars1" value="3" onclick="getVote(this.value,59,'poll')" />
-						<label class="full" for="star8" title="Ok"></label>
-						<input type="radio" id="star7" name="stars1" value="2" onclick="getVote(this.value,59,'poll')" />
-						<label class="full" for="star7" title="Kinda bad"></label>
-						<input type="radio" id="star6" name="stars1" value="1" onclick="getVote(this.value,59,'poll')"/>
-						<label class="full" for="star6" title="Pff"></label>
-					 </fieldset>
-					</form>
+		 <div class="column2">
+			   <?php 
+			$name="sport1";
+			ge tSuggestionPhoto($name);
+			?>
 			</div>
-		<?php
-		
-		  }
-		  else 
-		  {
-			  echo "<a href='login.php'>Login</a> for vote!";
-		  }
-		  
-		  ?>
-       
+			<div class="column2">
+			   <?php 
+			$name="sport2";
+			getSuggestionPhoto($name);
+			?>
+			  <p>
+				<br /><b>Let us know if you liked it!<br />Vote below!<br /></b>
+			  </p>
+			  <?php
+			  session_start();
+			  if(isset($_SESSION['login'])){
+				  ?>
+				  <div id="poll">
+					  <form>
+						<fieldset class="stars">
+							<input type="radio" id="star10" name="stars1" value="5" onclick="getVote(this.value,59,'poll')" />
+							<label class="full" for="star10" title="Awesome"></label>
+							<input type="radio" id="star9" name="stars1" value="4" onclick="getVote(this.value,59,'poll')"/>
+							<label class="full" for="star9" title="Pretty good"></label>
+							<input type="radio" id="star8" name="stars1" value="3" onclick="getVote(this.value,59,'poll')" />
+							<label class="full" for="star8" title="Ok"></label>
+							<input type="radio" id="star7" name="stars1" value="2" onclick="getVote(this.value,59,'poll')" />
+							<label class="full" for="star7" title="Kinda bad"></label>
+							<input type="radio" id="star6" name="stars1" value="1" onclick="getVote(this.value,59,'poll')"/>
+							<label class="full" for="star6" title="Pff"></label>
+						 </fieldset>
+						</form>
+				</div>
+			<?php
+			
+			  }
+			  else 
+			  {
+				  echo "<a href='login.php'>Login</a> for vote!";
+			  }
+			  
+			  ?>
+		   
           <br /><br /><br /><br />
           <p><b>Share this on </b></p>
           <?php
-		  if(isset($_SESSION['login'])){
+			  if(isset($_SESSION['login'])){
+				  ?>
+			  <p class="buton-share">
+				<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+				data-text="Whether you`re a routine marathon runner, or you simply enjoy the occasional light jog, there`s no denying that a gorgeous, sunny day can motivate just about anyone to get out there and pound the pavement."
+				data-url="http://M&amp;Ainspiration.com" 
+				data-via="m&amp;aInsipiration" 
+				data-hashtags="nikeShoesRun" 
+				data-lang="en" 
+				data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			  </p>
+		  
+			<?php
+			  }
+			  else 
+			  {
+				  echo "<a href='login.php'>Login</a> for share!";
+			  }
+			  
 			  ?>
-          <p class="buton-share">
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
-			data-text="Whether you`re a routine marathon runner, or you simply enjoy the occasional light jog, there`s no denying that a gorgeous, sunny day can motivate just about anyone to get out there and pound the pavement."
-			data-url="http://M&amp;Ainspiration.com" 
-			data-via="m&amp;aInsipiration" 
-			data-hashtags="nikeShoesRun" 
-			data-lang="en" 
-			data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </p>
-		  
-		<?php
-		  }
-		  else 
-		  {
-			  echo "<a href='login.php'>Login</a> for share!";
-		  }
-		  
-		  ?>
-          <br /><br />
+			  <br /><br />
         </div>
+		
 		<div class="column2">
            <?php 
-		$name="sport3";
-		getSuggestionPhoto($name);
-		?>
-      </div>
+				$name="sport3";
+				getSuggestionPhoto($name);
+			?>
+		</div>
+		
     </section>
+	
     <br />
     <br />
     <br />

@@ -2,7 +2,6 @@
 	include 'phpfiles/suggestion_controller.php';
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,46 +35,48 @@
       <br />
       <h3 class="message">
         <?php 
-		$name="hunting";
-		getSuggestion($name);
+			$name="hunting";
+			getSuggestion($name);
 		?>
       </h3>
       <div class="galery">
         <div class="column2">
-          <?php 
-		$name="hunting1";
-		getSuggestionPhoto($name);
-		?>
+			<?php 
+				$name="hunting1";
+				getSuggestionPhoto($name);
+			?>
         </div>
 
         <div class="column2">
-          <?php 
-		$name="hunting2";
-		getSuggestionPhoto($name);
-		?>
+			<?php 
+				$name="hunting2";
+				getSuggestionPhoto($name);
+			?>
+			
           <p>
             <br /><b>Let us know if you liked it!<br />Vote below!</b>
           </p>
+		  
 		  <?php
 		  session_start();
 		  if(isset($_SESSION['login'])){
 			  ?>
-			  <div id="poll">
-			   <form>
-				<fieldset class="stars">
-					<input type="radio" id="star10" name="stars1" value="5"  onclick="getVote(this.value,50,'poll')"/>
-					<label class="full" for="star10" title="Awesome"></label>
-					<input type="radio" id="star9" name="stars1" value="4" onclick="getVote(this.value,50,'poll')" />
-					<label class="full" for="star9" title="Pretty good"></label>
-					<input type="radio" id="star8" name="stars1" value="3"  onclick="getVote(this.value,50,'poll')" />
-					<label class="full" for="star8" title="Ok"></label>
-					<input type="radio" id="star7" name="stars1" value="2" onclick="getVote(this.value,50,'poll')" />
-					<label class="full" for="star7" title="Kinda bad"></label>
-					<input type="radio" id="star6" name="stars1" value="1" onclick="getVote(this.value,50,'poll')" />
-					<label class="full" for="star6" title="Vote"></label>
-				 </fieldset>
-				</form>
-			</div>
+				<div id="poll">
+				   <form>
+						<fieldset class="stars">
+							<input type="radio" id="star10" name="stars1" value="5"  onclick="getVote(this.value,50,'poll')"/>
+							<label class="full" for="star10" title="Awesome"></label>
+							<input type="radio" id="star9" name="stars1" value="4" onclick="getVote(this.value,50,'poll')" />
+							<label class="full" for="star9" title="Pretty good"></label>
+							<input type="radio" id="star8" name="stars1" value="3"  onclick="getVote(this.value,50,'poll')" />
+							<label class="full" for="star8" title="Ok"></label>
+							<input type="radio" id="star7" name="stars1" value="2" onclick="getVote(this.value,50,'poll')" />
+							<label class="full" for="star7" title="Kinda bad"></label>
+							<input type="radio" id="star6" name="stars1" value="1" onclick="getVote(this.value,50,'poll')" />
+							<label class="full" for="star6" title="Vote"></label>
+						 </fieldset>
+					</form>
+				</div>
 		<?php
 		
 		  }
@@ -113,9 +114,9 @@
        </div>
         <div class="column2">
            <?php 
-		$name="hunting3";
-		getSuggestionPhoto($name);
-		?>
+				$name="hunting3";
+				getSuggestionPhoto($name);
+			?>
         </div>
       </div>
     </section>

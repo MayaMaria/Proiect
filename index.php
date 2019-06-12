@@ -1,36 +1,35 @@
 <?php 
   include './phpfiles/header.php';
 ?>
-
     <section>
       <h2 style="text-align: center; font-family:Cambria (Headings)">
         Take a look at it, lady!
       </h2>
-      <div class="galery">
-        <div class="column">
-          <p>Oh, yes, it's Ladies' Night</p>
-          <a href="dance.php"
-            ><img src="imagini/dance.jpg" alt="Dance" style="width:100%"
-          /></a>
-        </div>
+		<div class="galery">
+			<div class="column">
+			  <p>Oh, yes, it's Ladies' Night</p>
+				<a href="dance.php">
+					<img src="imagini/dance.jpg" alt="Dance" style="width:100%"/>
+				</a>
+			</div>
 
-        <div class="column">
-          <a href="travel.php"
-            ><img src="imagini/travel.jpg" alt="Travel" style="width:100%"
-          /></a>
-          <p>
-            Are you going on a spring travel? And you don't have the right
-            shoes?
-          </p>
-        </div>
+			<div class="column">
+				<a href="travel.php">
+					<img src="imagini/travel.jpg" alt="Travel" style="width:100%"/>
+				</a>
+				<p>
+					Are you going on a spring travel? And you don't have the right
+					shoes?
+				 </p>
+			</div>
 
-        <div class="column">
-          <p>Summer is calling your name!</p>
-          <a href="summer.php">
-            <img src="imagini/summer.jpg" alt="Summer" style="width:100%"
-          /></a>
-        </div>
-      </div>
+			<div class="column">
+			  <p>Summer is calling your name!</p>
+			  <a href="summer.php">
+				<img src="imagini/summer.jpg" alt="Summer" style="width:100%"
+			  /></a>
+			</div>
+		</div>
       <br />
       <br />
       <br />

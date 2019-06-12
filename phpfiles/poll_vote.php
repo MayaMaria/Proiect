@@ -1,21 +1,26 @@
 <?php
-include 'calculateRating.php';
-require 'database_con.php';
+	include 'calculateRating.php';
+	require 'database_con.php';
 
-$vote = $_REQUEST['vote'];
-$suggestion=$_REQUEST['number'];
+	//se primeste valoare votului
+	$vote = $_REQUEST['vote'];
 
-$sql = "SELECT  * FROM ratings WHERE id_suggestion='".$suggestion."'";
-		$result_2 = mysqli_query($conn,$sql);
-			
-			while($row = mysqli_fetch_assoc($result_2)) {
-				$rating1=$row["rating1"];
-				$rating2=$row["rating2"];
-				$rating3=$row["rating3"];
-				$rating4=$row["rating4"];
-				$rating5=$row["rating5"];
-			}
-			
+	//se primeste id-ul sugestiei 
+	$suggestion=$_REQUEST['number'];
+
+	$sql = "SELECT  * FROM ratings WHERE id_suggestion='".$suggestion."'";
+	$result_2 = mysqli_query($conn,$sql);
+
+	//se extract numarul voturilor din baza de date
+	while($row = mysqli_fetch_assoc($result_2)) {
+		$rating1=$row["rating1"];
+		$rating2=$row["rating2"];
+		$rating3=$row["rating3"];
+		$rating4=$row["rating4"];
+		$rating5=$row["rating5"];
+	}
+	
+	//in functie de valoarea votului facem update coloanei respective
 	if($vote == 1)
 	{	$rating1=$rating1+1;
 		$sql1 = "UPDATE ratings SET rating1=".$rating1." WHERE id_suggestion='".$suggestion."'";
@@ -41,6 +46,8 @@ $sql = "SELECT  * FROM ratings WHERE id_suggestion='".$suggestion."'";
 		$sql1 = "UPDATE ratings SET rating5=".$rating5." WHERE id_suggestion='".$suggestion."'";
 		mysqli_query($conn, $sql1);
 	}
+	
+	//calculam procentul fiecarui vot pentru a reprezenta grafic
 	$ratings_number=$rating1+$rating2+$rating3+$rating4+$rating5;
 	$vote_1 = 100*round($rating1/($ratings_number),2);
 	$vote_2 = 100*round($rating2/($ratings_number),2);
@@ -134,6 +141,7 @@ $sql = "SELECT  * FROM ratings WHERE id_suggestion='".$suggestion."'";
 		  <p>
             <span><b>User Rating &emsp;&emsp;</b></span>
             <?php 
+				//calculam rating-ul
 				calculateRating($rating1,$rating2,$rating3,$rating4,$rating5);
 			?>
           </p>

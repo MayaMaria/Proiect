@@ -162,14 +162,16 @@ include 'phpfiles/suggestion_controller.php';
 		  
 		  ?>
           <br /><br />
-      
         </div>
+		
         <div class="column2">
           <?php
 			  $name="timeToTravel3";
 			  getSuggestionPhoto($name);
 			?>
+			
           <b><br />Let us know if you liked it!<br />Vote below!<br /><br /></b>
+		  
 		  <?php
 		  if(isset($_SESSION['login'])){
 			  ?>
@@ -230,9 +232,11 @@ include 'phpfiles/suggestion_controller.php';
         </div>
       </div>
     </section>
+	
     <br />
     <br />
     <br />
+	
     <footer>
       <div class="footer-newsletter">
         <div class="newsText">

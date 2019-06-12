@@ -22,13 +22,15 @@
 	<script src="./jsfiles/pollFunction.js"></script>
   </head>
 
-  <body style="background-color:#FFFCFC">
+ <body style="background-color:#FFFCFC">
     <header id="top">
       <img src="imagini/banner2.png" alt="M&A Inspiration" class="banner" />
       <a href="index.php" id="back" title="BACK">BACK</a>
       <h1>M&A Inspiration</h1>
-    </header>
+	</header>
+	
     <a href="#top" id="up" title="UP">UP</a>
+	
     <section>
       <br />
        <?php 
@@ -226,9 +228,11 @@
 		
       </div>
     </section>
+	
     <br />
     <br />
     <br />
+	
     <footer>
       <div class="footer-newsletter">
         <div class="newsText">

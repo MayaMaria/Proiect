@@ -149,19 +149,18 @@
         <div class="container">
           <div class="signin-content">
             <div class="signin-image">
-              <figure>
-                <img src="imagini/draw.jpg" alt="sing up image" />
-              </figure>
-              <a href="createAccount.php" class="signup-image-link"
-                >Create an account</a
-              >
+				<figure>
+					<img src="imagini/draw.jpg" alt="sing up image" />
+				</figure>
+				<a href="createAccount.php" class="signup-image-link">
+					Create an account
+				</a >
             </div>
 
 			
             <div class="signin-form">
               <h2 class="form-title">Sign up</h2>
-			  
-			  
+			 
 				<?php 
 					if(@$_GET['InvalidLogin'] == true)
 					{
@@ -177,7 +176,7 @@
 			
               <form class="register-form" id="login-form" method="POST" action="phpfiles/validate.php">
                 <div class="form-group">
-                  
+               
                   <input
                     type="text"
                     name="your_name"
