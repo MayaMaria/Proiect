@@ -3,10 +3,6 @@
   display: flex;
 }
 
-input[type="checkbox"] {
-  appearance: checkbox;
-}
-
 img {
   max-width: 100%;
   height: auto;
