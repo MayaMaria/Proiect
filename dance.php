@@ -229,7 +229,8 @@ include 'phpfiles/suggestion_controller.php';
 		  
 		  ?>
           <br /><br />
-		  
+		</div>
+	</div>
     </section>
 
     <br /> <br /> <br />

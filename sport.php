@@ -38,18 +38,18 @@
 			getSuggestion($name);
 			?>
 
-      <div class="galery">
-		 <div class="column2">
-			   <?php 
-			$name="sport1";
-			ge tSuggestionPhoto($name);
-			?>
-			</div>
+		<div class="galery">
 			<div class="column2">
 			   <?php 
-			$name="sport2";
-			getSuggestionPhoto($name);
-			?>
+					$name="sport1";
+					getSuggestionPhoto($name);
+				?>
+			</div>
+			<div class="column2">
+			    <?php 
+					$name="sport2";
+					getSuggestionPhoto($name);
+				?>
 			  <p>
 				<br /><b>Let us know if you liked it!<br />Vote below!<br /></b>
 			  </p>
@@ -115,7 +115,7 @@
 				getSuggestionPhoto($name);
 			?>
 		</div>
-		
+	</div>
     </section>
 	
     <br />

@@ -33,12 +33,11 @@
     <section>
       <a href="#top" id="up" title="UP">UP</a>
       <br />
-      <h3 class="message">
         <?php 
 			$name="hunting";
 			getSuggestion($name);
 		?>
-      </h3>
+
       <div class="galery">
         <div class="column2">
 			<?php 

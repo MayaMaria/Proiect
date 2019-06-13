@@ -7,8 +7,8 @@
 			$result = mysqli_query($conn, $sql);
 			$row = mysqli_fetch_assoc($result);
 			$description = $row["description"];
-			echo "<p class='message'>
-						".$description."</p>";
+			echo "<h3 class='message'>
+						".$description."</h3>";
 		
 	}
 	
@@ -22,7 +22,7 @@
 			$description = $row["description"];
 			$imagePath=$row["imagePath"];
 			echo  "<img src='".$imagePath."' alt='".$description."' style='width:100%' />
-          <p>".$description."</p>";
+          <h3>".$description."</h3>";
 	}
 
 ?>

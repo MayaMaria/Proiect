@@ -132,6 +132,20 @@ UPDATE `suggestions` SET `imagePath` = 'imagini/boots.jpg' WHERE `suggestions`.`
 	
 	INSERT INTO ratings (id_suggestion,rating1,rating2,rating3,rating4,rating5) VALUES ('59','1','0','1','0','0');
 
-	UPDATE `suggestions` SET `description` = 'Havaianas\r\n<p>These come with a qualifier: They are to be worn at the beach or by\r\n the pool only. But in those two locations, it`s hard to beat a good\r\n pair of sandals.</p>\r\n ' WHERE `suggestions`.`id_suggestion` = 54;
-	UPDATE `suggestions` SET `description` = 'Birkenstock\r\n <p>\r\n More acceptable than flops: Birkenstocks. These are waterproof, so\r\n they`re a sure bet around water.\r\n </p>' WHERE `suggestions`.`id_suggestion` = 56;
-	UPDATE `suggestions` SET `description` = 'Vans <p>\r\n If you want to fully embrace that laid-back spring vibe, go with a\r\n pair of sneakers worn by every California surfer and skater since\r\n the dawn of time (or since Vans first started making th' WHERE `suggestions`.`id_suggestion` = 55;
+	UPDATE `suggestions` SET `description` = 'Havaianas\r\n<br />These come with a qualifier: They are to be worn at the beach or by\r\n the pool only. But in those two locations, it`s hard to beat a good\r\n pair of sandals. ' WHERE `suggestions`.`id_suggestion` = 54;
+	UPDATE `suggestions` SET `description` = 'Vans <br /> If you want to fully embrace that laid-back spring vibe, go with a pair of sneakers worn by every California surfer and skater since\r\nthe dawn of time .' WHERE `suggestions`.`id_suggestion` = 55;
+	UPDATE `suggestions` SET `description` = 'Birkenstock\r\n \r\n<br /> More acceptable than flops: Birkenstocks. These are waterproof, so\r\nthey`re a sure bet around water.' WHERE `suggestions`.`id_suggestion` = 56;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
