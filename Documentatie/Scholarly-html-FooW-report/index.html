@@ -48,10 +48,10 @@
         Pentru crearea interfeței utilizatorului, am folosit limbajele HTML și CSS.
       </p>
       <p>
-        Partea de back-end a interfeței a fost realizata&#771; cu ajutorul PHP și JavaScript.
+        Partea de back-end a interfeței a fost realizata&#771; cu ajutorul PHP.
       </p>
       <p>
-          Stocarea și managementul datelor au fost realizare utilizând un server de baze de date relațional, MySql. 
+        Stocarea și managementul datelor au fost realizate utilizând un server de baze de date relațional, MySql. 
       </p>
     </section>
     <section id="structure">
@@ -66,7 +66,7 @@
         <li>Sistem de distribuire: Presupune posibilitatea unui utilizator întregistrat de a distribui sugestii pe rețelele de socializare.</li>
         <li>Newsletter: Presupune posibilitatea unui utilizator, întregistrat sau neîntregistrat, de a se abona la anumite sugestii. </li>
         <li>Posibilitatea unui utilizator de a vizualiza și a filtra recomanda&#771;ri și a sugestii.</li>
-        <li>Posibilitatea de a își crea cont, de a își modifica detaliile contului, de a se loga și a se deloga. </li>
+        <li>Posibilitatea de a își crea cont, de a își modifica detaliile contului, de a se conecta și deconecta. </li>
         <li>Existența unui administrator care poate modifica baza de date prin ada&#771;ugarea, ștergerea și modificarea recomanda&#771;rilor și sugestiilor.</li>
       </ul>
     </section>
@@ -89,6 +89,44 @@
           <img src="./diagrame/activitate1.png" height=100% width=100%>
           <img src="./diagrame/activitate2.png" height=100% width=100%>
       </section>
+    </section>
+    <section id="Root">
+      <h2>Task-uri</h2>
+      <ul>
+        <li>Maria:
+          <ul style="text-decoration: none">User:
+            <li>login: user-ul introduce o parola&#771; și un username care sunt verificate sa&#771; fie în baza de date; pentru a-l menține conectat am creat o sesiune de logare și una pentru imaginea de profil.</li>
+            <li>logout: user-ul este deconectat, sesiunea este distrusa&#771;.</li>
+            <li>înregistrarea: user-ul poate sa&#771;-și faca&#771; un cont nou; se verifica&#771; ca username-ul ales de utilizator sa&#771; nu existe deja în baza de date, validitatea email-ului și ca parola sa&#771; fie mai lunga&#771; de 7 caractere.</li>
+            <li>modificarea contului: user-ul user-ul logat poate sa&#771;-și schimbe anumite date legate de cont (username, parola, imaginea de profil etc).</li>
+            <li>votare sugestie: user-ul logat poate sa&#771; voteze fiecare sugestie.</li>
+            <li>distribuire sugestie: user-ul logat poate sa&#771; distribuie pe Twitter sugestiile.</li>
+          </ul>
+          <br>
+          <ul style="text-decoration: none">Admin:
+            <li>login: adminul se conecteaza&#771; pentru a avea acces la pagina pentru admin.</li>
+            <li>logout: adminul se poate deconecta.</li>
+            <li>inserare sugestie/recomandare</li>
+            <li>ștergere sugestie/recomandare</li>
+            <li>modificare sugestie/recomandare</li>
+          </ul>
+          <br>
+        </li>
+        <li>Andreea:
+          <ul>Filtre:
+            <li>Utilizatorul poate vizualiza produsele, selectând din meniul principal un anumit filtru; apoi, din meniul produselor, poate selecta mai multe filtre sau niciunul.
+              <br>Am evitat SQL injection prin folosirea funcției <code>mysqli_stmt::bind_param()</code>, care se asigura&#771; ca&#771; formateaza&#771; corect valorile primite.
+            </li>
+          </ul>
+          <br>
+          <ul>Newsletter:
+            <li>Utilizatorul se poate abona la newsletter completând formularul din footer și alegând domeniul de interes. În funcție de acesta, va primi mail-uri cu sugestii aflate pe prima pagina&#771; a site-ului.
+              <br>Am folosit tehnica de Ajax call pentru a crea un feedback pentru utilizator în momentul în care trimite formularul.
+              <br>Trimiterea mail-urilor am fa&#771;cut-o cu ajutorul SMTP4dev, mail server pentru development.
+            </li>
+          </ul>
+        </li>
+      </ul>
     </section>
     <section id="Root">
       <h3>Resurse</h3>
